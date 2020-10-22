@@ -93,7 +93,7 @@ $("#checkboxes input").change(function() {
          			$(this).parents(".ghost").addClass("yes");
          			$(this).parents(".ghost").removeClass('maybe');
          			fadeout($(this).parents(".ghost").siblings());
-         			warning("A ghooost! Click reset to start over!", "#55be61", "#000");
+         			warning("Oh shit, a ghooost! Click the reset button above to start over.", "#55be61", "#000");
          		}
          	});
          	if($("#ghosts").children(".yes").length == 0){

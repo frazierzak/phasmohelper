@@ -126,10 +126,6 @@ h2 {
 	font-size: 22px;
 }
 
-/*#checkboxes input[type="checkbox"]:hover + label, #ghost_info input[type="checkbox"]:hover + label {
-	background-color: #f41f86;
-}*/
-
 #checkboxes input[type="checkbox"]:checked + label, #ghost_info input[type="checkbox"]:checked + label {
 	background: #f41f86;
 }
