@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="wrapper">
+		<form>
+			<h1>Phasmophobia Helper</h1>
+			<div id="ghost_info">
+				<ul>
+					<li>
+						<label id="ghost_name">Ghost Name:</label>
+						<input type="text" class="ghost_name" placeholder="Enter Name Here" />
+					</li>
+					<li>
+						<input type="checkbox" id="shy" />
+						<label for="shy">Shy Ghost?</label>
+					</li>
+					<li>
+						<input id="reset" type="reset" value="Reset">
+					</li>
+				</ul>
+			</div>
+
+			<div id="checkboxes">
+				<h2>Confirmed Equipment:</h2>
+				<ul>
+					<li>
+						<input type="checkbox" class="emf" id="emf" />
+						<label for="emf">EMF Level 5</label>
+					</li>
+					<li>
+						<input type="checkbox" class="writing" id="writing" />
+						<label for="writing">Ghost Writing</label>
+					</li>
+					<li>
+						<input type="checkbox" class="fingerprints" id="fingerprints" />
+						<label for="fingerprints">Fingerprints</label>
+					</li>
+					<li>
+						<input type="checkbox" class="freezing" id="freezing" />
+						<label for="freezing">Freezing Temperatures</label>
+					</li>
+					<li>
+						<input type="checkbox" class="orb" id="orb" />
+						<label for="orb">Ghost Orb</label>
+					</li>
+					<li>
+						<input type="checkbox" class="box" id="box" />
+						<label for="box">Spirit Box</label>
+					</li>
+				</ul>
+				<div class="warning">
+					<div class="warning_text">Please select up to 3 pieces of evidence to narrow down the spookster.</div>
+				</div>
+			</div><!-- checkboxes -->
+		</form>
+
+		<h2>Possible Ghosts:</h2>
+		<div id="ghosts">
+			<div class="ghost">
+				<h3>Banshee</h3>
+				<p>A Banshee is a natural hunter and will attack anything. It has been known to stalk it’s prey one at a time until making it’s kill.</p>
+				<h4>Unique Strengths</h4>
+				<p>A Banshee will only target one person at a time.</p>
+				<h4>Weaknesses</h4>
+				<p>Banshees fear the Crucifix Cross and will be less aggressive when near one.</p>
+				<h4>Evidence</h4>
+				<ul class="evidence">
+					<li class="emf">EMF Level 5</li>
+					<li class="fingerprints">Fingerprints</li>
+					<li class="freezing">Freezing Temperatures</li>
+				</ul>
+			</div><!-- ghost -->
+			<div class="ghost">
+				<h3>Demon</h3>
+				<p>A Demon is one of the worst Ghosts you can encounter. It has been known to attack without a reason.</p>
+				<h4>Unique Strengths</h4>
+				<p>Demons will attack more often than any other Ghost.</p>
+				<h4>Weaknesses</h4>
+				<p>Asking a Demon successful questions on the Ouija Board won’t lower the users sanity.</p>
+				<h4>Evidence</h4>
+				<ul class="evidence">
+					<li class="box">Spirit Box</li>
+					<li class="writing">Ghost Writing</li>
+					<li class="freezing">Freezing Temperatures</li>
+				</ul>
+			</div><!-- ghost -->
+			<div class="ghost">
+				<h3>Jinn</h3>
+				<p>A Jinn is a territorial Ghost that will attack when threatened. It has also been known to be able to travel at significant speed.</p>
+				<h4>Unique Strengths</h4>
+				<p>A Jinn will travel at a a faster speed if it’s victim is far away.</p>
+				<h4>Weaknesses</h4>
+				<p>Turning off the locations power source will prevent the Jinn from using it’s ability.</p>
+				<h4>Evidence</h4>
+				<ul class="evidence">
+					<li class="box">Spirit Box</li>
+					<li class="orb">Ghost Orb</li>
+					<li class="emf">EMF Level 5</li>
+				</ul>
+			</div><!-- ghost -->
+			<div class="ghost">
+				<h3>Mare</h3>
+				<p>A Mare is the source of all nightmares, making it most powerful in the darkness.</p>
+				<h4>Unique Strengths</h4>
+				<p>A Mare will have an increased chance to attack in the dark.</p>
+				<h4>Weaknesses</h4>
+				<p>Turning the lights ON around the Mare will lower it’s chance to attack.</p>
+				<h4>Evidence</h4>
+				<ul class="evidence">
+					<li class="box">Spirit Box</li>
+					<li class="orb">Ghost Orb</li>
+					<li class="freezing">Freezing Temperatures</li>
+				</ul>
+			</div><!-- ghost -->
+			<div class="ghost">
+				<h3>Oni</h3>
+				<p>Oni’s are a cousin to the Demon and possess extreme strength. There have been rumors that they become more active around their prey.</p>
+				<h4>Unique Strengths</h4>
+				<p>Oni’s are more active when people are nearby and have been seen moving objects at great speed.</p>
+				<h4>Weaknesses</h4>
+				<p>Being more active will make the Oni easier to find and identify.</p>
+				<h4>Evidence</h4>
+				<ul class="evidence">
+					<li class="emf">EMF Level 5</li>
+					<li class="box">Spirit Box</li>
+					<li class="writing">Ghost Writing</li>
+				</ul>
+			</div><!-- ghost -->
+			<div class="ghost">
+				<h3>Phantom</h3>
+				<p>A Phantom is a Ghost that can possess the living, most commonly summoned by a Ouija Board. It also induces fear into those around it.</p>
+				<h4>Unique Strengths</h4>
+				<p>Looking at a Phantom will considerably drop your sanity.</p>
+				<h4>Weaknesses</h4>
+				<p>Taking a photo of the Phantom will make it temporarily disappear.</p>
+				<h4>Evidence</h4>
+				<ul class="evidence">
+					<li class="emf">EMF Level 5</li>
+					<li class="orb">Ghost Orb</li>
+					<li class="freezing">Freezing Temperatures</li>
+				</ul>
+			</div><!-- ghost -->
+			<div class="ghost">
+				<h3>Poltergeist</h3>
+				<p>One of the most famous Ghosts, a Poltergeist, also known as a noisy ghost that can manipulate objects around it to spread fear into it’s victims.</p>
+				<h4>Unique Strengths</h4>
+				<p>A Poltergeist can throw huge amounts of objects at once.</p>
+				<h4>Weaknesses</h4>
+				<p>A Poltergeist is almost ineffective in an empty room.</p>
+				<h4>Evidence</h4>
+				<ul class="evidence">
+					<li class="box">Spirit Box</li>
+					<li class="fingerprints">Fingerprints</li>
+					<li class="orb">Ghost Orb</li>
+				</ul>
+			</div><!-- ghost -->
+			<div class="ghost">
+				<h3>Revenant</h3>
+				<p>They are slow but violent ghosts that will attack everyone indiscriminately. They also travel at a greater speed like Jinn while hunting.</p>
+				<h4>Unique Strengths</h4>
+				<p>Travels faster while hunting.</p>
+				<h4>Weaknesses</h4>
+				<p>If you are hidden from the Revenant, their speed drops, and they travel slowly.</p>
+				<h4>Evidence</h4>
+				<ul class="evidence">
+					<li class="emf">EMF Level 5</li>
+					<li class="fingerprints">Fingerprints</li>
+					<li class="writing">Ghost Writing</li>
+				</ul>
+			</div><!-- ghost -->
+			<div class="ghost">
+				<h3>Shade</h3>
+				<p>A Shade is known to be a Shy Ghost. There is evidence that a Shade will stop all paranormal activity if there are multiple people nearby.</p>
+				<h4>Unique Strengths</h4>
+				<p>Being shy means the Ghost will be harder to find.</p>
+				<h4>Weaknesses</h4>
+				<p>The Ghost will not enter hunting mode if there is multiple people nearby.</p>
+				<h4>Evidence</h4>
+				<ul class="evidence">
+					<li class="emf">EMF Level 5</li>
+					<li class="orb">Ghost Orb</li>
+					<li class="writing">Ghost Writing</li>
+				</ul>
+			</div><!-- ghost -->
+			<div class="ghost">
+				<h3>Spirit</h3>
+				<p>A Spirit is the most common Ghost you will come across however it is still very powerful and dangerous. They are usually discovered at one of their hunting grounds after an unexplained death.</p>
+				<h4>Unique Strengths</h4>
+				<p>None.</p>
+				<h4>Weaknesses</h4>
+				<p>Using Smudge Sticks on a Spirit will stop it attacking for a long period of time.</p>
+				<h4>Evidence</h4>
+				<ul class="evidence">
+					<li class="box">Spirit Box</li>
+					<li class="fingerprints">Fingerprints</li>
+					<li class="writing">Ghost Writing</li>
+				</ul>
+			</div><!-- ghost -->
+			<div class="ghost">
+				<h3>Wraith</h3>
+				<p>A Wraith is one of the most dangerous Ghosts you will find. It is also the only known Ghost that has the ability of flight and has sometimes been known to travel through walls.</p>
+				<h4>Unique Strengths</h4>
+				<p>Wraiths almost never touch the ground meaning it can’t be tracked by footsteps.</p>
+				<h4>Weaknesses</h4>
+				<p>Wraiths have a toxic reaction to Salt.</p>
+				<h4>Evidence</h4>
+				<ul class="evidence">
+					<li class="fingerprints">Fingerprints</li>
+					<li class="freezing">Freezing Temperatures</li>
+					<li class="box">Spirit Box</li>
+				</ul>
+			</div><!-- ghost -->
+			<div class="ghost">
+				<h3>Yurei</h3>
+				<p>A Yurei is a Ghost that has returned to the physical world, usually for the purpose of revenge or pure hatred.</p>
+				<h4>Unique Strengths</h4>
+				<p>Yurei’s have been known to have a stronger effect on peoples sanity.</p>
+				<h4>Weaknesses</h4>
+				<p>Smudging the Yurei’s room will cause it to not wander around the location for a long time.</p>
+				<h4>Evidence</h4>
+				<ul class="evidence">
+					<li class="orb">Ghost Orb</li>
+					<li class="writing">Ghost Writing</li>
+					<li class="freezing">Freezing Temperatures</li>
+				</ul>
+			</div><!-- ghost -->
+		</div><!-- ghosts -->
+	</div><!-- wrapper -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
