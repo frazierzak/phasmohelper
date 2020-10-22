@@ -33,6 +33,7 @@ $("#reset").click(function() {
 		$(this).removeClass('yes');
 	});
 	$('form').trigger("reset");
+	warning("Please select up to 3 pieces of evidence to narrow down the spookster.", "#2f2f2f", "#fff");
 	return
 });
 
@@ -44,8 +45,6 @@ $("#checkboxes input").change(function() {
 		$(this).prop('checked', false);
 		warning("You've already selected 3 pieces of evidence!", "#c61c1ce0", "#fff");
 		return
-	} else {
-		warning("Please select up to 3 pieces of evidence to narrow down the spookster.", "#2f2f2f", "#fff");
 	}
 
 	if(this.checked){
@@ -63,6 +62,7 @@ $("#checkboxes input").change(function() {
 				fadein($(this).parents(".ghost"));
 				$(this).parents(".ghost").removeClass('maybe');
 			});
+			warning("Please select up to 3 pieces of evidence to narrow down the spookster.", "#2f2f2f", "#fff");
 			break;
 		case 1:
 			$(".evidence").each(function() {
@@ -73,6 +73,7 @@ $("#checkboxes input").change(function() {
         			$(this).parents(".ghost").addClass('maybe');
 	        	}
 	        });
+	        warning("Please select up to 2 more pieces of evidence to narrow down the spookster.", "#2f2f2f", "#fff");
 	        break;
         case 2:
         	$(".evidence").each(function() {
@@ -83,6 +84,7 @@ $("#checkboxes input").change(function() {
         			$(this).parents(".ghost").addClass('maybe');
         		}
         	});
+        	warning("Please select 1 more piece of evidence to identify the spookster.", "#2f2f2f", "#fff");
         	break;
          case 3:
          	$(".evidence").each(function() {
@@ -91,7 +93,7 @@ $("#checkboxes input").change(function() {
          			$(this).parents(".ghost").addClass("yes");
          			$(this).parents(".ghost").removeClass('maybe');
          			fadeout($(this).parents(".ghost").siblings());
-         			warning("OH SHIT! A GHOST!", "#55be61", "#000");
+         			warning("A ghooost! Click reset to start over!", "#55be61", "#000");
          		}
          	});
          	if($("#ghosts").children(".yes").length == 0){
