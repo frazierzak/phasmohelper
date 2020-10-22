@@ -23,7 +23,7 @@ function fadein(div) {
 $("#reset").click(function() {
 	$('.ghost').each(function() {
 		$(this).removeClass('maybe disabled yes fadein fadeout');
-		$(this).css("display", "block");
+		// $(this).css("display", "block");
 	});
 	$(".evidence li").each(function() {
 		$(this).removeClass('yes');
