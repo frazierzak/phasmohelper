@@ -9,19 +9,15 @@ function warning(message, bgcolor, color) {
 function fadeout(div) {
 	div.removeClass("fadein maybe yes");
 	div.addClass("fadeout disabled");
-    setTimeout(function() {
-	    div.css(
-	    	'display', 'none'
-	    	);
-	},300);
+    // div.css('display', 'none');
+    // div.parents("#ghosts").forceGridAnimation();
 }
 
 function fadein(div) {
 	div.removeClass("fadeout disabled yes");
 	div.addClass("fadein");
-    setTimeout(function() {
-	    div.css('display', 'block');
-	}, 300);
+	// div.css('display', 'grid');
+	// div.parents("#ghosts").forceGridAnimation();
 }
 
 $("#reset").click(function() {

@@ -87,6 +87,7 @@ h2 {
 	appearance:         none;
 	font-family: 'Quicksand', sans-serif;
 	border-radius: 2px;
+	font-weight: 700;
 }
 
 #ghost_info input[type="text"]:focus {	
@@ -130,31 +131,25 @@ h2 {
 	background: #f41f86;
 }
 
-#checkboxes input[type="checkbox"]:unchecked + label, #ghost_info input[type="checkbox"]:unchecked + label {
-	background: red;
-}
-
-#checkboxes input[type="checkbox"]:focus + label, #checkboxes input[type="checkbox"]:active + label {
-	background: red;
-}
-
 #ghosts {
-	display: flex;
-    flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-gap: 16px;
+	grid-auto-flow: dense;
+
 }
 
 .ghost {
-    margin: 0 2em 2em 0;
     transition: opacity 1s ease;
-    width: 15%;
+    background: #000;
 }
 
 .fadeout {
-	opacity: 0;
+	display: none;
 }
 
 .fadein {
-	opacity: 1;
+	display: block;
 }
 
 .ghost.disabled h3 {
