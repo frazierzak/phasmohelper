@@ -34,7 +34,7 @@ body {
 
 h1 {
 	font-size: 30px;
-	margin: 0 0 20px 0;
+	margin: 0 0 5px 0;
 }
 
 h2 {
@@ -43,7 +43,11 @@ h2 {
 	font-weight: 400;
 }
 
-#checkboxes, #ghost_info {
+#ghost_info {
+	margin: 10px 0 20px 0;
+}
+
+#checkboxes {
 	margin: 0 0 20px 0;
 }
 
@@ -197,6 +201,23 @@ h2 {
 
 .ghost.disabled .evidence li.yes {
 	background-color: #ff5656;	
+}
+
+footer {
+	font-size: 16px;
+	text-align: center;
+
+}
+
+a {
+	color: #f41f86;
+	font-weight: 700;
+	padding: 0 2px;
+}
+
+a:hover {
+	background: #f41f86;
+	color: #fff;
 }
 
 @media screen and (max-width: 1000px) {
