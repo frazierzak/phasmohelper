@@ -232,6 +232,6 @@ a:hover {
 		flex-wrap: wrap;
 	}
 	.ghost {
-		width: initial;
+		width: 100%;
 	}
 }
