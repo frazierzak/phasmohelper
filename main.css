@@ -1,12 +1,11 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
 	display: flex;
-	align-items: center;
-	justify-content: flex-start;
 	flex-direction: column;
 	height: 100vh;
 	width: 100%;
@@ -28,7 +27,7 @@ body {
 }
 
 .wrapper {
-	width: 90%;
+	/*width: 100%;*/
 	padding: 20px;
 }
 
@@ -111,6 +110,8 @@ input[type=reset] {
 	cursor: pointer;
 	font-weight: 700;
 	margin: 0 0 0 10px;
+	border: none;
+    outline:none;
 }
 
 input[type=reset]:hover {
@@ -297,6 +298,26 @@ a:hover {
 	}
 	#ghost_info {
 		margin: 0 0 20px 0;
+		width: 100%;
+	}
+	#ghost_info #ghost_name_holder {
+		width: 100%;
+	}
+	#ghost_info .ghost_name {
+		width: 100%;
+		margin: 0 0 20px 0;
+	}
+	#ghost_info div {
+		flex-wrap: wrap;
+	}
+	#ghost_info input {
+		margin: 0 10px 20px 0;
+	}
+	#ghost_info label {
+		margin: 0 10px 0 0;
+	}
+	#ghost_info #reset {
+		margin: 0;
 	}
 	#ghosts {
 		flex-wrap: wrap;
