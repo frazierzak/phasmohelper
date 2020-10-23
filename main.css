@@ -275,17 +275,28 @@ a:hover {
 }
 
 @media screen and (max-width: 1000px) {
+	#objectives {
+		margin: 0 0 5px 0;
+	}
+	#objective_list {
+		flex-wrap: wrap;
+	}
+	#objective_list div {
+		margin: 0 10px 20px 0;
+	}
+	#evidence {
+		margin: 0 0 5px 0;
+	}
 	#evidence ul {
 		display: flex;
 		flex-wrap: wrap;
 	}
 	#evidence li {
-		margin: 0 1em 1em 0;
+		margin: 0 0 10px 0;
 		white-space: nowrap;
 	}
-	#ghost_info li {
-		width: 100%;
-		margin: 0 1em 1em 0;
+	#ghost_info {
+		margin: 0 0 20px 0;
 	}
 	#ghosts {
 		flex-wrap: wrap;
