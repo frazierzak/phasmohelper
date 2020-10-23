@@ -111,10 +111,10 @@ $("#checkboxes input").change(function() {
 	if (numChecked >= 1){
 		$('#checkboxes input[type="checkbox"]:not(:checked)').each(function() {
 			if (!evidence_left.includes($(this).attr("id"))) {
-				$(this).parent('li').addClass('disabled');
+				$(this).parents('li').addClass('disabled');
 				// $(this).siblings('label').removeClass('disabled');
 			} else {
-				$(this).parent('li').removeClass('disabled');
+				$(this).parents('li').removeClass('disabled');
 				// $(this).siblings('label').addClass('disabled');
 			}
 		});

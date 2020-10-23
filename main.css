@@ -51,14 +51,29 @@ h2 {
 	margin: 0 0 20px 0;
 }
 
-#checkboxes ul, #ghost_info ul {
+#checkboxes ul {
+	display: inline-grid;
+	grid-template-columns: repeat(6, auto);
+	grid-gap: 10px;
+	margin: 0 0 20px 0;
+}
+
+#checkboxes li {
+	list-style: none;
+}
+
+#checkboxes ul li.disabled {
+	display: none;
+}
+
+#ghost_info ul {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
 	flex-wrap: wrap;
 }
 
-#checkboxes li, #ghost_info li {
+#ghost_info li {
 	display: flex;
 	align-items: center;
 	margin: 0 1em 1em 0;
@@ -129,10 +144,6 @@ h2 {
 
 #checkboxes input[type="checkbox"]:checked + label, #ghost_info input[type="checkbox"]:checked + label {
 	background: #f41f86;
-}
-
-#checkboxes li.disabled {
-	display: none;
 }
 
 #ghosts {
