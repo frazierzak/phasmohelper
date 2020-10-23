@@ -47,49 +47,24 @@ h2 {
 	font-weight: 400;
 }
 
-
-
-#evidence {
-	margin: 0 0 20px 0;
-}
-
-#evidence ul {
-	display: inline-grid;
-	grid-template-columns: repeat(6, auto);
-	grid-gap: 10px;
-}
-
-#evidence li {
-	list-style: none;
-}
-
-#evidence ul li.disabled {
-	display: none;
-}
-
 #ghost_info {
-	margin: 0 0 20px 0;
+	margin: 0 0 25px 0;
 	display: flex;
-	align-items: center;
-	flex-direction: row;
+	flex-direction: column;
 }
 
-#ghost_info ul {
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	flex-wrap: wrap;
+#ghost_info h2 {
+	margin: 0 0 5px 0;
+}
+
+#ghost_info p {
+	margin: 0 0 10px 0;
 }
 
 #ghost_info div {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	margin: 0 20px 0 0;
-}
-
-#ghost_info h2 {
-	margin: 0;
 }
 
 #ghost_name {
@@ -116,7 +91,7 @@ input[type="text"] {
 	font-family: 'Quicksand', sans-serif;
 	border-radius: 2px;
 	font-weight: 700;
-	margin: 0 20px 0 0;
+	margin: 0 10px 0 0;
 }
 
 input[type="text"]:focus {	
@@ -135,6 +110,7 @@ input[type=reset] {
 	font-size: 22px;
 	cursor: pointer;
 	font-weight: 700;
+	margin: 0 0 0 10px;
 }
 
 input[type=reset]:hover {
@@ -144,11 +120,15 @@ input[type=reset]:hover {
 #objectives {
 	display: flex;
 	flex-direction: column;
-	margin: 0 0 20px 0;
+	margin: 0 0 25px 0;
 }
 
 #objectives h2 {
-	width: 100%;
+	margin: 0 0 5px 0;
+}
+
+#objectives p {
+	margin: 0 0 15px 0;
 }
 
 #objective_list {
@@ -176,6 +156,36 @@ input[type="checkbox"] + label {
 
 input[type="checkbox"]:checked + label {
 	background: #f41f86;
+}
+
+#objectives input[type="checkbox"]:checked + label {
+	background: #1faef4;
+}
+
+#evidence {
+	margin: 0 0 20px 0;
+}
+
+#evidence ul {
+	display: inline-grid;
+	grid-template-columns: repeat(6, auto);
+	grid-gap: 10px;
+}
+
+#evidence h2 {
+	margin: 0 0 5px 0;
+}
+
+#evidence p {
+	margin: 0 0 15px 0;
+}
+
+#evidence li {
+	list-style: none;
+}
+
+#evidence ul li.disabled {
+	display: none;
 }
 
 #ghosts {

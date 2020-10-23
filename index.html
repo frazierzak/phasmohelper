@@ -11,21 +11,24 @@
 	<div class="wrapper">	
 		<div id="desc">
 			<h1>PhasmoHelper</h1>
-			<p>A web app for tracking evidence on ghost hunts in the game Phasmophobia. <a href="https://www.reddit.com/user/zuffdaddy">Contact me on reddit</a> for bugs/suggestions.</p>
+			<p>A web app for tracking evidence in contracts in the game Phasmophobia. This is a supplemental tool for the journal on hunts. <a href="https://github.com/zuffdaddy/phasmohelper">View the source on github</a> and submit bugs/suggestions <a href="https://github.com/zuffdaddy/phasmohelper/issues">here</a>.</p>
 		</div>
 		<form>
 			<div id="ghost_info">
+				<h2>Ghost Information</h2>
+				<p>Type in your ghost name and select Shy Ghost if the ghost prefers speaking to people alone.</p>
 				<div>
-					<label id="ghost_name">Ghost Name:</label>
-					<input type="text" class="ghost_name" placeholder="Enter Name Here" />
+					<input type="text" class="ghost_name" placeholder="Ghost Name" />
 					<input type="checkbox" id="shy" />
-					<label for="shy">Shy Ghost?</label>
+					<label for="shy">Shy Ghost</label>
+					<input id="reset" type="reset" value="Reset">
 				</div>				
-				<input id="reset" type="reset" value="Reset">
+				
 			</div><!-- ghost_info -->
 
 			<div id="objectives">
-				<h2>Optional Evidence:</h2>
+				<h2>Optional Objectives:</h2>
+				<p>Select your optional objectives for the contract here.</p>
 					<div id="objective_list">
 						<div>
 							<input type="checkbox" id="water" />
@@ -64,6 +67,7 @@
 
 			<div id="evidence">
 				<h2>Confirmed Evidence:</h2>
+				<p>Check off found evidence here. Evidence not necessary based on previously selected evidence will be eliminated.</p>
 				<ul>
 					<li>
 						<div>
