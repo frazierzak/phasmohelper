@@ -47,8 +47,31 @@ h2 {
 	font-weight: 400;
 }
 
+
+
+#evidence {
+	margin: 0 0 20px 0;
+}
+
+#evidence ul {
+	display: inline-grid;
+	grid-template-columns: repeat(6, auto);
+	grid-gap: 10px;
+}
+
+#evidence li {
+	list-style: none;
+}
+
+#evidence ul li.disabled {
+	display: none;
+}
+
 #ghost_info {
 	margin: 0 0 20px 0;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
 }
 
 #ghost_info ul {
@@ -58,31 +81,16 @@ h2 {
 	flex-wrap: wrap;
 }
 
-#ghost_info li {
+#ghost_info div {
 	display: flex;
+	flex-direction: row;
 	align-items: center;
 	margin: 0 20px 0 0;
 }
 
-#checkboxes {
-	margin: 0 0 20px 0;
+#ghost_info h2 {
+	margin: 0;
 }
-
-#checkboxes ul {
-	display: inline-grid;
-	grid-template-columns: repeat(6, auto);
-	grid-gap: 10px;
-}
-
-#checkboxes li {
-	list-style: none;
-}
-
-#checkboxes ul li.disabled {
-	display: none;
-}
-
-
 
 #ghost_name {
 	margin: 0 15px 0 0;
@@ -92,7 +100,7 @@ h2 {
 	font-size: 22px;
 }
 
-#ghost_info input[type="text"] {
+input[type="text"] {
 	background: #1a1a1a;
 	width: 350px;
 	border: none;
@@ -108,14 +116,15 @@ h2 {
 	font-family: 'Quicksand', sans-serif;
 	border-radius: 2px;
 	font-weight: 700;
+	margin: 0 20px 0 0;
 }
 
-#ghost_info input[type="text"]:focus {	
+input[type="text"]:focus {	
 	background: #fff;
 	color: #000;
 }
 
-#ghost_info input[type=reset] {
+input[type=reset] {
 	background-color: #484848;
 	border: none;
 	color: #fff;
@@ -128,17 +137,35 @@ h2 {
 	font-weight: 700;
 }
 
-#ghost_info input[type=reset]:hover {
+input[type=reset]:hover {
 	background-color: #f41f86;
 }
 
-#checkboxes input[type="checkbox"], #ghost_info input[type="checkbox"] {
+#objectives {
+	display: flex;
+	flex-direction: column;
+	margin: 0 0 20px 0;
+}
+
+#objectives h2 {
+	width: 100%;
+}
+
+#objective_list {
+	display: flex;
+}
+
+#objective_list div {
+	margin: 0 10px 0 0;
+}
+
+input[type="checkbox"] {
 	position:absolute;
 	visibility:hidden;
 	opacity:0;
 }
 
-#checkboxes ul li input[type="checkbox"] + label, #ghost_info input[type="checkbox"] + label {
+input[type="checkbox"] + label {
 	background: #484848;
 	font-weight: 700;
 	padding: 5px 10px;
@@ -147,7 +174,7 @@ h2 {
 	font-size: 22px;
 }
 
-#checkboxes input[type="checkbox"]:checked + label, #ghost_info input[type="checkbox"]:checked + label {
+input[type="checkbox"]:checked + label {
 	background: #f41f86;
 }
 
@@ -238,8 +265,13 @@ a:hover {
 }
 
 @media screen and (max-width: 1000px) {
-	#checkboxes li {
+	#evidence ul {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	#evidence li {
 		margin: 0 1em 1em 0;
+		white-space: nowrap;
 	}
 	#ghost_info li {
 		width: 100%;

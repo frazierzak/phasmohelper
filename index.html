@@ -15,22 +15,54 @@
 		</div>
 		<form>
 			<div id="ghost_info">
-				<ul>
-					<li>
-						<label id="ghost_name">Ghost Name:</label>
-						<input type="text" class="ghost_name" placeholder="Enter Name Here" />
-					</li>
-					<li>
-						<input type="checkbox" id="shy" />
-						<label for="shy">Shy Ghost?</label>
-					</li>
-					<li>
-						<input id="reset" type="reset" value="Reset">
-					</li>
-				</ul>
-			</div>
+				<div>
+					<label id="ghost_name">Ghost Name:</label>
+					<input type="text" class="ghost_name" placeholder="Enter Name Here" />
+					<input type="checkbox" id="shy" />
+					<label for="shy">Shy Ghost?</label>
+				</div>				
+				<input id="reset" type="reset" value="Reset">
+			</div><!-- ghost_info -->
 
-			<div id="checkboxes">
+			<div id="objectives">
+				<h2>Optional Evidence:</h2>
+					<div id="objective_list">
+						<div>
+							<input type="checkbox" id="water" />
+							<label for="water">Water</label>
+						</div>
+						<div>
+							<input type="checkbox" id="photo" />
+							<label for="photo">Photo</label>
+						</div>
+						<div>
+							<input type="checkbox" id="event" />
+							<label for="event">Event</label>
+						</div>
+						<div>
+							<input type="checkbox" id="motion" />
+							<label for="motion">Motion</label>
+						</div>
+						<div>
+							<input type="checkbox" id="temp" />
+							<label for="temp">Temperature</label>
+						</div>
+						<div>
+							<input type="checkbox" id="crucifix" />
+							<label for="crucifix">Crucifix</label>
+						</div>
+						<div>
+							<input type="checkbox" id="emf_read" />
+							<label for="emf_read">EMF</label>
+						</div>
+						<div>
+							<input type="checkbox" id="smudge" />
+							<label for="smudge">Smudge</label>
+						</div>
+					</div><!-- objective_list -->
+			</div><!-- objectives -->
+
+			<div id="evidence">
 				<h2>Confirmed Evidence:</h2>
 				<ul>
 					<li>
@@ -279,7 +311,7 @@
 	<script>
 	  const ghost = document.querySelector("#ghosts");
 	  animateCSSGrid.wrapGrid(ghost, {duration : 600});
-	  const checkbox = document.querySelector("#checkboxes ul");
+	  const checkbox = document.querySelector("#evidence ul");
 	  animateCSSGrid.wrapGrid(checkbox, {duration : 600});
 	</script>
 </body>

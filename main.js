@@ -24,14 +24,14 @@ $("#reset").click(function() {
 	$(".evidence li").each(function() {
 		$(this).removeClass('yes');
 	});
-	$("#checkboxes li").removeClass("disabled");
+	$("#evidence li").removeClass("disabled");
 	$('form').trigger("reset");
 	warning("Please select up to 3 pieces of evidence to narrow down the spookster.", "#2f2f2f", "#fff");
 	return
 });
 
-$("#checkboxes input").change(function() {
-	var numChecked = $('#checkboxes input[type="checkbox"]:checked').length;
+$("#evidence input").change(function() {
+	var numChecked = $('#evidence input[type="checkbox"]:checked').length;
 	var evidence = $("ul.evidence > li." + $(this).attr("class"));
 
 	if(numChecked > 3){
@@ -110,7 +110,7 @@ $("#checkboxes input").change(function() {
 		});
 	});
 	if (numChecked >= 1){
-		$('#checkboxes input[type="checkbox"]:not(:checked)').each(function() {
+		$('#evidence input[type="checkbox"]:not(:checked)').each(function() {
 			if (!evidence_left.includes($(this).attr("id"))) {
 				$(this).parents('li').addClass('disabled');
 				// $(this).siblings('label').removeClass('disabled');
