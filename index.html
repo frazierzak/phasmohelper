@@ -264,8 +264,10 @@
 	<script type="text/javascript" src="main.js"></script>
 	<script src="https://unpkg.com/animate-css-grid@latest"></script>
 	<script>
-	  const grid = document.querySelector("#ghosts");
-	  animateCSSGrid.wrapGrid(grid, {duration : 600});
+	  const ghost = document.querySelector("#ghosts");
+	  animateCSSGrid.wrapGrid(ghost, {duration : 600});
+	  const checkbox = document.querySelector("#checkboxes ul");
+	  animateCSSGrid.wrapGrid(checkbox, {duration : 600});
 	</script>
 </body>
 </html>

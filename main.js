@@ -9,15 +9,11 @@ function warning(message, bgcolor, color) {
 function fadeout(div) {
 	div.removeClass("fadein maybe yes");
 	div.addClass("fadeout disabled");
-    // div.css('display', 'none');
-    // div.parents("#ghosts").forceGridAnimation();
 }
 
 function fadein(div) {
 	div.removeClass("fadeout disabled yes");
 	div.addClass("fadein");
-	// div.css('display', 'grid');
-	// div.parents("#ghosts").forceGridAnimation();
 }
 
 $("#reset").click(function() {
@@ -80,7 +76,13 @@ $("#checkboxes input").change(function() {
         			$(this).parents(".ghost").addClass('maybe');
         		}
         	});
-        	warning("Please select 1 more piece of evidence to identify the spookster.", "#2f2f2f", "#fff");
+        	if($(".maybe").length == 1){
+        		warning("Oh shit, a ghooost! Click the reset button above to start over.", "#55be61", "#000");
+        		$(".maybe").addClass('yes');
+        		$(".maybe").removeClass('maybe');
+        	} else {
+        		warning("Please select 1 more piece of evidence to identify the spookster.", "#2f2f2f", "#fff");
+        	}
         	break;
          case 3:
          	$(".evidence").each(function() {
@@ -98,5 +100,23 @@ $("#checkboxes input").change(function() {
          	}
          	break;
 	}
-
+	//Remove incompatible evidence
+	var evidence_left = [];
+	$(".maybe div .evidence").each(function() {
+		$(this).children(":not(.yes)").each(function() {
+			evidence_left.push($(this).attr("class"));
+			// alert($(this).attr("class"));
+		});
+	});
+	if (numChecked >= 1){
+		$('#checkboxes input[type="checkbox"]:not(:checked)').each(function() {
+			if (!evidence_left.includes($(this).attr("id"))) {
+				$(this).parent('li').addClass('disabled');
+				// $(this).siblings('label').removeClass('disabled');
+			} else {
+				$(this).parent('li').removeClass('disabled');
+				// $(this).siblings('label').addClass('disabled');
+			}
+		});
+	}
 });

@@ -131,6 +131,10 @@ h2 {
 	background: #f41f86;
 }
 
+#checkboxes li.disabled {
+	display: none;
+}
+
 #ghosts {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
