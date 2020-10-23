@@ -21,15 +21,19 @@ body {
 
 .warning {
 	padding: 5px 10px;
+	margin: 0 0 20px 0;
 	background-color: #2f2f2f;
 	font-weight: 700;
-	margin: 0 0 1em 0;
 	transition: background-color 0.5s ease;
 }
 
 .wrapper {
 	width: 90%;
 	padding: 20px;
+}
+
+#desc {
+	margin: 0 0 20px 0;
 }
 
 h1 {
@@ -39,31 +43,12 @@ h1 {
 
 h2 {
 	font-size: 22px;
-	margin: 0 0 15px 0;
+	margin: 0 0 10px 0;
 	font-weight: 400;
 }
 
 #ghost_info {
-	margin: 10px 0 20px 0;
-}
-
-#checkboxes {
 	margin: 0 0 20px 0;
-}
-
-#checkboxes ul {
-	display: inline-grid;
-	grid-template-columns: repeat(6, auto);
-	grid-gap: 10px;
-	margin: 0 0 20px 0;
-}
-
-#checkboxes li {
-	list-style: none;
-}
-
-#checkboxes ul li.disabled {
-	display: none;
 }
 
 #ghost_info ul {
@@ -76,8 +61,28 @@ h2 {
 #ghost_info li {
 	display: flex;
 	align-items: center;
-	margin: 0 1em 1em 0;
+	margin: 0 20px 0 0;
 }
+
+#checkboxes {
+	margin: 0 0 20px 0;
+}
+
+#checkboxes ul {
+	display: inline-grid;
+	grid-template-columns: repeat(6, auto);
+	grid-gap: 10px;
+}
+
+#checkboxes li {
+	list-style: none;
+}
+
+#checkboxes ul li.disabled {
+	display: none;
+}
+
+
 
 #ghost_name {
 	margin: 0 15px 0 0;

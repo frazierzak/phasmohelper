@@ -24,6 +24,7 @@ $("#reset").click(function() {
 	$(".evidence li").each(function() {
 		$(this).removeClass('yes');
 	});
+	$("#checkboxes li").removeClass("disabled");
 	$('form').trigger("reset");
 	warning("Please select up to 3 pieces of evidence to narrow down the spookster.", "#2f2f2f", "#fff");
 	return
