@@ -16,20 +16,24 @@ function fadein(div) {
 	div.addClass("fadein");
 }
 
-$('.ghost').each(function() {
-	$(this).removeClass('maybe disabled yes fadein fadeout');
+$("#toggle_instructions").click(function(){
+	$(".instructions").toggle();
 });
 
-$(".evidence li").each(function() {
-	$(this).removeClass('yes');
+$("#toggle_descriptions").click(function(){
+	$(".description").toggle();
 });
 
-$("#evidence li").removeClass("disabled");
+$("#toggle_minimal").click(function(){
+	$(".minimal").toggle();
+	$(".description").toggle();
+});
 
-$('input:checkbox').removeAttr('checked');
-
-$('form').trigger("reset");
-warning("Please select up to 3 pieces of evidence to narrow down the spookster.", "#2f2f2f", "#fff");
+$(".toggle_buttons a").each(function(){
+	$(this).click(function(){
+		$(this).toggleClass("active");
+	});
+});
 
 $("#reset").click(function() {
 	$('.ghost').each(function() {
