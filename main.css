@@ -20,7 +20,7 @@ body {
 
 .warning {
 	padding: 5px 10px;
-	margin: 0 0 20px 0;
+	margin: 0 0 15px 0;
 	background-color: #2f2f2f;
 	font-weight: 700;
 	transition: background-color 0.5s ease;
