@@ -53,8 +53,6 @@ $("#aggression_list input").change(function() {
 	const wasAnUncheck = !$(this).prop("checked");
 	const aggressionType = !wasAnUncheck ? $(this).prop("id") : null;
 
-	console.log(aggressionType)
-
 	/**
 	 * Loop through each option and add/remove the "disabled" class
 	 * depending on whether it's checked.
