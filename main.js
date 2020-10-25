@@ -1,141 +1,164 @@
-function warning(message, bgcolor, color) {
-	$(".warning").css(
-		"background-color", bgcolor
-		);
-	$(".warning_text").text(message);
-	$(".warning_text").css("color", color);
+function warning (message, bgcolor, color) {
+	document.querySelector('.warning').setAttribute('style', `background-color: ${bgcolor}`)
+	document.querySelector('.warning_text').textContent = message
+	document.querySelector('.warning_text').setAttribute('style', `color: ${color}`)
 }
 
-function fadeout(div) {
-	div.removeClass("fadein maybe yes");
-	div.addClass("fadeout disabled");
+function fadeout (div) {
+  console.log(div)
+	div.classList.remove('fadein', 'maybe', 'yes')
+	div.classList.add('fadeout', 'disabled')
 }
 
-function fadein(div) {
-	div.removeClass("fadeout disabled yes");
-	div.addClass("fadein");
+function fadein (div) {
+	div.classList.remove('fadeout', 'disabled', 'yes')
+	div.classList.add('fadein')
 }
 
-$("#toggle_instructions").click(function(){
-	$(".instructions").toggle();
-});
+function toggle (el, inverted = false) {
+  if (el.hasAttribute('style')) {
+    if (inverted) {
+      return el.setAttribute('style', 'display: none')
+    }
+    return el.setAttribute('style', 'display: block')
+  }
+  if (inverted) {
+    return el.setAttribute('style', 'display: block')
+  }
+  el.setAttribute('style', 'display: none')
+}
 
-$("#toggle_descriptions").click(function(){
-	$(".description").toggle();
-});
+function getSiblings(el) {
+  let siblings = [];
+  let me = el
+  el = el.parentNode.firstChild
+  do {
+    console.log(el.nodeType)
+    if (el.nodeType === 3 || el.nodeType === 8 || el === me) continue
+    siblings.push(el)
+  } while (el = el.nextSibling)
+  return siblings
+}
 
-$("#toggle_minimal").click(function(){
-	$(".minimal").toggle();
-	$(".description").toggle();
-});
+document.querySelector('#toggle_instructions').addEventListener('click', () => {
+  document.querySelectorAll('.instructions').forEach(instructions => toggle(instructions, true))
+})
 
-$(".toggle_buttons a").each(function(){
-	$(this).click(function(){
-		$(this).toggleClass("active");
-	});
-});
+document.querySelector('#toggle_descriptions').addEventListener('click', () => {
+  document.querySelectorAll('.description').forEach(description => toggle(description))
+})
 
-$("#reset").click(function() {
-	$('.ghost').each(function() {
-		$(this).removeClass('maybe disabled yes fadein fadeout');
-	});
-	$(".evidence li").each(function() {
-		$(this).removeClass('yes');
-	});
-	$("#evidence li").removeClass("disabled");
-	$('form').trigger("reset");
-	warning("Please select up to 3 pieces of evidence to narrow down the spookster.", "#2f2f2f", "#fff");
-	return
-});
+document.querySelector('#toggle_minimal').addEventListener('click', () => {
+  document.querySelectorAll('.minimal').forEach(minimal => toggle(minimal))
+  document.querySelectorAll('.description').forEach(description => toggle(description))
+})
 
-$("#evidence input").change(function() {
-	var numChecked = $('#evidence input[type="checkbox"]:checked').length;
-	var evidence = $("ul.evidence > li." + $(this).attr("class"));
+document.querySelectorAll('.toggle_buttons a').forEach(button => {
+	button.addEventListener('click', () => {
+		button.classList.toggle('active')
+	})
+})
 
-	if(numChecked > 3){
-		$(this).prop('checked', false);
-		warning("You've already selected 3 pieces of evidence!", "#c61c1ce0", "#fff");
-		return
-	}
+document.querySelector('#reset').addEventListener('click', () => {
+	document.querySelectorAll('.ghost').forEach(ghost => {
+		ghost.classList.remove('maybe', 'disabled', 'yes', 'fadein', 'fadeout')
+	})
+	document.querySelectorAll('.evidence li').forEach(evidence => {
+		evidence.classList.remove('yes')
+	})
+	document.querySelector('#evidence li').classList.remove('disabled')
+	document.querySelector('form').reset()
+	warning('Please select up to 3 pieces of evidence to narrow down the spookster.', '#2f2f2f', '#fff')
+})
+document.querySelector('form').reset()
 
-	if(this.checked){
-		evidence.each(function() {
-    		$(this).addClass("yes");
-    	});
-	} else {
-		evidence.each(function() {
-    		$(this).removeClass("yes");
-    	});
-	}
-	switch(numChecked) {
-		case 0:
-			$(".evidence").each(function() {
-				fadein($(this).parents(".ghost"));
-				$(this).parents(".ghost").removeClass('maybe');
-			});
-			warning("Please select up to 3 pieces of evidence to narrow down the spookster.", "#2f2f2f", "#fff");
-			break;
-		case 1:
-			$(".evidence").each(function() {
-				if($(this).children(".yes").length < 1){
-	        		fadeout($(this).parents(".ghost"));
-	        	} else {
-	        		fadein($(this).parents(".ghost"));
-        			$(this).parents(".ghost").addClass('maybe');
-	        	}
-	        });
-	        warning("Please select up to 2 more pieces of evidence to narrow down the spookster.", "#2f2f2f", "#fff");
-	        break;
+document.querySelectorAll('#evidence input').forEach(evidenceInput => {
+  evidenceInput.addEventListener('change', () => {
+    let numChecked = document.querySelectorAll('#evidence input[type="checkbox"]:checked').length
+    let evidence = document.querySelectorAll(`ul.evidence > li.${evidenceInput.getAttribute('class')}`)
+
+    if (numChecked > 3) {
+      evidenceInput.checked = false
+      warning('You\'ve already selected 3 pieces of evidence!', '#c61c1ce0', '#fff')
+      return
+    }
+
+    if (evidenceInput.checked) {
+      evidence.forEach(e => e.classList.add('yes'))
+    } else {
+      evidence.forEach(e => e.classList.remove('yes'))
+    }
+    
+    switch (numChecked) {
+      case 0:
+        document.querySelectorAll('.evidence').forEach(e => {
+          fadein(e.parentElement.parentElement)
+          e.parentElement.parentElement.classList.remove('maybe')
+        })
+        warning('Please select up to 3 pieces of evidence to narrow down the spookster.', '#2f2f2f', '#fff')
+        break
+      case 1:
+        document.querySelectorAll('.evidence').forEach(e => {
+          let childrenLen = e.querySelectorAll('.yes').length
+          if (childrenLen < 1) {
+              fadeout(e.parentElement.parentElement)
+            } else {
+              fadein(e.parentElement.parentElement)
+              e.parentElement.parentElement.classList.add('maybe')
+            }
+          })
+          warning('Please select up to 2 more pieces of evidence to narrow down the spookster.', '#2f2f2f', '#fff')
+          break
         case 2:
-        	$(".evidence").each(function() {
-        		if($(this).children('.yes').length < 2){
-        			fadeout($(this).parents(".ghost"));
-        		} else {
-        			fadein($(this).parents(".ghost"));
-        			$(this).parents(".ghost").addClass('maybe');
-        		}
-        	});
-        	if($(".maybe").length == 1){
-        		warning("Oh shit, a ghooost! Click the reset button above to start over.", "#55be61", "#000");
-        		$(".maybe").addClass('yes');
-        		$(".maybe").removeClass('maybe');
-        	} else {
-        		warning("Please select 1 more piece of evidence to identify the spookster.", "#2f2f2f", "#fff");
-        	}
-        	break;
-         case 3:
-         	$(".evidence").each(function() {
-         		if($(this).children(":not(.yes)").length == 0){
-         			fadein($(this).parents(".ghost"));
-         			$(this).parents(".ghost").addClass("yes");
-         			$(this).parents(".ghost").removeClass('maybe');
-         			fadeout($(this).parents(".ghost").siblings());
-         			warning("Oh shit, a ghooost! Click the reset button above to start over.", "#55be61", "#000");
-         		}
-         	});
-         	if($("#ghosts").children(".yes").length == 0){
-         		warning("No combination of evidence works!", "#c61c1ce0", "#fff");
-         		fadeout($(".ghost"));
-         	}
-         	break;
-	}
-	//Remove incompatible evidence
-	var evidence_left = [];
-	$(".maybe div .evidence").each(function() {
-		$(this).children(":not(.yes)").each(function() {
-			evidence_left.push($(this).attr("class"));
-			// alert($(this).attr("class"));
-		});
-	});
-	if (numChecked >= 1){
-		$('#evidence input[type="checkbox"]:not(:checked)').each(function() {
-			if (!evidence_left.includes($(this).attr("id"))) {
-				$(this).parents('li').addClass('disabled');
-				// $(this).siblings('label').removeClass('disabled');
-			} else {
-				$(this).parents('li').removeClass('disabled');
-				// $(this).siblings('label').addClass('disabled');
-			}
-		});
-	}
-});
+          document.querySelectorAll('.evidence').forEach(e => {
+            let childrenLen = e.querySelectorAll('.yes').length
+            if (childrenLen < 2) {
+              fadeout(e.parentElement.parentElement)
+            } else {
+              fadein(e.parentElement.parentElement)
+              e.parentElement.parentElement.classList.add('maybe')
+            }
+          })
+          let maybe = document.querySelectorAll('.maybe')
+          if (maybe.length === 1) {
+            warning('Oh shit, a ghooost! Click the reset button above to start over.', '#55be61', '#000')
+            maybe[0].classList.add('yes')
+            maybe[0].classList.remove('maybe')
+          } else {
+            warning('Please select 1 more piece of evidence to identify the spookster.', '#2f2f2f', '#fff')
+          }
+          break
+        case 3:
+          document.querySelectorAll('.evidence').forEach(e => {
+            if (e.querySelectorAll(':not(.yes)').length == 0) {
+              fadein(e.parentElement.parentElement)
+              e.parentElement.parentElement.classList.add('yes')
+              e.parentElement.parentElement.classList.remove('maybe')
+              getSiblings(e.parentElement.parentElement).forEach(sibling => fadeout(sibling))
+              warning('Oh shit, a ghooost! Click the reset button above to start over.', '#55be61', '#000')
+            }
+          })
+          if (document.querySelectorAll('#ghosts .yes').length == 0) {
+            warning('No combination of evidence works!', '#c61c1ce0', '#fff')
+            document.querySelectorAll('.ghost').forEach(ghost => fadeout(ghost))
+          }
+          break
+    }
+    //Remove incompatible evidence
+    let evidence_left = []
+    document.querySelectorAll('.maybe div .evidence').forEach(evidence => {
+      evidence.querySelectorAll(':not(.yes)').forEach(no => {
+        evidence_left.push(no.getAttribute('class'))
+      })
+    })
+    if (numChecked >= 1){
+      document.querySelectorAll('#evidence input[type="checkbox"]:not(:checked)').forEach(notChecked => {
+        if (!evidence_left.includes(notChecked.getAttribute('id'))) {
+          notChecked.parentElement.parentElement.classList.add('disabled')
+        } else {
+          notChecked.parentElement.parentElement.classList.remove('disabled')
+        }
+      })
+    }
+  })
+})
