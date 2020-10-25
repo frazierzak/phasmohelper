@@ -31,6 +31,10 @@ body {
 	padding: 20px;
 }
 
+.row {
+	display: flex;
+}
+
 #desc {
 	margin: 0 0 15px 0;
 }
@@ -191,6 +195,49 @@ input[type=reset]:hover {
 	margin: 0 10px 0 0;
 }
 
+#ghost_aggression {
+	display: flex;
+	flex-direction: column;
+	margin: 0 0 25px 0;
+}
+
+#ghost_aggression h2 {
+	margin: 0 0 5px 0;
+}
+
+#ghost_aggression p {
+	margin: 0 0 15px 0;
+}
+
+#aggression_list {
+	display: flex;
+}
+
+#aggression_list div {
+	margin: 0 10px 0 0;
+}
+
+#aggression_hints {
+	width: 50%;
+}
+
+#aggression_hints.hidden {
+	width: 0;
+}
+
+#aggression_list div.disabled, #aggression_hints div.hidden {
+	display: none;
+}
+
+@media screen and (max-width: 1540px) {
+	#aggression_list {
+		flex-direction: column;
+	}
+	#aggression_list div {
+		margin: 0 10px 20px 0;
+	}
+}
+
 input[type="checkbox"] {
 	position:absolute;
 	visibility:hidden;
@@ -332,6 +379,12 @@ a:hover {
 }
 
 @media screen and (max-width: 1000px) {
+	#ghost_aggression .row {
+		flex-direction: column;
+	}
+	#aggression_hints {
+		width: 100%;
+	}
 	#objectives {
 		margin: 0 0 5px 0;
 	}

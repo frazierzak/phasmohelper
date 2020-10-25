@@ -48,6 +48,51 @@ $("#reset").click(function() {
 	return
 });
 
+$("#aggression_list input").change(function() {
+	const aggressionOptions = $("#aggression_list input");
+	const wasAnUncheck = !$(this).prop("checked");
+	const aggressionType = !wasAnUncheck ? $(this).prop("id") : null;
+
+	console.log(aggressionType)
+
+	/**
+	 * Loop through each option and add/remove the "disabled" class
+	 * depending on whether it's checked.
+	 **/
+	aggressionOptions.each(async function (i, item) {
+		const curOption = $(item);
+		if (!curOption.prop("checked") && !wasAnUncheck) {
+			curOption.parent().addClass("disabled").removeClass("active");
+		}
+		else {
+			curOption.parent().removeClass("disabled").addClass("active");
+		}
+	});
+
+	// Reveal the appropiate companion text for aggression meaning.
+	var textToRevealID = null
+
+	if (wasAnUncheck) {
+		$("#aggression_hints").addClass("hidden");
+	} else {
+		$("#aggression_hints").removeClass("hidden");
+	}
+
+	switch (aggressionType) {
+		case 'aggressive': textToRevealID = "violent";
+			break;
+		case 'friendly1':
+		case 'friendly2': textToRevealID = "placid";
+			break;
+		case 'nonefriendly1':
+		case 'nonefriendly2': textToRevealID = "unfriendly";
+			break;
+	}
+
+	$("#aggression_hints").children().addClass("hidden");
+	$("#aggression_hints").children(`#${textToRevealID}`).removeClass("hidden");
+});
+
 $("#evidence input").change(function() {
 	var numChecked = $('#evidence input[type="checkbox"]:checked').length;
 	var evidence = $("ul.evidence > li." + $(this).attr("class"));
