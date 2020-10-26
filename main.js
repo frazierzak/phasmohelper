@@ -44,6 +44,7 @@ $("#reset").click(function() {
 	});
 	$("#evidence li").removeClass("disabled");
 	$('form').trigger("reset");
+	$("#aggression_list input").prop("checked", false).trigger("change");
 	warning("Please select up to 3 pieces of evidence to narrow down the spookster.", "#2f2f2f", "#fff");
 	return
 });
