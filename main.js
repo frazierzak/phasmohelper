@@ -5,7 +5,6 @@ function warning (message, bgcolor, color) {
 }
 
 function fadeout (div) {
-  console.log(div)
 	div.classList.remove('fadein', 'maybe', 'yes')
 	div.classList.add('fadeout', 'disabled')
 }
@@ -33,7 +32,6 @@ function getSiblings(el) {
   let me = el
   el = el.parentNode.firstChild
   do {
-    console.log(el.nodeType)
     if (el.nodeType === 3 || el.nodeType === 8 || el === me) continue
     siblings.push(el)
   } while (el = el.nextSibling)
