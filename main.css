@@ -5,8 +5,8 @@
 }
 
 body {
-	display: flex;
-	flex-direction: column;
+	/*display: flex;*/
+	/*flex-direction: column;*/
 	height: 100vh;
 	width: 100%;
 	background-color: #000;
@@ -20,14 +20,13 @@ body {
 
 .warning {
 	padding: 5px 10px;
-	margin: 0 0 15px 0;
+	margin: 0 0 35px 0;
 	background-color: #2f2f2f;
 	font-weight: 700;
 	transition: background-color 0.5s ease;
 }
 
 .wrapper {
-	/*width: 100%;*/
 	padding: 20px;
 }
 
@@ -42,10 +41,13 @@ body {
 
 .toggle_buttons {
 	display: flex;
-	margin: 0 0 20px 0;
+	margin: 0 0 35px 0;
 }
 
 .toggle_buttons a {
+	display: flex;
+	align-items: center;
+	text-align: center;
 	outline: none;
 	border: none;
 	margin-right: 15px;
@@ -56,7 +58,6 @@ body {
 	background: #fff;
 	margin: 0 10px 0 0;
 	font-size: 18px;
-	display: inline-block;
 	transition: all .125s ease;
 }
 
@@ -71,7 +72,7 @@ body {
 }
 
 .instructions {
-	margin: 0 0 15px 0;
+	margin: 0 0 35px 0;
 	display: none;
 }
 
@@ -103,17 +104,17 @@ span.minimal {
 }
 
 #ghost_info {
-	margin: 0 0 20px 0;
+	margin: 0 0 35px 0;
 	display: flex;
 	flex-direction: column;
 }
 
 #ghost_info h2 {
-	margin: 0 0 5px 0;
+	margin: 0 0 10px 0;
 }
 
 #ghost_info p {
-	margin: 0 0 10px 0;
+	margin: 0 0 15px 0;
 }
 
 #ghost_info div {
@@ -177,11 +178,11 @@ input[type=reset]:hover {
 #objectives {
 	display: flex;
 	flex-direction: column;
-	margin: 0 0 20px 0;
+	margin: 0 0 35px 0;
 }
 
 #objectives h2 {
-	margin: 0 0 5px 0;
+	margin: 0 0 10px 0;
 }
 
 #objectives p {
@@ -199,7 +200,7 @@ input[type=reset]:hover {
 #ghost_aggression {
 	display: flex;
 	flex-direction: column;
-	margin: 0 0 20px 0;
+	margin: 0 0 35px 0;
 }
 
 #ghost_aggression h2 {
@@ -438,5 +439,7 @@ a:hover {
 	}
 	.ghost {
 		width: 100%;
+		border-bottom: 4px solid #f41f86;
+		padding: 0 0 20px 0;
 	}
 }
