@@ -33,6 +33,7 @@ body {
 
 .row {
 	display: flex;
+	align-items: center;
 }
 
 #desc {
@@ -198,7 +199,7 @@ input[type=reset]:hover {
 #ghost_aggression {
 	display: flex;
 	flex-direction: column;
-	margin: 0 0 25px 0;
+	margin: 0 0 20px 0;
 }
 
 #ghost_aggression h2 {
@@ -207,6 +208,10 @@ input[type=reset]:hover {
 
 #ghost_aggression p {
 	margin: 0 0 15px 0;
+}
+
+#ghost_aggression p:last-of-type {
+	margin: 0;
 }
 
 #aggression_list {
@@ -218,7 +223,7 @@ input[type=reset]:hover {
 }
 
 #aggression_hints {
-	width: 50%;
+	margin: 0 0 0 15px;
 }
 
 #aggression_hints.hidden {
