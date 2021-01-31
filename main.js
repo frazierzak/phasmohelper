@@ -18,7 +18,7 @@ function fadein(div) {
 
 function reset() {
 	$('.ghost').each(function() {
-		$(this).removeClass('maybe disabled yes fadein fadeout');
+		$(this).removeClass('maybe disabled yes excluded fadein fadeout');
 	});
 	$(".evidence li").each(function() {
 		$(this).removeClass('yes no');
