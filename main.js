@@ -21,7 +21,7 @@ function reset() {
 		$(this).removeClass('maybe disabled yes fadein fadeout');
 	});
 	$(".evidence li").each(function() {
-		$(this).removeClass('yes');
+		$(this).removeClass('yes no');
 	});
 	$("#evidence li").removeClass("disabled");
 	$('form').trigger("reset");
