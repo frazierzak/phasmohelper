@@ -260,6 +260,13 @@ input[type="checkbox"] + label {
 	font-size: 22px;
 }
 
+input[type="checkbox"].indeterminate + label {
+	background: #1a1a1a;
+}
+input[type="checkbox"].indeterminate:indeterminate + label {
+	background: #484848;
+}
+
 input[type="checkbox"]:checked + label {
 	background: #f41f86;
 }
@@ -309,6 +316,7 @@ input[type="checkbox"]:checked + label {
 .ghost {
     transition: opacity 1s ease;
     background: #000;
+	position: relative;
 }
 
 .fadeout {
@@ -317,10 +325,6 @@ input[type="checkbox"]:checked + label {
 
 .fadein {
 	display: block;
-}
-
-.ghost.disabled h3 {
-	color: #ff5656;
 }
 
 .ghost h3 {
@@ -337,7 +341,7 @@ input[type="checkbox"]:checked + label {
 }
 
 .ghost.maybe h3 {
-	color: #f41f86;
+	color: #1faef4;
 }
 
 .ghost p {
@@ -359,14 +363,8 @@ input[type="checkbox"]:checked + label {
 	background-color: #f41f86;
 }
 
-
-.ghost.yes .evidence li.yes {
-	color: #000;
-	background-color: #55be61;
-}
-
-.ghost.disabled .evidence li.yes {
-	background-color: #ff5656;	
+.ghost .evidence li.no {
+	background-color: #50092b;
 }
 
 footer {
@@ -442,4 +440,15 @@ a:hover {
 		border-bottom: 4px solid #f41f86;
 		padding: 0 0 20px 0;
 	}
+}
+
+.excluded ::before {
+    display: block;
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.1);
 }
