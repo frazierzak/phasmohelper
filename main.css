@@ -258,21 +258,26 @@ input[type="checkbox"] + label {
 	border-radius: 2px;
 	cursor: pointer;
 	font-size: 22px;
+	text-decoration: none;
 }
 
 input[type="checkbox"].indeterminate + label {
 	background: #1a1a1a;
+	text-decoration: line-through;
 }
 input[type="checkbox"].indeterminate:indeterminate + label {
 	background: #484848;
+	text-decoration: none;
 }
 
 input[type="checkbox"]:checked + label {
 	background: #f41f86;
+	text-decoration: none;
 }
 
 #objectives input[type="checkbox"]:checked + label {
 	background: #1faef4;
+	text-decoration: none;
 }
 
 #evidence {
