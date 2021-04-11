@@ -12,8 +12,22 @@ function fadeout(div) {
 }
 
 function fadein(div) {
-	div.removeClass("fadeout disabled yes");
+	div.removeClass("fadeout disabled maybe yes");
 	div.addClass("fadein");
+}
+
+function reset() {
+	$('.ghost').each(function() {
+		$(this).removeClass('maybe disabled yes excluded fadein fadeout');
+	});
+	$(".evidence li").each(function() {
+		$(this).removeClass('yes no');
+	});
+	$("#evidence li").removeClass("disabled");
+	$('form').trigger("reset");
+	$("#aggression_list input").prop("checked", false).trigger("change");
+	$(".indeterminate").prop("checked", true).prop("indeterminate", true).prop("readonly", true);
+	warning("Please select up to 3 pieces of evidence to narrow down the spookster.", "#2f2f2f", "#fff");
 }
 
 $("#toggle_instructions").click(function(){
@@ -35,19 +49,7 @@ $(".toggle_buttons a").each(function(){
 	});
 });
 
-$("#reset").click(function() {
-	$('.ghost').each(function() {
-		$(this).removeClass('maybe disabled yes fadein fadeout');
-	});
-	$(".evidence li").each(function() {
-		$(this).removeClass('yes');
-	});
-	$("#evidence li").removeClass("disabled");
-	$('form').trigger("reset");
-	$("#aggression_list input").prop("checked", false).trigger("change");
-	warning("Please select up to 3 pieces of evidence to narrow down the spookster.", "#2f2f2f", "#fff");
-	return
-});
+$("#reset").click(reset);
 
 $("#aggression_list input").change(function() {
 	const aggressionOptions = $("#aggression_list input");
@@ -93,93 +95,114 @@ $("#aggression_list input").change(function() {
 });
 
 $("#evidence input").change(function() {
-	var numChecked = $('#evidence input[type="checkbox"]:checked').length;
-	var evidence = $("ul.evidence > li." + $(this).attr("class"));
-
-	if(numChecked > 3){
-		$(this).prop('checked', false);
-		warning("You've already selected 3 pieces of evidence!", "#c61c1ce0", "#fff");
-		return
+	if(this.readOnly) {
+		this.readOnly = false;
+		this.checked = true;
+		this.indeterminate = false;
 	}
-
-	if(this.checked){
-		evidence.each(function() {
-    		$(this).addClass("yes");
-    	});
-	} else {
-		evidence.each(function() {
-    		$(this).removeClass("yes");
-    	});
+	else if(this.checked) {
+		this.readOnly = true;
+		this.indeterminate = true;
 	}
-	switch(numChecked) {
-		case 0:
-			$(".evidence").each(function() {
-				fadein($(this).parents(".ghost"));
-				$(this).parents(".ghost").removeClass('maybe');
+	
+	var foundEvidence = $('#evidence input[type="checkbox"]:not(:indeterminate):checked').map(function(){return this.id;}).get();
+
+	{
+		var changedEvidence = $(this).attr("id");
+		var changedGhosts = $("ul.evidence > li").filter(function(){
+			return $(this).data("evidence") === changedEvidence;
+		});
+		if(this.indeterminate) {
+			changedGhosts.each(function() {
+				$(this).removeClass("yes no");
 			});
-			warning("Please select up to 3 pieces of evidence to narrow down the spookster.", "#2f2f2f", "#fff");
-			break;
-		case 1:
-			$(".evidence").each(function() {
-				if($(this).children(".yes").length < 1){
-	        		fadeout($(this).parents(".ghost"));
-	        	} else {
-	        		fadein($(this).parents(".ghost"));
-        			$(this).parents(".ghost").addClass('maybe');
-	        	}
-	        });
-	        warning("Please select up to 2 more pieces of evidence to narrow down the spookster.", "#2f2f2f", "#fff");
-	        break;
-        case 2:
-        	$(".evidence").each(function() {
-        		if($(this).children('.yes').length < 2){
-        			fadeout($(this).parents(".ghost"));
-        		} else {
-        			fadein($(this).parents(".ghost"));
-        			$(this).parents(".ghost").addClass('maybe');
-        		}
-        	});
-        	if($(".maybe").length == 1){
-        		warning("Oh shit, a ghooost! Click the reset button above to start over.", "#55be61", "#000");
-        		$(".maybe").addClass('yes');
-        		$(".maybe").removeClass('maybe');
-        	} else {
-        		warning("Please select 1 more piece of evidence to identify the spookster.", "#2f2f2f", "#fff");
-        	}
-        	break;
-         case 3:
-         	$(".evidence").each(function() {
-         		if($(this).children(":not(.yes)").length == 0){
-         			fadein($(this).parents(".ghost"));
-         			$(this).parents(".ghost").addClass("yes");
-         			$(this).parents(".ghost").removeClass('maybe');
-         			fadeout($(this).parents(".ghost").siblings());
-         			warning("Oh shit, a ghooost! Click the reset button above to start over.", "#55be61", "#000");
-         		}
-         	});
-         	if($("#ghosts").children(".yes").length == 0){
-         		warning("No combination of evidence works!", "#c61c1ce0", "#fff");
-         		fadeout($(".ghost"));
-         	}
-         	break;
+		} else if(this.checked) {
+			changedGhosts.each(function() {
+				$(this).removeClass("no");
+				$(this).addClass("yes");
+			})
+		} else {
+			changedGhosts.each(function() {
+				$(this).removeClass("yes");
+				$(this).addClass("no");
+			})
+		}
 	}
-	//Remove incompatible evidence
-	var evidence_left = [];
-	$(".maybe div .evidence").each(function() {
-		$(this).children(":not(.yes)").each(function() {
-			evidence_left.push($(this).attr("class"));
-			// alert($(this).attr("class"));
-		});
+
+	var minEvidenceLeft = Number.MAX_SAFE_INTEGER;
+	var maxEvidenceLeft = 0;
+
+	$(".evidence").each(function() {
+		$(this).parents(".ghost").removeClass("excluded");
+		if($(this).children(".yes").length !== foundEvidence.length)
+			fadeout($(this).parents(".ghost"));
+		else if($(this).children(".no").length > 0) {
+			$(this).parents(".ghost").addClass("excluded");
+			fadein($(this).parents(".ghost"));
+		}
+		else {
+			var thisEvidenceLeft = $(this).children("li:not(.yes)");
+			if(thisEvidenceLeft.length < minEvidenceLeft)
+				minEvidenceLeft = thisEvidenceLeft.length;
+			else if(thisEvidenceLeft.length > maxEvidenceLeft)
+				maxEvidenceLeft = thisEvidenceLeft.length;
+			fadein($(this).parents(".ghost"));
+		}
 	});
-	if (numChecked >= 1){
-		$('#evidence input[type="checkbox"]:not(:checked)').each(function() {
-			if (!evidence_left.includes($(this).attr("id"))) {
-				$(this).parents('li').addClass('disabled');
-				// $(this).siblings('label').removeClass('disabled');
-			} else {
-				$(this).parents('li').removeClass('disabled');
-				// $(this).siblings('label').addClass('disabled');
-			}
-		});
+
+
+	var validEvidence = $(".ghost:not(.disabled):not(.excluded) .evidence li:not(.yes)").map(function(){return $(this).data("evidence");}).get()
+		.filter(function(value, index, self) {
+		return self.indexOf(value) === index;
+	});
+
+	var validableEvidence = $(".ghost:not(.disabled).excluded .evidence li.no").map(function(){return $(this).data("evidence");}).get()
+		.filter(function(value, index, self) {
+		return self.indexOf(value) === index && validEvidence.indexOf(value) === -1;
+	});
+
+	$('#evidence input[type="checkbox"]:indeterminate, #evidence input[type="checkbox"]:not(:checked)').each(function() {
+		if(validEvidence.includes($(this).attr("id")))
+			$(this).parents('li').removeClass('disabled');
+		else if(validableEvidence.includes($(this).attr("id")))
+			$(this).parents('li').removeClass('disabled');
+		else
+			$(this).parents('li').addClass('disabled');
+	});
+
+	if(maxEvidenceLeft >= 1)
+	{
+		if(minEvidenceLeft === maxEvidenceLeft)
+		{
+			if(maxEvidenceLeft === 1)
+				warning("Please select another evidence to identify the spookster.", "#2f2f2f", "#fff");
+			else
+				warning("Please select up to " + maxEvidenceLeft + " pieces of evidence to narrow down the spookster.", "#2f2f2f", "#fff");
+		}
+		else
+		{
+			// Technically the if/else statements don't need to be as complex...
+			warning("Please select up to " + maxEvidenceLeft + " pieces of evidence to narrow down the spookster.", "#2f2f2f", "#fff");
+		}
 	}
+	else if($(".ghost:not(.excluded):not(.disabled)").length === 1)
+	{
+		var Ghost = $(".ghost:not(.excluded):not(.disabled)");
+		if($(".ghost.excluded").length > 0)
+		{
+			Ghost.addClass("maybe");
+			warning("A ghost! But how can you be so sure?", "#1faef4", "#000");
+		}
+		else
+		{
+			Ghost.addClass("yes");
+			warning("Oh shit, a ghooost! Click the reset button above to start over.", "#55be61", "#000");
+		}
+	}
+	else if($(".ghost.excluded").length > 0)
+		warning("You excluded a vital piece of evidence!", "#c61c1ce0", "#fff");
+	else
+		warning("No combination of evidence works!", "#c61c1ce0", "#fff");
 });
+
+$(document).ready(reset);
