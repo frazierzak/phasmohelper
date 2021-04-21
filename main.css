@@ -191,10 +191,11 @@ input[type=reset]:hover {
 
 #objective_list {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 #objective_list div {
-	margin: 0 10px 0 0;
+	margin: 0 10px 10px 0;
 }
 
 #ghost_aggression {
