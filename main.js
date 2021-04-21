@@ -177,12 +177,12 @@ $("#evidence input").change(function() {
 			if(maxEvidenceLeft === 1)
 				warning("Please select another evidence to identify the spookster.", "#2f2f2f", "#fff");
 			else
-				warning("Please select up to " + maxEvidenceLeft + " pieces of evidence to narrow down the spookster.", "#2f2f2f", "#fff");
+				warning("Please select up to " + maxEvidenceLeft + " pieces of evidence to narrow down the spookster. Click it again to eliminate it as a possibility.", "#2f2f2f", "#fff");
 		}
 		else
 		{
 			// Technically the if/else statements don't need to be as complex...
-			warning("Please select up to " + maxEvidenceLeft + " pieces of evidence to narrow down the spookster.", "#2f2f2f", "#fff");
+			warning("Please select up to " + maxEvidenceLeft + " pieces of evidence to narrow down the spookster. Click it again to eliminate it as a possibility.", "#2f2f2f", "#fff");
 		}
 	}
 	else if($(".ghost:not(.excluded):not(.disabled)").length === 1)
