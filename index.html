@@ -14,7 +14,7 @@
 
 <body>
 	<div class="wrapper">
-		<div id="desc" class="minimal">
+		<div id="desc" class="minimal no-print">
 			<h1>Phasmo.site</h1>
 			<p>A web app for tracking evidence during contracts in the game Phasmophobia. This is a supplemental tool
 				for the journal on hunts. <a href="https://github.com/rudi9719/phasmohelper">View the source on
@@ -22,14 +22,14 @@
 					href="https://github.com/rudi9719/phasmohelper/issues">here</a>.</p>
 		</div>
 
-		<div class="toggle_buttons">
+		<div class="toggle_buttons no-print">
 			<a href="javascript:void(0);" id="toggle_minimal">Min. Mode</a>
 			<a href="javascript:void(0);" id="toggle_instructions">Toggle Instructions</a>
 			<a href="javascript:void(0);" id="toggle_descriptions">Toggle Ghost Info</a>
 			<a href="javascript:void(0);" id="reset">Reset</a>
 		</div><!-- toggle_buttons -->
 
-		<div class="instructions">
+		<div class="instructions no-print">
 			<h2>Instructions:</h2>
 			<ol>
 				<li>Type in the name of your ghost in the Ghost Name text box.</li>
@@ -43,19 +43,16 @@
 		<form>
 			<div id="ghost_info">
 				<h2 class="minimal">Ghost Information:</h2>
-				<p class="instructions">Type in your ghost name and select Shy Ghost if the ghost prefers speaking to
+				<p class="instructions no-print">Type in your ghost name and select Shy Ghost if the ghost prefers speaking to
 					people alone.</p>
 				<div>
 					<div id="ghost_name_holder">
 						<input type="text" class="ghost_name" placeholder="Ghost Name" />
 					</div>
 					<div>
-						<input type="checkbox" id="shy" />
+						<input class="shy-hide" type="checkbox" id="shy" />
 						<label for="shy">Shy Ghost</label>
 					</div>
-					<!-- <div>
-						<input id="reset" type="reset" value="Reset">
-					</div> -->
 				</div>
 
 			</div><!-- ghost_info -->
@@ -267,7 +264,7 @@
 			</div><!-- checkboxes -->
 		</form>
 		<div class="warning">
-			<div class="warning_text">Please select up to 3 pieces of evidence to narrow down the spookster. Click it
+			<div class="warning_text  no-print">Please select up to 3 pieces of evidence to narrow down the spookster. Click it
 				again to eliminate it as a possibility.</div>
 		</div>
 		<h2 class="minimal">Possible Ghosts:</h2>
@@ -284,7 +281,7 @@
 						<p>Banshees fear the Crucifix Cross and will be less aggressive when near one.</p>
 						<h4>Evidence</h4>
 					</div>
-					<ul class="evidence">
+					<ul class="evidence no-print">
 						<li data-evidence="emf">EMF Level 5</li>
 						<li data-evidence="fingerprints">Fingerprints</li>
 						<li data-evidence="freezing">Freezing Temperatures</li>
@@ -303,7 +300,7 @@
 						<p>Asking a Demon successful questions on the Ouija Board won’t lower the users sanity.</p>
 						<h4>Evidence</h4>
 					</div>
-					<ul class="evidence">
+					<ul class="evidence no-print">
 						<li data-evidence="writing">Ghost Writing</li>
 						<li data-evidence="box">Spirit Box</li>
 						<li data-evidence="freezing">Freezing Temperatures</li>
@@ -322,7 +319,7 @@
 						<p>Turning off the locations power source will prevent the Jinn from using it’s ability.</p>
 						<h4>Evidence</h4>
 					</div>
-					<ul class="evidence">
+					<ul class="evidence no-print">
 						<li data-evidence="emf">EMF Level 5</li>
 						<li data-evidence="box">Spirit Box</li>
 						<li data-evidence="orb">Ghost Orb</li>
@@ -340,7 +337,7 @@
 						<p>Turning the lights ON around the Mare will lower it’s chance to attack.</p>
 						<h4>Evidence</h4>
 					</div>
-					<ul class="evidence">
+					<ul class="evidence no-print">
 						<li data-evidence="box">Spirit Box</li>
 						<li data-evidence="orb">Ghost Orb</li>
 						<li data-evidence="freezing">Freezing Temperatures</li>
@@ -360,7 +357,7 @@
 						<p>Being more active will make the Oni easier to find and identify.</p>
 						<h4>Evidence</h4>
 					</div>
-					<ul class="evidence">
+					<ul class="evidence no-print">
 						<li data-evidence="emf">EMF Level 5</li>
 						<li data-evidence="writing">Ghost Writing</li>
 						<li data-evidence="box">Spirit Box</li>
@@ -379,7 +376,7 @@
 						<p>Taking a photo of the Phantom will make it temporarily disappear.</p>
 						<h4>Evidence</h4>
 					</div>
-					<ul class="evidence">
+					<ul class="evidence no-print">
 						<li data-evidence="emf">EMF Level 5</li>
 						<li data-evidence="orb">Ghost Orb</li>
 						<li data-evidence="freezing">Freezing Temperatures</li>
@@ -398,7 +395,7 @@
 						<p>A Poltergeist is almost ineffective in an empty room.</p>
 						<h4>Evidence</h4>
 					</div>
-					<ul class="evidence">
+					<ul class="evidence no-print">
 						<li data-evidence="box">Spirit Box</li>
 						<li data-evidence="fingerprints">Fingerprints</li>
 						<li data-evidence="orb">Ghost Orb</li>
@@ -417,7 +414,7 @@
 						<p>If you are hidden from the Revenant, their speed drops, and they travel slowly.</p>
 						<h4>Evidence</h4>
 					</div>
-					<ul class="evidence">
+					<ul class="evidence no-print">
 						<li data-evidence="emf">EMF Level 5</li>
 						<li data-evidence="writing">Ghost Writing</li>
 						<li data-evidence="fingerprints">Fingerprints</li>
@@ -436,7 +433,7 @@
 						<p>The Ghost will not enter hunting mode if there is multiple people nearby.</p>
 						<h4>Evidence</h4>
 					</div>
-					<ul class="evidence">
+					<ul class="evidence no-print">
 						<li data-evidence="emf">EMF Level 5</li>
 						<li data-evidence="writing">Ghost Writing</li>
 						<li data-evidence="orb">Ghost Orb</li>
@@ -456,7 +453,7 @@
 						<p>Using Smudge Sticks on a Spirit will stop it attacking for a long period of time.</p>
 						<h4>Evidence</h4>
 					</div>
-					<ul class="evidence">
+					<ul class="evidence no-print">
 						<li data-evidence="writing">Ghost Writing</li>
 						<li data-evidence="box">Spirit Box</li>
 						<li data-evidence="fingerprints">Fingerprints</li>
@@ -476,7 +473,7 @@
 						<p>Wraiths have a toxic reaction to Salt.</p>
 						<h4>Evidence</h4>
 					</div>
-					<ul class="evidence">
+					<ul class="evidence no-print">
 						<li data-evidence="fingerprints">Fingerprints</li>
 						<li data-evidence="freezing">Freezing Temperatures</li>
 						<li data-evidence="box">Spirit Box</li>
@@ -496,7 +493,7 @@
 						</p>
 						<h4>Evidence</h4>
 					</div>
-					<ul class="evidence">
+					<ul class="evidence no-print">
 						<li data-evidence="orb">Ghost Orb</li>
 						<li data-evidence="writing">Ghost Writing</li>
 						<li data-evidence="freezing">Freezing Temperatures</li>

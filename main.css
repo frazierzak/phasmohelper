@@ -487,3 +487,18 @@ a:hover {
     bottom: 0;
     background-color: rgba(0,0,0,0.1);
 }
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+	#shy:checked+ label{
+        display: inline-block;
+    }
+	#shy:not(:checked) + label{
+        display: none !important;
+    }
+
+}
