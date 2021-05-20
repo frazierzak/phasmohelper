@@ -262,7 +262,7 @@ input[type="checkbox"] + label {
 }
 
 input[type="checkbox"].indeterminate + label {
-	background: #1a1a1a;
+	background: #1faef4;
 	text-decoration: line-through;
 }
 input[type="checkbox"].indeterminate:indeterminate + label {
@@ -277,8 +277,10 @@ input[type="checkbox"]:checked + label {
 
 #objectives input[type="checkbox"]:checked + label {
 	background: #1faef4;
-	text-decoration: none;
+	
 }
+
+
 
 #evidence {
 	margin: 0 0 20px 0;

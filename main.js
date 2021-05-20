@@ -98,6 +98,7 @@ $("#aggression_list input").change(function() {
 });
 
 $("#objective_list input").change(function() {
+	console.log("Starting with readOnly: " + this.readOnly + " checked: " + this.checked + " indeterminate: " + this.indeterminate);
 	if(this.readOnly) {
 		this.readOnly = false;
 		this.checked = true;
@@ -107,15 +108,8 @@ $("#objective_list input").change(function() {
 		this.readOnly = true;
 		this.indeterminate = true;
 	}
+	console.log("Ending with readOnly: " + this.readOnly + " checked: " + this.checked + " indeterminate: " + this.indeterminate);
 
-	$('#objective_list input[type="checkbox"]:indeterminate, #evidence input[type="checkbox"]:not(:checked)').each(function() {
-		if(validEvidence.includes($(this).attr("id")))
-			$(this).parents('li').removeClass('disabled');
-		else if(validableEvidence.includes($(this).attr("id")))
-			$(this).parents('li').removeClass('disabled');
-		else
-			$(this).parents('li').addClass('disabled');
-	});
 });
 
 $("#evidence input").change(function() {
