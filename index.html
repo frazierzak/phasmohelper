@@ -43,7 +43,8 @@
 		<form>
 			<div id="ghost_info">
 				<h2 class="minimal">Ghost Information:</h2>
-				<p class="instructions no-print">Type in your ghost name and select Shy Ghost if the ghost prefers speaking to
+				<p class="instructions no-print">Type in your ghost name and select Shy Ghost if the ghost prefers
+					speaking to
 					people alone.</p>
 				<div>
 					<div id="ghost_name_holder">
@@ -264,7 +265,8 @@
 			</div><!-- checkboxes -->
 		</form>
 		<div class="warning">
-			<div class="warning_text  no-print">Please select up to 3 pieces of evidence to narrow down the spookster. Click it
+			<div class="warning_text  no-print">Please select up to 3 pieces of evidence to narrow down the spookster.
+				Click it
 				again to eliminate it as a possibility.</div>
 		</div>
 		<h2 class="minimal">Possible Ghosts:</h2>
@@ -499,11 +501,20 @@
 						<li data-evidence="freezing">Freezing Temperatures</li>
 					</ul>
 				</div>
+
+			</div><!-- ghost -->
+			<div class="only-print">
+				<img src="http://clipart-library.com/new_gallery/563120_certificate-seal-png.jpg" width="200"
+					height="200" />
+				<p>Investigation Concluded: <span id="datetime"></span></p>
+
+
+
 			</div><!-- ghost -->
 		</div><!-- ghosts -->
 		<footer>
-			<p>web app made by <a href="https://reddit.com/u/zuffdaddy">zuffdaddy</a>. submit bugs and suggestions to original app<a
-					href="https://github.com/zuffdaddy/phasmohelper/issues">here</a>.</p>
+			<p>web app made by <a href="https://reddit.com/u/zuffdaddy">zuffdaddy</a>. submit bugs and suggestions to
+				original app<a href="https://github.com/zuffdaddy/phasmohelper/issues">here</a>.</p>
 		</footer>
 	</div><!-- wrapper -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -516,6 +527,10 @@
 		const checkbox = document.querySelector("#evidence ul");
 		animateCSSGrid.wrapGrid(checkbox, { duration: 600 });
 	</script>
+					<script>
+						var dt = new Date();
+						document.getElementById("datetime").innerHTML = dt.toLocaleString();
+					</script>
 </body>
 
 </html>
