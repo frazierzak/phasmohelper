@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Phasmo.site - A Phasmophobia Companion Web App</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
-	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">	
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 	<meta name="description" content="A Phasmophobia Web App for help with tracking ghost evidence and information.">
 	<meta name="keywords" content="Phasmophobia, PhasmoHelpeor, Phasmo, Companion App, Web App, Phasmo Site">
 	<meta name="author" content="zuffdaddy">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 </head>
+
 <body>
-	<div class="wrapper">	
+	<div class="wrapper">
 		<div id="desc" class="minimal">
 			<h1>Phasmo.site</h1>
-			<p>A web app for tracking evidence during contracts in the game Phasmophobia. This is a supplemental tool for the journal on hunts. <a href="https://github.com/zuffdaddy/phasmohelper">View the source on github</a> and submit bugs/suggestions <a href="https://github.com/zuffdaddy/phasmohelper/issues">here</a>.</p>
+			<p>A web app for tracking evidence during contracts in the game Phasmophobia. This is a supplemental tool
+				for the journal on hunts. <a href="https://github.com/zuffdaddy/phasmohelper">View the source on
+					github</a> and submit bugs/suggestions <a
+					href="https://github.com/zuffdaddy/phasmohelper/issues">here</a>.</p>
 		</div>
 
 		<div class="toggle_buttons">
@@ -30,14 +35,16 @@
 				<li>Type in the name of your ghost in the Ghost Name text box.</li>
 				<li>Click the "Shy Ghost" box if the ghost prefers hunters to be alone</li>
 				<li>Click any optional objectives for easier tracking once you're in the house</li>
-				<li>Click evidence as you find it. As you select evidence the ghosts below narrow down to possible choices.</li>
+				<li>Click evidence as you find it. As you select evidence the ghosts below narrow down to possible
+					choices.</li>
 				<li>Once your contract is finished, click the "Reset" button near the top to start over!</li>
 			</ol>
 		</div>
 		<form>
 			<div id="ghost_info">
 				<h2 class="minimal">Ghost Information:</h2>
-				<p class="instructions">Type in your ghost name and select Shy Ghost if the ghost prefers speaking to people alone.</p>
+				<p class="instructions">Type in your ghost name and select Shy Ghost if the ghost prefers speaking to
+					people alone.</p>
 				<div>
 					<div id="ghost_name_holder">
 						<input type="text" class="ghost_name" placeholder="Ghost Name" />
@@ -49,141 +56,176 @@
 					<!-- <div>
 						<input id="reset" type="reset" value="Reset">
 					</div> -->
-				</div>				
-				
+				</div>
+
 			</div><!-- ghost_info -->
 			<span class="minimal" style="display: none;"></span>
 
 			<div id="ghost_aggression">
 				<h2 class="minimal">Ghost Aggression:</h2>
 				<p class="instructions">Select your radio hint for the contract here.</p>
-					<div class="row">
-						<div id="aggression_list">
-							<div>
-								<input type="checkbox" id="aggressive" />
-								<label for="aggressive">Reports of Violence, left in a hurry.</label>
+				<div class="row">
+					<div id="aggression_list">
+						<div>
+							<input type="checkbox" id="aggressive" />
+							<label for="aggressive">Reports of Violence, left in a hurry.</label>
+						</div>
+						<div>
+							<input type="checkbox" id="nonefriendly1" />
+							<label for="nonefriendly1">No Reports, left in a hurry</label>
+						</div>
+						<div>
+							<input type="checkbox" id="nonefriendly2" />
+							<label for="nonefriendly2">Possible Ghost Sighting</label>
+						</div>
+						<div>
+							<input type="checkbox" id="friendly2" />
+							<label for="friendly2">No Violence or sightings</label>
+						</div>
+						<div>
+							<input type="checkbox" id="friendly1" />
+							<label for="friendly1">Lights Switching</label>
+						</div>
+					</div><!-- aggression_list -->
+					<div id="aggression_hints" class="hidden">
+						<div id="violent" class="hidden">
+							<h2>Violent, Aggressive, Dangerous</h2>
+							<p>The ghost you are investigating is violent and aggressive. <em>run now while you
+									can.</em><br>
+								Aggressive ghosts are believed to have a tendency to attack more often. Make sure you
+								are keeping tabs on your
+								nearest hiding spot <em>just in case</em>.</p>
+							<div class="minimal">
+								<h4>Possible Phrases</h4>
+								<q>Got the Intel, looks like this is going to be a tough one. We've had reports of
+									violence, and it looks like they left
+									in a hurry.</q>
 							</div>
-							<div>
-								<input type="checkbox" id="nonefriendly1" />
-								<label for="nonefriendly1">No Reports, left in a hurry</label>
+						</div>
+						<div id="unfriendly" class="hidden">
+							<h2>Unfriendly</h2>
+							<p>The ghost you are investigating is quite unfriendly to welcome vistors. It's not as
+								dangerous as a Violent ghost,
+								but likewise any ghost do not let your guard down...</p>
+							<div class="minimal">
+								<h4>Possible Phrases</h4>
+								<p>
+									<q>Nothing to report, but it looks like whoever was here left in a hurry...</q>
+								</p>
+								<p>
+									<q>I've got a report that suggests a possible ghost sighting.</q>
+								</p>
 							</div>
-							<div>
-								<input type="checkbox" id="nonefriendly2" />
-								<label for="nonefriendly2">Possible Ghost Sighting</label>
+						</div>
+						<div id="placid" class="hidden">
+							<h2>Placid</h2>
+							<p>The ghost you are investigating is placid, sometimes shy and shows little activity.
+								However, do not mistake this
+								ghost for being safe. They are still very powerful and if/when provoked, just like any
+								ghost, they can be very
+								dangerous...</p>
+							<div class="minimal">
+								<h4>Possible Phrases</h4>
+								<p>
+									<q>New Intel: Reports of lights switching. Possibly harmless, but be careful out
+										there.</q>
+								</p>
+								<p>
+									<q>There's been no reports of violence or sightings, but please remain careful.</q>
+								</p>
 							</div>
-							<div>
-								<input type="checkbox" id="friendly2" />
-								<label for="friendly2">No Violence or sightings</label>
-							</div>
-							<div>
-								<input type="checkbox" id="friendly1" />
-								<label for="friendly1">Lights Switching</label>
-							</div>
-						</div><!-- aggression_list -->
-						<div id="aggression_hints" class="hidden">
-							<div id="violent" class="hidden">
-								<h2>Violent, Aggressive, Dangerous</h2>
-								<p>The ghost you are investigating is violent and aggressive. <em>run now while you can.</em><br>
-									Aggressive ghosts are believed to have a tendency to attack more often. Make sure you are keeping tabs on your
-									nearest hiding spot <em>just in case</em>.</p>
-								<div class="minimal">
-									<h4>Possible Phrases</h4>
-									<q>Got the Intel, looks like this is going to be a tough one. We've had reports of violence, and it looks like they left
-										in a hurry.</q>
-								</div>
-							</div>
-							<div id="unfriendly" class="hidden">
-								<h2>Unfriendly</h2>
-								<p>The ghost you are investigating is quite unfriendly to welcome vistors. It's not as dangerous as a Violent ghost,
-									but likewise any ghost do not let your guard down...</p>
-								<div class="minimal">
-									<h4>Possible Phrases</h4>
-									<p>
-										<q>Nothing to report, but it looks like whoever was here left in a hurry...</q>
-									</p>
-									<p>
-										<q>I've got a report that suggests a possible ghost sighting.</q>
-									</p>
-								</div>
-							</div>
-							<div id="placid" class="hidden">
-								<h2>Placid</h2>
-								<p>The ghost you are investigating is placid, sometimes shy and shows little activity. However, do not mistake this
-									ghost for being safe. They are still very powerful and if/when provoked, just like any ghost, they can be very
-									dangerous...</p>
-								<div class="minimal">
-									<h4>Possible Phrases</h4>
-									<p>
-										<q>New Intel: Reports of lights switching. Possibly harmless, but be careful out there.</q>
-									</p>
-									<p>
-										<q>There's been no reports of violence or sightings, but please remain careful.</q>
-									</p>
-								</div>
-							</div>
-						</div><!-- aggression_hints -->
-					</div>
+						</div>
+					</div><!-- aggression_hints -->
+				</div>
 			</div><!-- ghost_aggression -->
 			<span class="minimal" style="display: none;"></span>
 
 			<div id="objectives">
 				<h2 class="minimal">Optional Objectives:</h2>
 				<p class="instructions">Select your optional objectives for the contract here.</p>
-					<div id="objective_list">
-						<div>
-							<input type="checkbox" id="photo" />
-							<label for="photo">Photo</label>
-						</div>
-						<div>
-							<input type="checkbox" id="event" />
-							<label for="event">Event</label>
-						</div>
-						<div>
-							<input type="checkbox" id="motion" />
-							<label for="motion">Motion</label>
-						</div>
-						<div>
-							<input type="checkbox" id="crucifix" />
-							<label for="crucifix">Crucifix</label>
-						</div>
-						<div>
-							<input type="checkbox" id="emf_read" />
-							<label for="emf_read">EMF</label>
-						</div>
-						<div>
-							<input type="checkbox" id="smudge_cleanse" />
-							<label for="smudge_cleanse">Smudge Cleanse</label>
-						</div>
-						<div>
-							<input type="checkbox" id="smudge_hunt" />
-							<label for="smudge_hunt">Smudge Hunt</label>
-						</div>
-						<div>
-							<input type="checkbox" id="salt" />
-							<label for="salt">Salt</label>
-						</div>
-						<div>
-							<input type="checkbox" id="candle" />
-							<label for="candle">Candle</label>
-						</div>
-						<div>
-							<input type="checkbox" id="sanity" />
-							<label for="sanity">Low Sanity</label>
-						</div>
-						<div>
-							<input type="checkbox" id="escape_hunt" />
-							<label for="escape_hunt">Member Escape</label>
-						</div>
-						<div>
-							<input type="checkbox" id="no_deaths" />
-							<label for="no_deaths">No Deaths</label>
-						</div>
-					</div><!-- objective_list -->
+				<div id="objective_list">
+					<ul>
+						<li>
+							<div>
+								<input type="checkbox" class="indeterminate" id="photo" />
+								<label for="photo">Photo</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input type="checkbox" class="indeterminate" id="event" />
+								<label for="event">Event</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input type="checkbox" class="indeterminate" id="motion" />
+								<label for="motion">Motion</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input type="checkbox" class="indeterminate" id="crucifix" />
+								<label for="crucifix">Crucifix</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input type="checkbox" class="indeterminate" id="emf_read" />
+								<label for="emf_read">EMF</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input type="checkbox" class="indeterminate" id="smudge_cleanse" />
+								<label for="smudge_cleanse">Smudge Cleanse</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input type="checkbox" class="indeterminate" id="smudge_hunt" />
+								<label for="smudge_hunt">Smudge Hunt</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input type="checkbox" class="indeterminate" id="salt" />
+								<label for="salt">Salt</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input type="checkbox" class="indeterminate" id="candle" />
+								<label for="candle">Candle</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input type="checkbox" class="indeterminate" id="sanity" />
+								<label for="sanity">Low Sanity</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input type="checkbox" class="indeterminate" id="escape_hunt" />
+								<label for="escape_hunt">Member Escape</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input type="checkbox" class="indeterminate" id="no_deaths" />
+								<label for="no_deaths">No Deaths</label>
+							</div>
+						</li>
+					</ul>
+				</div><!-- objective_list -->
 			</div><!-- objectives -->
 			<span class="minimal" style="display: none;"></span>
 			<div id="evidence">
 				<h2 class="minimal">Confirmed Evidence:</h2>
-				<p class="instructions">Check off found evidence here. Evidence not necessary based on previously selected evidence will be eliminated. Click twice on evidence to "eliminate" it from possibilities. </p>
+				<p class="instructions">Check off found evidence here. Evidence not necessary based on previously
+					selected evidence will be eliminated. Click twice on evidence to "eliminate" it from possibilities.
+				</p>
 				<ul>
 					<li>
 						<div>
@@ -225,7 +267,8 @@
 			</div><!-- checkboxes -->
 		</form>
 		<div class="warning">
-			<div class="warning_text">Please select up to 3 pieces of evidence to narrow down the spookster. Click it again to eliminate it as a possibility.</div>
+			<div class="warning_text">Please select up to 3 pieces of evidence to narrow down the spookster. Click it
+				again to eliminate it as a possibility.</div>
 		</div>
 		<h2 class="minimal">Possible Ghosts:</h2>
 		<div id="ghosts">
@@ -233,7 +276,8 @@
 				<div>
 					<h3>Banshee</h3>
 					<div class="description">
-						<p>A Banshee is a natural hunter and will attack anything. It has been known to stalk it’s prey one at a time until making it’s kill.</p>
+						<p>A Banshee is a natural hunter and will attack anything. It has been known to stalk it’s prey
+							one at a time until making it’s kill.</p>
 						<h4>Unique Strengths</h4>
 						<p>A Banshee will only target one person at a time.</p>
 						<h4>Weaknesses</h4>
@@ -251,7 +295,8 @@
 				<div>
 					<h3>Demon</h3>
 					<div class="description">
-						<p>A Demon is one of the worst Ghosts you can encounter. It has been known to attack without a reason.</p>
+						<p>A Demon is one of the worst Ghosts you can encounter. It has been known to attack without a
+							reason.</p>
 						<h4>Unique Strengths</h4>
 						<p>Demons will attack more often than any other Ghost.</p>
 						<h4>Weaknesses</h4>
@@ -269,7 +314,8 @@
 				<div>
 					<h3>Jinn</h3>
 					<div class="description">
-						<p>A Jinn is a territorial Ghost that will attack when threatened. It has also been known to be able to travel at significant speed.</p>
+						<p>A Jinn is a territorial Ghost that will attack when threatened. It has also been known to be
+							able to travel at significant speed.</p>
 						<h4>Unique Strengths</h4>
 						<p>A Jinn will travel at a a faster speed if it’s victim is far away.</p>
 						<h4>Weaknesses</h4>
@@ -305,9 +351,11 @@
 				<div>
 					<h3>Oni</h3>
 					<div class="description">
-						<p>Oni’s are a cousin to the Demon and possess extreme strength. There have been rumors that they become more active around their prey.</p>
+						<p>Oni’s are a cousin to the Demon and possess extreme strength. There have been rumors that
+							they become more active around their prey.</p>
 						<h4>Unique Strengths</h4>
-						<p>Oni’s are more active when people are nearby and have been seen moving objects at great speed.</p>
+						<p>Oni’s are more active when people are nearby and have been seen moving objects at great
+							speed.</p>
 						<h4>Weaknesses</h4>
 						<p>Being more active will make the Oni easier to find and identify.</p>
 						<h4>Evidence</h4>
@@ -323,7 +371,8 @@
 				<div>
 					<h3>Phantom</h3>
 					<div class="description">
-						<p>A Phantom is a Ghost that can possess the living, most commonly summoned by a Ouija Board. It also induces fear into those around it.</p>
+						<p>A Phantom is a Ghost that can possess the living, most commonly summoned by a Ouija Board. It
+							also induces fear into those around it.</p>
 						<h4>Unique Strengths</h4>
 						<p>Looking at a Phantom will considerably drop your sanity.</p>
 						<h4>Weaknesses</h4>
@@ -341,7 +390,8 @@
 				<div>
 					<h3>Poltergeist</h3>
 					<div class="description">
-						<p>One of the most famous Ghosts, a Poltergeist, also known as a noisy ghost that can manipulate objects around it to spread fear into it’s victims.</p>
+						<p>One of the most famous Ghosts, a Poltergeist, also known as a noisy ghost that can manipulate
+							objects around it to spread fear into it’s victims.</p>
 						<h4>Unique Strengths</h4>
 						<p>A Poltergeist can throw huge amounts of objects at once.</p>
 						<h4>Weaknesses</h4>
@@ -359,7 +409,8 @@
 				<div>
 					<h3>Revenant</h3>
 					<div class="description">
-						<p>They are slow but violent ghosts that will attack everyone indiscriminately. They also travel at a greater speed like Jinn while hunting.</p>
+						<p>They are slow but violent ghosts that will attack everyone indiscriminately. They also travel
+							at a greater speed like Jinn while hunting.</p>
 						<h4>Unique Strengths</h4>
 						<p>Travels faster while hunting.</p>
 						<h4>Weaknesses</h4>
@@ -377,7 +428,8 @@
 				<div>
 					<h3>Shade</h3>
 					<div class="description">
-						<p>A Shade is known to be a Shy Ghost. There is evidence that a Shade will stop all paranormal activity if there are multiple people nearby.</p>
+						<p>A Shade is known to be a Shy Ghost. There is evidence that a Shade will stop all paranormal
+							activity if there are multiple people nearby.</p>
 						<h4>Unique Strengths</h4>
 						<p>Being shy means the Ghost will be harder to find.</p>
 						<h4>Weaknesses</h4>
@@ -395,7 +447,9 @@
 				<div>
 					<h3>Spirit</h3>
 					<div class="description">
-						<p>A Spirit is the most common Ghost you will come across however it is still very powerful and dangerous. They are usually discovered at one of their hunting grounds after an unexplained death.</p>
+						<p>A Spirit is the most common Ghost you will come across however it is still very powerful and
+							dangerous. They are usually discovered at one of their hunting grounds after an unexplained
+							death.</p>
 						<h4>Unique Strengths</h4>
 						<p>None.</p>
 						<h4>Weaknesses</h4>
@@ -406,15 +460,16 @@
 						<li data-evidence="writing">Ghost Writing</li>
 						<li data-evidence="box">Spirit Box</li>
 						<li data-evidence="fingerprints">Fingerprints</li>
-						
-				</ul>
+
+					</ul>
 				</div>
 			</div><!-- ghost -->
 			<div class="ghost">
 				<div>
 					<h3>Wraith</h3>
 					<div class="description">
-						<p>A Wraith is one of the most dangerous Ghosts you will find. It is also the only known Ghost that has the ability of flight and has sometimes been known to travel through walls.</p>
+						<p>A Wraith is one of the most dangerous Ghosts you will find. It is also the only known Ghost
+							that has the ability of flight and has sometimes been known to travel through walls.</p>
 						<h4>Unique Strengths</h4>
 						<p>Wraiths almost never touch the ground meaning it can’t be tracked by footsteps.</p>
 						<h4>Weaknesses</h4>
@@ -432,11 +487,13 @@
 				<div>
 					<h3>Yurei</h3>
 					<div class="description">
-						<p>A Yurei is a Ghost that has returned to the physical world, usually for the purpose of revenge or pure hatred.</p>
+						<p>A Yurei is a Ghost that has returned to the physical world, usually for the purpose of
+							revenge or pure hatred.</p>
 						<h4>Unique Strengths</h4>
 						<p>Yurei’s have been known to have a stronger effect on peoples sanity.</p>
 						<h4>Weaknesses</h4>
-						<p>Smudging the Yurei’s room will cause it to not wander around the location for a long time.</p>
+						<p>Smudging the Yurei’s room will cause it to not wander around the location for a long time.
+						</p>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
@@ -447,16 +504,21 @@
 				</div>
 			</div><!-- ghost -->
 		</div><!-- ghosts -->
-		<footer><p>web app made by <a href="https://reddit.com/u/zuffdaddy">zuffdaddy</a>. submit bugs and suggestions <a href="https://github.com/zuffdaddy/phasmohelper/issues">here</a>.</p></footer>
+		<footer>
+			<p>web app made by <a href="https://reddit.com/u/zuffdaddy">zuffdaddy</a>. submit bugs and suggestions <a
+					href="https://github.com/zuffdaddy/phasmohelper/issues">here</a>.</p>
+		</footer>
 	</div><!-- wrapper -->
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="main.js"></script>
 	<script src="https://unpkg.com/animate-css-grid@latest"></script>
 	<script>
-	  const ghost = document.querySelector("#ghosts");
-	  animateCSSGrid.wrapGrid(ghost, {duration : 600});
-	  const checkbox = document.querySelector("#evidence ul");
-	  animateCSSGrid.wrapGrid(checkbox, {duration : 600});
+		const ghost = document.querySelector("#ghosts");
+		animateCSSGrid.wrapGrid(ghost, { duration: 600 });
+		const checkbox = document.querySelector("#evidence ul");
+		animateCSSGrid.wrapGrid(checkbox, { duration: 600 });
 	</script>
 </body>
+
 </html>

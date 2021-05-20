@@ -10,7 +10,6 @@ body {
 	height: 100vh;
 	width: 100%;
 	background-color: #000;
-	background-image: url('orb.gif');
 	background-repeat: no-repeat;
 	background-position: top left;
 	color: #fff;
@@ -63,7 +62,7 @@ body {
 
 .toggle_buttons a.active {
 	color: #fff;
-	background: #f41f86;
+	background: #7b0499;
 }
 
 .toggle_buttons a#reset.active  {
@@ -98,7 +97,7 @@ h2 {
 span.minimal {
 	width: 100%;
 	height: 3px;
-	background: #f41f86;
+	background: #7b0499;
 	display: block;
 	margin: 0 0 20px 0;
 }
@@ -137,7 +136,7 @@ input[type="text"] {
 	border: none;
 	outline: none;
 	text-decoration: none;
-	color: #f41f86;
+	color: #7b0499;
 	font-size: 22px;
 	padding: 5px;
 	margin: 0;
@@ -172,7 +171,7 @@ input[type=reset] {
 }
 
 input[type=reset]:hover {
-	background-color: #f41f86;
+	background-color: #7b0499;
 }
 
 #objectives {
@@ -272,7 +271,7 @@ input[type="checkbox"].indeterminate:indeterminate + label {
 }
 
 input[type="checkbox"]:checked + label {
-	background: #f41f86;
+	background: #7b0499;
 	text-decoration: none;
 }
 
@@ -308,6 +307,36 @@ input[type="checkbox"]:checked + label {
 }
 
 #evidence input[type="checkbox"].no + label {
+	background: #971a1a;
+}
+
+#objective_list {
+	margin: 0 0 20px 0;
+}
+
+#objective_list ul {
+	display: inline-grid;
+	grid-template-columns: repeat(6, auto);
+	grid-gap: 10px;
+}
+
+#objective_list h2 {
+	margin: 0 0 5px 0;
+}
+
+#objective_list p {
+	margin: 0 0 15px 0;
+}
+
+#objective_list li {
+	list-style: none;
+}
+
+#objective_list ul li.disabled {
+	display: none;
+}
+
+#objective_list input[type="checkbox"].no + label {
 	background: #971a1a;
 }
 
@@ -366,7 +395,7 @@ input[type="checkbox"]:checked + label {
 }
 
 .ghost .evidence li.yes {
-	background-color: #f41f86;
+	background-color: #7b0499;
 }
 
 .ghost .evidence li.no {
@@ -378,13 +407,13 @@ footer {
 }
 
 a {
-	color: #f41f86;
+	color: #7b0499;
 	font-weight: 700;
 	padding: 0 2px;
 }
 
 a:hover {
-	background: #f41f86;
+	background: #7b0499;
 	color: #fff;
 }
 
@@ -443,7 +472,7 @@ a:hover {
 	}
 	.ghost {
 		width: 100%;
-		border-bottom: 4px solid #f41f86;
+		border-bottom: 4px solid #7b0499;
 		padding: 0 0 20px 0;
 	}
 }

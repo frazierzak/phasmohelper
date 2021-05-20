@@ -24,6 +24,10 @@ function reset() {
 		$(this).removeClass('yes no');
 	});
 	$("#evidence li").removeClass("disabled");
+	$(".objective_list li").each(function() {
+		$(this).removeClass('yes no');
+	});
+	$("#objective_list li").removeClass("disabled");
 	$('form').trigger("reset");
 	$("#aggression_list input").prop("checked", false).trigger("change");
 	$(".indeterminate").prop("checked", true).prop("indeterminate", true).prop("readonly", true);
@@ -40,7 +44,6 @@ $("#toggle_descriptions").click(function(){
 
 $("#toggle_minimal").click(function(){
 	$(".minimal").toggle();
-	$(".description").toggle();
 });
 
 $(".toggle_buttons a").each(function(){
@@ -92,6 +95,27 @@ $("#aggression_list input").change(function() {
 
 	$("#aggression_hints").children().addClass("hidden");
 	$("#aggression_hints").children(`#${textToRevealID}`).removeClass("hidden");
+});
+
+$("#objective_list input").change(function() {
+	if(this.readOnly) {
+		this.readOnly = false;
+		this.checked = true;
+		this.indeterminate = false;
+	}
+	else if(this.checked) {
+		this.readOnly = true;
+		this.indeterminate = true;
+	}
+
+	$('#objective_list input[type="checkbox"]:indeterminate, #evidence input[type="checkbox"]:not(:checked)').each(function() {
+		if(validEvidence.includes($(this).attr("id")))
+			$(this).parents('li').removeClass('disabled');
+		else if(validableEvidence.includes($(this).attr("id")))
+			$(this).parents('li').removeClass('disabled');
+		else
+			$(this).parents('li').addClass('disabled');
+	});
 });
 
 $("#evidence input").change(function() {
@@ -206,3 +230,5 @@ $("#evidence input").change(function() {
 });
 
 $(document).ready(reset);
+$("#toggle_minimal").toggleClass("active");
+$(".minimal").toggle();
