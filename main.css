@@ -40,7 +40,7 @@ body {
 
 .toggle_buttons {
 	display: flex;
-	margin: 0 0 35px 0;
+	margin: 0 0 10px 0;
 }
 
 .toggle_buttons a {
@@ -99,11 +99,11 @@ span.minimal {
 	height: 3px;
 	background: #7b0499;
 	display: block;
-	margin: 0 0 20px 0;
+	margin: 0 0 10px 0;
 }
 
 #ghost_info {
-	margin: 0 0 35px 0;
+	margin: 0 0 10px 0;
 	display: flex;
 	flex-direction: column;
 }
@@ -177,7 +177,7 @@ input[type=reset]:hover {
 #objectives {
 	display: flex;
 	flex-direction: column;
-	margin: 0 0 35px 0;
+	margin: 0 0 10px 0;
 }
 
 #objectives h2 {
@@ -200,7 +200,7 @@ input[type=reset]:hover {
 #ghost_aggression {
 	display: flex;
 	flex-direction: column;
-	margin: 0 0 35px 0;
+	margin: 0 0 10px 0;
 }
 
 #ghost_aggression h2 {
@@ -240,7 +240,7 @@ input[type=reset]:hover {
 		flex-direction: column;
 	}
 	#aggression_list div {
-		margin: 0 10px 20px 0;
+		margin: 0 10px 10px 0;
 	}
 }
 
@@ -281,7 +281,7 @@ input[type="checkbox"]:checked+label {
 }
 
 #evidence {
-	margin: 0 0 20px 0;
+	margin: 0 0 10px 0;
 }
 
 #evidence ul {
@@ -311,7 +311,7 @@ input[type="checkbox"]:checked+label {
 }
 
 #objective_list {
-	margin: 0 0 20px 0;
+	margin: 0 0 0px 0;
 }
 
 #objective_list ul {
