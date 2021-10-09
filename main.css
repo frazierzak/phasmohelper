@@ -10,12 +10,15 @@ body {
 	height: 100vh;
 	width: 100%;
 	background-color: #000;
-	background-image: url('orb.gif');
-	background-repeat: no-repeat;
-	background-position: top left;
 	color: #fff;
 	font-size: 14px;
 	font-family: 'Quicksand', sans-serif;
+}
+
+.orb {
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-image: url('orb.gif');
 }
 
 .warning {
@@ -95,6 +98,9 @@ h2 {
 	font-weight: 400;
 }
 
+span {
+	display: none;
+}
 span.minimal {
 	width: 100%;
 	height: 3px;
