@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 </head>
-<body>
+<body class="orb" onload="loadSettings()">
 	<div class="wrapper">	
 		<div id="desc" class="minimal">
 			<h1>Phasmo.site</h1>
@@ -21,6 +21,7 @@
 			<a href="javascript:void(0);" id="toggle_minimal">Min. Mode</a>
 			<a href="javascript:void(0);" id="toggle_instructions">Toggle Instructions</a>
 			<a href="javascript:void(0);" id="toggle_descriptions">Toggle Ghost Info</a>
+			<a href="javascript:void(0);" id="toggle_floatingorb">Toggle Orb</a>
 			<a href="javascript:void(0);" id="reset">Reset</a>
 		</div><!-- toggle_buttons -->
 
@@ -52,7 +53,7 @@
 				</div>				
 				
 			</div><!-- ghost_info -->
-			<span class="minimal" style="display: none;"></span>
+			<span></span>
 
 			<div id="ghost_aggression">
 				<h2 class="minimal">Ghost Aggression:</h2>
@@ -60,24 +61,24 @@
 					<div class="row">
 						<div id="aggression_list">
 							<div>
-								<input type="checkbox" id="aggressive" />
-								<label for="aggressive">Reports of Violence, left in a hurry.</label>
+								<input type="checkbox" id="friendly1" />
+								<label for="friendly1">Lights Switching</label>
 							</div>
 							<div>
 								<input type="checkbox" id="nonefriendly1" />
 								<label for="nonefriendly1">No Reports, left in a hurry</label>
 							</div>
 							<div>
-								<input type="checkbox" id="nonefriendly2" />
-								<label for="nonefriendly2">Possible Ghost Sighting</label>
-							</div>
-							<div>
 								<input type="checkbox" id="friendly2" />
 								<label for="friendly2">No Violence or sightings</label>
 							</div>
 							<div>
-								<input type="checkbox" id="friendly1" />
-								<label for="friendly1">Lights Switching</label>
+								<input type="checkbox" id="nonefriendly2" />
+								<label for="nonefriendly2">Possible Ghost Sighting</label>
+							</div>
+							<div>
+								<input type="checkbox" id="aggressive" />
+								<label for="aggressive">Reports of Violence, left in a hurry.</label>
 							</div>
 						</div><!-- aggression_list -->
 						<div id="aggression_hints" class="hidden">
@@ -124,77 +125,78 @@
 						</div><!-- aggression_hints -->
 					</div>
 			</div><!-- ghost_aggression -->
-			<span class="minimal" style="display: none;"></span>
+			<span></span>
 
 			<div id="objectives">
 				<h2 class="minimal">Optional Objectives:</h2>
 				<p class="instructions">Select your optional objectives for the contract here.</p>
-					<div id="objective_list">
-						<div>
-							<input type="checkbox" id="photo" />
-							<label for="photo">Photo</label>
-						</div>
-						<div>
-							<input type="checkbox" id="event" />
-							<label for="event">Event</label>
-						</div>
-						<div>
-							<input type="checkbox" id="motion" />
-							<label for="motion">Motion</label>
-						</div>
-						<div>
-							<input type="checkbox" id="crucifix" />
-							<label for="crucifix">Crucifix</label>
-						</div>
-						<div>
-							<input type="checkbox" id="emf_read" />
-							<label for="emf_read">EMF</label>
-						</div>
-						<div>
-							<input type="checkbox" id="smudge_cleanse" />
-							<label for="smudge_cleanse">Smudge Cleanse</label>
-						</div>
-						<div>
-							<input type="checkbox" id="smudge_hunt" />
-							<label for="smudge_hunt">Smudge Hunt</label>
-						</div>
-						<div>
-							<input type="checkbox" id="salt" />
-							<label for="salt">Salt</label>
-						</div>
-						<div>
-							<input type="checkbox" id="candle" />
-							<label for="candle">Candle</label>
-						</div>
-						<div>
-							<input type="checkbox" id="sanity" />
-							<label for="sanity">Low Sanity</label>
-						</div>
-						<div>
-							<input type="checkbox" id="escape_hunt" />
-							<label for="escape_hunt">Member Escape</label>
-						</div>
-						<div>
-							<input type="checkbox" id="no_deaths" />
-							<label for="no_deaths">No Deaths</label>
-						</div>
-					</div><!-- objective_list -->
+				<div id="objective_list">
+					<div>
+						<input type="checkbox" id="candle" />
+						<label for="candle">Candle</label>
+					</div>
+					<div>
+						<input type="checkbox" id="crucifix" />
+						<label for="crucifix">Crucifix</label>
+					</div>
+					<div>
+						<input type="checkbox" id="emf_read" />
+						<label for="emf_read">EMF</label>
+					</div>
+				   
+					<div>
+						<input type="checkbox" id="event" />
+						<label for="event">Event</label>
+					</div>
+					<div>
+						<input type="checkbox" id="sanity" />
+						<label for="sanity">Low Sanity</label>
+					</div>
+					<div>
+						<input type="checkbox" id="escape_hunt" />
+						<label for="escape_hunt">Member Escape</label>
+					</div>
+					<div>
+						<input type="checkbox" id="motion" />
+						<label for="motion">Motion</label>
+					</div>
+					<div>
+						<input type="checkbox" id="no_deaths" />
+						<label for="no_deaths">No Deaths</label>
+					</div>
+					<div>
+						<input type="checkbox" id="photo" />
+						<label for="photo">Photo</label>
+					</div>
+					<div>
+						<input type="checkbox" id="salt" />
+						<label for="salt">Salt</label>
+					</div>
+					<div>
+						<input type="checkbox" id="smudge_cleanse" />
+						<label for="smudge_cleanse">Smudge Cleanse</label>
+					</div>
+					<div>
+						<input type="checkbox" id="smudge_hunt" />
+						<label for="smudge_hunt">Smudge Hunt</label>
+					</div>
+				</div><!-- objective_list -->
 			</div><!-- objectives -->
-			<span class="minimal" style="display: none;"></span>
+			<span></span>
 			<div id="evidence">
 				<h2 class="minimal">Confirmed Evidence:</h2>
 				<p class="instructions">Check off found evidence here. Evidence not necessary based on previously selected evidence will be eliminated. Click twice on evidence to "eliminate" it from possibilities. </p>
 				<ul>
 					<li>
 						<div>
-							<input type="checkbox" class="indeterminate" id="emf" />
-							<label for="emf">EMF Level 5</label>
+							<input type="checkbox" class="indeterminate" id="dots" />
+							<label for="dots">D.O.T.S Projector</label>
 						</div>
 					</li>
 					<li>
 						<div>
-							<input type="checkbox" class="indeterminate" id="writing" />
-							<label for="writing">Ghost Writing</label>
+							<input type="checkbox" class="indeterminate" id="emf" />
+							<label for="emf">EMF Level 5</label>
 						</div>
 					</li>
 					<li>
@@ -217,16 +219,17 @@
 					</li>
 					<li>
 						<div>
-							<input type="checkbox" class="indeterminate" id="box" />
-							<label for="box">Spirit Box</label>
+							<input type="checkbox" class="indeterminate" id="writing" />
+							<label for="writing">Ghost Writing</label>
 						</div>
 					</li>
 					<li>
 						<div>
-							<input type="checkbox" class="indeterminate" id="dots" />
-							<label for="dots">D.O.T.S Projector</label>
+							<input type="checkbox" class="indeterminate" id="box" />
+							<label for="box">Spirit Box</label>
 						</div>
 					</li>
+					
 				</ul>
 			</div><!-- checkboxes -->
 		</form>
@@ -259,9 +262,9 @@
 					<div class="description">
 						<p>A Demon is one of the worst Ghosts you can encounter. It has been known to attack without a reason.</p>
 						<h4>Unique Strengths</h4>
-						<p>Demons will attack more often than any other Ghost.</p>
+						<p>Demons will initiatehunts more often than other ghosts.</p>
 						<h4>Weaknesses</h4>
-						<p>Asking a Demon successful questions on the Ouija Board won’t lower the users sanity.</p>
+						<p>Demons will take less sanity when answering through a Ouija Board.</p>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
@@ -361,6 +364,24 @@
 					</ul>
 				</div>
 			</div><!-- ghost -->
+            <div class="ghost">
+				<div>
+					<h3>Obake</h3>
+					<div class="description">
+						<p>Obake are terrifying shape-shifters, capable of taking on many forms. They have been seen taking on humanoid shapes to attract their prey.</p>
+						<h4>Unique Strengths</h4>
+						<p>When interacting with the environment, an Obake will rarely leave a trace.</p>
+						<h4>Weaknesses</h4>
+						<p>Sometimes this ghost will shapeshift, leaving behind unique evidence.</p>
+						<h4>Evidence</h4>
+					</div>
+					<ul class="evidence">
+						<li data-evidence="emf">EMF Level 5</li>
+						<li data-evidence="fingerprints">Fingerprints</li>
+						<li data-evidence="orb">Ghost Orb</li>
+					</ul>
+				</div>
+			</div><!-- ghost -->
 			<div class="ghost">
 				<div>
 					<h3>Oni</h3>
@@ -376,6 +397,24 @@
 						<li data-evidence="emf">EMF Level 5</li>
 						<li data-evidence="freezing">Freezing Temperatures</li>
 						<li data-evidence="dots">D.O.T.S Projector</li>
+					</ul>
+				</div>
+			</div><!-- ghost -->
+            <div class="ghost">
+				<div>
+					<h3>Onryo</h3>
+					<div class="description">
+						<p>The Onryo is often referred to as "The Wrathful Spirit". It steals soulsfrom dying victims' bodies to seek revenge. This ghost has been known to fear any form of fire, and will do anything to be far from it.</p>
+						<h4>Unique Strengths</h4>
+						<p>Extinguishing a flame can cause an Onryo to attack.</p>
+						<h4>Weaknesses</h4>
+						<p>When threatened, this ghost will be less likely to hunt.</p>
+						<h4>Evidence</h4>
+					</div>
+					<ul class="evidence">
+						<li data-evidence="box">Spirit Box</li>
+                        <li data-evidence="orb">Ghost Orb</li>
+						<li data-evidence="freezing">Freezing Temperatures</li>
 					</ul>
 				</div>
 			</div><!-- ghost -->
@@ -412,6 +451,24 @@
 						<li data-evidence="box">Spirit Box</li>
 						<li data-evidence="fingerprints">Fingerprints</li>
 						<li data-evidence="writing">Ghost Writing</li>
+					</ul>
+				</div>
+			</div><!-- ghost -->
+			<div class="ghost">
+				<div>
+					<h3>Raiju</h3>
+					<div class="description">
+						<p>A Raiju is a demon that thrives on electrical current. While generally calm, they can become agitated when overhwhelmed with power.</p>
+						<h4>Unique Strengths</h4>
+						<p>A Raiju can siphon power from nearby electrical devices, making it move faster.</p>
+						<h4>Weaknesses</h4>
+						<p>Raiju are constatntly disrupting electronic equipment, making it easier to track when attacking.</p>
+						<h4>Evidence</h4>
+					</div>
+					<ul class="evidence">
+						<li data-evidence="emf">EMF Level 5</li>
+						<li data-evidence="orb">Ghost Orb</li>
+						<li data-evidence="dots">D.O.T.S Projector</li>
 					</ul>
 				</div>
 			</div><!-- ghost -->
@@ -466,6 +523,25 @@
 						<li data-evidence="emf">EMF Level 5</li>
 						<li data-evidence="box">Spirit Box</li>
 						<li data-evidence="writing">Ghost Writing</li>
+						
+				</ul>
+				</div>
+			</div><!-- ghost -->
+            <div class="ghost">
+				<div>
+					<h3>The Twins</h3>
+					<div class="description">
+						<p>These ghosts have been reported to mimic each other's actions. They alternate their attacks to confuse their prey.</p>
+						<h4>Unique Strengths</h4>
+						<p>Either Twin can be angered and initiate an attack on their prey.</p>
+						<h4>Weaknesses</h4>
+						<p>The Twins will often interact with the environment at the same time.</p>
+						<h4>Evidence</h4>
+					</div>
+					<ul class="evidence">
+						<li data-evidence="emf">EMF Level 5</li>
+						<li data-evidence="box">Spirit Box</li>
+						<li data-evidence="freezing">Freezing Temperatures</li>
 						
 				</ul>
 				</div>
