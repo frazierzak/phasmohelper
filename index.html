@@ -54,77 +54,146 @@
 				
 			</div><!-- ghost_info -->
 			<span></span>
-
-			<div id="ghost_aggression">
-				<h2 class="minimal">Ghost Aggression:</h2>
-				<p class="instructions">Select your radio hint for the contract here.</p>
+			
+			<div id="cursed_possessions">
+				<h2 class="minimal">Cursed Possession:</h2>
+				<p class="instructions">You will always find a cursed possession during each contract. Each item has been reported to have paranormal abilities that can help you investigate.<br />
+					Be warned, using these items will lower your sanity. Make sure you're sane enough, otherwise they may break and initiate an attack from the ghost.</p>
 					<div class="row">
-						<div id="aggression_list">
+						<div id="possessions_list">
 							<div>
-								<input type="checkbox" id="friendly1" />
-								<label for="friendly1">Lights Switching</label>
+								<input type="checkbox" id="mirror" />
+								<label for="mirror">Haunted Mirror</label>
 							</div>
 							<div>
-								<input type="checkbox" id="nonefriendly1" />
-								<label for="nonefriendly1">No Reports, left in a hurry</label>
+								<input type="checkbox" id="music" />
+								<label for="music">Music Box</label>
 							</div>
 							<div>
-								<input type="checkbox" id="friendly2" />
-								<label for="friendly2">No Violence or sightings</label>
+								<input type="checkbox" id="ouija" />
+								<label for="ouija">Ouija Board</label>
 							</div>
 							<div>
-								<input type="checkbox" id="nonefriendly2" />
-								<label for="nonefriendly2">Possible Ghost Sighting</label>
+								<input type="checkbox" id="circle" />
+								<label for="circle">Summoning Circle</label>
 							</div>
 							<div>
-								<input type="checkbox" id="aggressive" />
-								<label for="aggressive">Reports of Violence, left in a hurry.</label>
+								<input type="checkbox" id="tarot" />
+								<label for="tarot">Tarot Cards</label>
 							</div>
-						</div><!-- aggression_list -->
-						<div id="aggression_hints" class="hidden">
-							<div id="violent" class="hidden">
-								<h2>Violent, Aggressive, Dangerous</h2>
-								<p>The ghost you are investigating is violent and aggressive. <em>run now while you can.</em><br>
-									Aggressive ghosts are believed to have a tendency to attack more often. Make sure you are keeping tabs on your
-									nearest hiding spot <em>just in case</em>.</p>
+							<div>
+								<input type="checkbox" id="doll" />
+								<label for="doll">Voodoo Doll</label>
+							</div>
+						</div><!-- possessions_list -->
+						<div id="possessions_hints" class="hidden">
+							<div id="mirror_hint" class="hidden">
+								<h2>From The Journal</h2>
+								<p>If you find the oval shaped mirror laying around, you can use it to find the room where the ghost is most commonly found. 
+									Pick it up and activate it to peer into the spectral realm.<br />
+									Careful: seeing into this realm will drain your sanity rapidly.</p>
 								<div class="minimal">
-									<h4>Possible Phrases</h4>
-									<q>Got the Intel, looks like this is going to be a tough one. We've had reports of violence, and it looks like they left
-										in a hurry.</q>
+									<h2>How To Use</h2>
+									<p>The mirror must be toggled while inside. When activated, the haunted mirror will show a view of a part of the ghost room as a sweeping panorama, allowing players to locate the room by cross-reference. <br />
+										If the users' sanity reaches zero, the mirror will break and start a cursed hunt near the users' position. </p>
 								</div>
 							</div>
-							<div id="unfriendly" class="hidden">
-								<h2>Unfriendly</h2>
-								<p>The ghost you are investigating is quite unfriendly to welcome vistors. It's not as dangerous as a Violent ghost,
-									but likewise any ghost do not let your guard down...</p>
+							<div id="music_hint" class="hidden">
+								<h2>From The Journal</h2>
+								<p>This intricate little music box has been created with the sole purpose of communicating with the dead.<br /> 
+									Holding the box and activating it starts playing a spectral song, if you listen closely the ghost can sometimes be heard singing along to this haunting melody.<br />
+									Don't get too close, you may interrupt its musical trance and anger it. </p>
 								<div class="minimal">
-									<h4>Possible Phrases</h4>
-									<p>
-										<q>Nothing to report, but it looks like whoever was here left in a hurry...</q>
-									</p>
-									<p>
-										<q>I've got a report that suggests a possible ghost sighting.</q>
-									</p>
+									<h2>How To Use</h2>
+									<p>A music box can be activated by holding it in the hand and using the secondary use key to activate the device. The music box can only be used once.<br />
+										The music box will make the ghost sing along while being invisible, broadcasting its location. If the music box is 5 meters or less from the ghost, it will appear and start walking towards the box. If the ghost touches it, walks for more than 5 seconds, or the player drops the box while the tune is playing, it will start a cursed hunt. The music box can be handheld or put on the floor, the latter being the only safe way to discard the box without triggering a cursed hunt while it's playing.<br />
+										The sanity will drop only if the player can hear the song.</p>
 								</div>
 							</div>
-							<div id="placid" class="hidden">
-								<h2>Placid</h2>
-								<p>The ghost you are investigating is placid, sometimes shy and shows little activity. However, do not mistake this
-									ghost for being safe. They are still very powerful and if/when provoked, just like any ghost, they can be very
-									dangerous...</p>
+							<div id="ouija_hint" class="hidden">
+								<h2>From The Journal</h2>
+								<p>These commonly found wooden boards can be used to communicate with ghosts. If you find one: activate it by placing down a planchette (a heart shaped wooden slate) and use your voice to ask a question.<br />
+									Certain questions may lower your sanity more than others, especially if the ghost responds.</p>
 								<div class="minimal">
-									<h4>Possible Phrases</h4>
-									<p>
-										<q>New Intel: Reports of lights switching. Possibly harmless, but be careful out there.</q>
-									</p>
-									<p>
-										<q>There's been no reports of violence or sightings, but please remain careful.</q>
-									</p>
+									<h2>How To Use</h2>
+									<p>Once activated, the planchette will appear, cancelling the setup phase if it is ongoing.<br />
+										The player asking the question must have the Ouija Board inside the investigation area, as well as be inside to ask questions.<br />
+										The Ouija Board does not have to be in the Ghost Room (nor the ghost's current room) to respond.<br />
+										To deactivate the Ouija Board, the player must say "Goodbye", which will make the planchette disappear.<br />
+										If the player who activated the board walks away from an active Ouija Board, or has insufficient sanity to "pay" for the question that they ask, the board will break itself up and trigger a cursed hunt.<br />
+										
+										<table>
+											<tr><th colspan="3">Sanity deduction rates (%)</th></tr>
+											<tr><th>Type of question</th><th>Success&nbsp;</th><th>Success (Demon)</th></tr>
+											<tr><td>Ghost's current location</td><td>40%</td><td>32%</td></tr>
+											<tr><td>Hide and seek</td><td>25%</td><td>20%</td></tr>
+											<tr><td>Number of people in room, bone location</td><td>20%</td><td>16%</td></tr>
+											<tr><td>Others</td><td>5%</td><td>4%</td></tr>
+										</table>
+										
+										If the question is recognised, the planchette will move to answer the question, and an EMF Level 2 reading will be generated around the Ouija Board.<br />
+										If the ghost has EMF Level 5 as evidence, there is a 25% chance for this to be the reading instead.<br />
+										The response chance is not affected by whether or not the ghost is shy.</p>
 								</div>
 							</div>
-						</div><!-- aggression_hints -->
+							<div id="circle_hint" class="hidden">
+								<h2>From The Journal</h2>
+								<p>Some locations have pentagrams drawn in blood, surrounded by blood red candles. Lighting all five candles will summon the ghost and trap it temporarily: perfect for taking photos.<br />
+									Make sure you escape before the ghost breaks free.</p>
+								<div class="minimal">
+									<h2>How To Use</h2>
+									<p>The summoning circle can be used by lighting all five red candles with a lighter.<br />
+										Each candle deducts 16% sanity, leading to a total of 80% sanity being deducted for all candles.<br />
+										Once all five candles are lit, the ghost will be summoned and fully-materialized, and stay motionless for 5 seconds, unable to kill players. <br />
+										After the 5 second "grace period", it will immediately initiate a cursed hunt on the spot. Once the summoning circle has been activated, it cannot be used again.<br /><br />
+										
+										If the circle is lit while a hunt is already ongoing, the ghost will be teleported to the middle of the circle, and the hunt will continue. </p>
+								</div>
+							</div>
+							<div id="tarot_hint" class="hidden">
+								<h2>From The Journal</h2>
+								<p>These mystical cards are the most intriguing item we've found during previous investigations.<br />
+									Each deck contains ten random cards that all have different paranormal properties. When drawn, they can trigger different effects on the team and on any nearby ghost.<br />									
+									Whilst they can be useful, they can also have negative effects, such as: sanity drain, ghost attacks, and even death.<br />									
+									Many of these cards are still yet to be discovered, who knows what's possible?</p>
+								<div class="minimal">
+									<h2>How To Use</h2>
+									<p>Each Tarot cards deck contains 10 randomly generated cards. There are various possible cards the player can draw from the deck, each having a unique effect on either the player or the ghost if it is nearby. After being used, each card will vanish in a colored flame that is dependent on its type. The cards must be drawn inside the investigation area for them to work.<br /><br />
+										There are 10 possible cards that can be drawn. A single card type can appear more than once in the deck, and there are different percentages for each card to spawn.<br />
+										<table>
+											<tr><th>Card</th><th>Effect</th></tr>
+											<tr><td>The Sun</td><td>Fully restores sanity to 100%.</td></tr>
+											<tr><td>The Moon</td><td>Immediately drops sanity to 0%.</td></tr>
+											<tr><td>The Tower</td><td>Causes an interaction.</td></tr>
+											<tr><td>The Wheel of Fortune&nbsp;</td><td>Either increases the player's sanity by 25% if it burns green or decreases it by 25% if it burns red.</td></tr>
+											<tr><td>The Devil</td><td>Triggers a Ghost Event.</td></tr>
+											<tr><td>The High Priestess</td><td>Randomly selects one dead teammate and resurrects them. The resurrected teammate will respawn at the location of their corpse.</td></tr>
+											<tr><td>The Hanged Man</td><td>Instantly kills the player.</td></tr>
+											<tr><td>Death</td><td>Triggers a hunt.</td></tr>
+											<tr><td>The Hermit</td><td>Prevents the ghost it from moving out of its current room for a short while.</td></tr>
+											<tr><td>The Fool</td><td>Appears as another card at first, before turning into The Fool just before it burns. This card does not have any effect on the player.</td></tr>
+										</table><br />
+										
+										There will only be one deck of tarot cards that will spawn should it spawn, and once all ten have been used, no more will be given to the player. </p>
+								</div>
+							</div>
+							<div id="doll_hint" class="hidden">
+								<h2>From The Journal</h2>
+								<p>These eerie, cute dolls are known for causing harm to others.<br />
+									Picking one up and activating it will force the ghost to interact with the environment. Pins are chosen at random, and certain pins seem to affect you more than it effects the ghost.</p>
+								<div class="minimal">
+									<h2>How To Use</h2>
+									<p>Taking a picture of a voodoo doll with the photo camera will give photo rewards, and is counted as a Voodoo Doll picture.<br />
+
+										Interacting with the voodoo doll will cause one of the 10 pins stuck in the doll to be pushed into it at random.<br />
+										This will cause the ghost to perform an interaction, and will drop the player's sanity by 10%. If the heart pin is pressed down, it will initiate a cursed hunt in the player's immediate vicinity.<br />
+										If the player's sanity is less than 10%, all of the pins will get pushed in and a cursed hunt will occur as well. </p>
+								</div>
+							</div><!-- possessions_hints -->
+						</div>
 					</div>
-			</div><!-- ghost_aggression -->
+			</div><!-- cursed_possessions -->
+
 			<span></span>
 
 			<div id="objectives">

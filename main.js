@@ -73,7 +73,8 @@ function reset() {
 	});
 	$("#evidence li").removeClass("disabled");
 	$('form').trigger("reset");
-	$("#aggression_list input").prop("checked", false).trigger("change");
+	//$("#aggression_list input").prop("checked", false).trigger("change");
+	$("#possessions_list input").prop("checked", false).trigger("change");
 	$(".indeterminate").prop("checked", true).prop("indeterminate", true).prop("readonly", true);
 	warning("Please select up to 3 pieces of evidence to narrow down the spookster.", "#2f2f2f", "#fff");
 }
@@ -144,16 +145,16 @@ $(".toggle_buttons a").each(function(){
 
 $("#reset").click(reset);
 
-$("#aggression_list input").change(function() {
-	const aggressionOptions = $("#aggression_list input");
+$("#possessions_list input").change(function() {
+	const possessionsOptions = $("#possessions_list input");
 	const wasAnUncheck = !$(this).prop("checked");
-	const aggressionType = !wasAnUncheck ? $(this).prop("id") : null;
+	const possessionsType = !wasAnUncheck ? $(this).prop("id") : null;
 
 	/**
 	 * Loop through each option and add/remove the "disabled" class
 	 * depending on whether it's checked.
 	 **/
-	aggressionOptions.each(async function (i, item) {
+	possessionsOptions.each(async function (i, item) {
 		const curOption = $(item);
 		if (!curOption.prop("checked") && !wasAnUncheck) {
 			curOption.parent().addClass("disabled").removeClass("active");
@@ -163,28 +164,32 @@ $("#aggression_list input").change(function() {
 		}
 	});
 
-	// Reveal the appropiate companion text for aggression meaning.
+	// Reveal the appropiate companion text for possessions meaning.
 	var textToRevealID = null
 
 	if (wasAnUncheck) {
-		$("#aggression_hints").addClass("hidden");
+		$("#possessions_hints").addClass("hidden");
 	} else {
-		$("#aggression_hints").removeClass("hidden");
+		$("#possessions_hints").removeClass("hidden");
 	}
 
-	switch (aggressionType) {
-		case 'aggressive': textToRevealID = "violent";
-			break;
-		case 'friendly1':
-		case 'friendly2': textToRevealID = "placid";
-			break;
-		case 'nonefriendly1':
-		case 'nonefriendly2': textToRevealID = "unfriendly";
-			break;
+	switch (possessionsType) {
+		case 'mirror': textToRevealID = "mirror_hint";
+            break;
+        case 'music': textToRevealID = "music_hint";
+            break;
+        case 'ouija': textToRevealID = "ouija_hint";
+            break;
+        case 'circle': textToRevealID = "circle_hint";
+            break;
+        case 'tarot': textToRevealID = "tarot_hint";
+            break;
+        case 'doll': textToRevealID = "doll_hint";
+            break;
 	}
 
-	$("#aggression_hints").children().addClass("hidden");
-	$("#aggression_hints").children(`#${textToRevealID}`).removeClass("hidden");
+	$("#possessions_hints").children().addClass("hidden");
+	$("#possessions_hints").children(`#${textToRevealID}`).removeClass("hidden");
 });
 
 $("#evidence input").change(function() {

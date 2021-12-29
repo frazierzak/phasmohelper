@@ -101,6 +101,7 @@ h2 {
 span {
 	display: none;
 }
+
 span.minimal {
 	width: 100%;
 	height: 3px;
@@ -204,41 +205,41 @@ input[type=reset]:hover {
 	margin: 0 10px 10px 0;
 }
 
-#ghost_aggression {
+#cursed_possessions {
 	display: flex;
 	flex-direction: column;
 	margin: 0 0 35px 0;
 }
 
-#ghost_aggression h2 {
+#cursed_possessions h2 {
 	margin: 0 0 5px 0;
 }
 
-#ghost_aggression p {
+#cursed_possessions p {
 	margin: 0 0 15px 0;
 }
 
-#ghost_aggression p:last-of-type {
+#cursed_possessions p:last-of-type {
 	margin: 0;
 }
 
-#aggression_list {
+#possessions_list {
 	display: flex;
 }
 
-#aggression_list div {
+#possessions_list div {
 	margin: 0 10px 0 0;
 }
 
-#aggression_hints {
+#possessions_hints {
 	margin: 0 0 0 15px;
 }
 
-#aggression_hints.hidden {
+#possessions_hints.hidden {
 	width: 0;
 }
 
-#aggression_list div.disabled, #aggression_hints div.hidden {
+#possessions_list div.disabled, #possessions_hints div.hidden {
 	display: none;
 }
 
