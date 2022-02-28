@@ -254,52 +254,59 @@
 			<span></span>
 			<div id="evidence">
 				<h2 class="minimal">Confirmed Evidence:</h2>
-				<p class="instructions">Check off found evidence here. Evidence not necessary based on previously selected evidence will be eliminated. Click twice on evidence to "eliminate" it from possibilities. </p>
-				<ul>
-					<li>
-						<div>
-							<input type="checkbox" class="indeterminate" id="dots" />
-							<label for="dots">D.O.T.S Projector</label>
-						</div>
-					</li>
-					<li>
-						<div>
-							<input type="checkbox" class="indeterminate" id="emf" />
-							<label for="emf">EMF Level 5</label>
-						</div>
-					</li>
-					<li>
-						<div>
-							<input type="checkbox" class="indeterminate" id="fingerprints" />
-							<label for="fingerprints">Fingerprints</label>
-						</div>
-					</li>
-					<li>
-						<div>
-							<input type="checkbox" class="indeterminate" id="freezing" />
-							<label for="freezing">Freezing Temperatures</label>
-						</div>
-					</li>
-					<li>
-						<div>
-							<input type="checkbox" class="indeterminate" id="orb" />
-							<label for="orb">Ghost Orb</label>
-						</div>
-					</li>
-					<li>
-						<div>
-							<input type="checkbox" class="indeterminate" id="writing" />
-							<label for="writing">Ghost Writing</label>
-						</div>
-					</li>
-					<li>
-						<div>
-							<input type="checkbox" class="indeterminate" id="box" />
-							<label for="box">Spirit Box</label>
-						</div>
-					</li>
-					
-				</ul>
+				<p class="instructions">Track found evidence here. Slide left for confirmed evidence and right for eliminated evidence. If you are playing on Nightmare difficulty select Nightmare to account for one piece of evidence being hidden.  </p>
+				<div id="nightmare_checkbox">
+					<input  id="nightmare_difficulty" type="checkbox"  name="nightmare_difficulty" />
+					<label for="nightmare_difficulty">Nightmare</label>
+				</div>
+
+				<div id="evidence_list">
+					<ul>
+						<li>
+							<div class="evidenceToggle">
+								<label for="dots">D.O.T.S Projector</label>
+								<input type="range" name="dots" id="dots" min="0" max="2" />
+							</div>
+						</li>
+						<li>
+							<div class="evidenceToggle">
+								<label for="emf">EMF Level 5</label>
+								<input type="range" name="emf" id="emf" min="0" max="2" />
+							</div>
+						</li>
+						<li>
+							<div class="evidenceToggle">
+								<label for="fingerprints">Fingerprints</label>
+								<input type="range" name="fingerprints" id="fingerprints" min="0" max="2" />
+							</div>
+						</li>
+						<li>
+							<div class="evidenceToggle">
+								<label for="freezing">Freezing Temperatures</label>
+								<input type="range" name="freezing" id="freezing" min="0" max="2" />
+							</div>
+						</li>
+						<li>
+							<div class="evidenceToggle">
+								<label for="orb">Ghost Orb</label>
+								<input type="range" name="orb" id="orb" min="0" max="2" />
+							</div>
+						</li>
+						<li>
+							<div class="evidenceToggle">
+								<label for="writing">Ghost Writing</label>
+								<input type="range" name="writing" id="writing" min="0" max="2" />
+							</div>
+						</li>
+						<li>
+							<div class="evidenceToggle">
+								<label for="box">Spirit Box</label>
+								<input type="range" name="box" id="box" min="0" max="2" />
+							</div>
+						</li>
+
+					</ul>
+				</div>
 			</div><!-- checkboxes -->
 		</form>
 		<div class="warning">
@@ -382,7 +389,7 @@
 					<ul class="evidence">
 						<li data-evidence="emf">EMF Level 5</li>
 						<li data-evidence="fingerprints">Fingerprints</li>
-						<li data-evidence="dots">D.O.T.S Projector</li>
+						<li data-evidence="dots" required="true">D.O.T.S Projector</li>
 					</ul>
 				</div>
 			</div><!-- ghost -->
@@ -410,7 +417,7 @@
 					<ul class="evidence">
 						<li data-evidence="fingerprints">Fingerprints</li>
 						<li data-evidence="orb">Ghost Orb</li>
-						<li data-evidence="freezing">Freezing Temperatures</li>
+						<li data-evidence="freezing" required="true">Freezing Temperatures</li>
 					</ul>
 				</div>
 			</div><!-- ghost -->
@@ -486,7 +493,7 @@
 						<li data-evidence="box">Spirit Box</li>
 						<li data-evidence="fingerprints">Fingerprints</li>
 						<li data-evidence="freezing">Freezing Temperatures</li>
-						<li data-evidence="orb">Ghost Orb</li>
+						<li data-evidence="orb" required="true">Ghost Orb</li>
 					</ul>
 				</div>
 			</div><!-- ghost -->
@@ -533,7 +540,7 @@
 					</div>
 					<ul class="evidence">
 						<li data-evidence="emf">EMF Level 5</li>
-						<li data-evidence="fingerprints">Fingerprints</li>
+						<li data-evidence="fingerprints" required="true">Fingerprints</li>
 						<li data-evidence="orb">Ghost Orb</li>
 					</ul>
 				</div>
