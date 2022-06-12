@@ -3,7 +3,7 @@
 <head>
 	<title>Phasmo.site - A Phasmophobia Companion Web App</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
-	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">	
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 	<meta name="description" content="A Phasmophobia Web App for help with tracking ghost evidence and information.">
 	<meta name="keywords" content="Phasmophobia, PhasmoHelpeor, Phasmo, Companion App, Web App, Phasmo Site">
 	<meta name="author" content="zuffdaddy">
@@ -11,7 +11,7 @@
 	<meta charset="utf-8">
 </head>
 <body class="orb" onload="loadSettings()">
-	<div class="wrapper">	
+	<div class="wrapper">
 		<div id="desc" class="minimal">
 			<h1>Phasmo.site</h1>
 			<p>A web app for tracking evidence during contracts in the game Phasmophobia. This is a supplemental tool for the journal on hunts. <a href="https://github.com/zuffdaddy/phasmohelper">View the source on github</a> and submit bugs/suggestions <a href="https://github.com/zuffdaddy/phasmohelper/issues">here</a>.</p>
@@ -50,11 +50,11 @@
 					<!-- <div>
 						<input id="reset" type="reset" value="Reset">
 					</div> -->
-				</div>				
-				
+				</div>
+
 			</div><!-- ghost_info -->
 			<span></span>
-			
+
 			<div id="cursed_possessions">
 				<h2 class="minimal">Cursed Possession:</h2>
 				<p class="instructions">You will always find a cursed possession during each contract. Each item has been reported to have paranormal abilities that can help you investigate.<br />
@@ -89,7 +89,7 @@
 						<div id="possessions_hints" class="hidden">
 							<div id="mirror_hint" class="hidden">
 								<h2>From The Journal</h2>
-								<p>If you find the oval shaped mirror laying around, you can use it to find the room where the ghost is most commonly found. 
+								<p>If you find the oval shaped mirror laying around, you can use it to find the room where the ghost is most commonly found.
 									Pick it up and activate it to peer into the spectral realm.<br />
 									Careful: seeing into this realm will drain your sanity rapidly.</p>
 								<div class="minimal">
@@ -100,7 +100,7 @@
 							</div>
 							<div id="music_hint" class="hidden">
 								<h2>From The Journal</h2>
-								<p>This intricate little music box has been created with the sole purpose of communicating with the dead.<br /> 
+								<p>This intricate little music box has been created with the sole purpose of communicating with the dead.<br />
 									Holding the box and activating it starts playing a spectral song, if you listen closely the ghost can sometimes be heard singing along to this haunting melody.<br />
 									Don't get too close, you may interrupt its musical trance and anger it. </p>
 								<div class="minimal">
@@ -121,7 +121,7 @@
 										The Ouija Board does not have to be in the Ghost Room (nor the ghost's current room) to respond.<br />
 										To deactivate the Ouija Board, the player must say "Goodbye", which will make the planchette disappear.<br />
 										If the player who activated the board walks away from an active Ouija Board, or has insufficient sanity to "pay" for the question that they ask, the board will break itself up and trigger a cursed hunt.<br />
-										
+
 										<table>
 											<tr><th colspan="3">Sanity deduction rates (%)</th></tr>
 											<tr><th>Type of question</th><th>Success&nbsp;</th><th>Success (Demon)</th></tr>
@@ -130,7 +130,7 @@
 											<tr><td>Number of people in room, bone location</td><td>20%</td><td>16%</td></tr>
 											<tr><td>Others</td><td>5%</td><td>4%</td></tr>
 										</table>
-										
+
 										If the question is recognised, the planchette will move to answer the question, and an EMF Level 2 reading will be generated around the Ouija Board.<br />
 										If the ghost has EMF Level 5 as evidence, there is a 25% chance for this to be the reading instead.<br />
 										The response chance is not affected by whether or not the ghost is shy.</p>
@@ -146,15 +146,15 @@
 										Each candle deducts 16% sanity, leading to a total of 80% sanity being deducted for all candles.<br />
 										Once all five candles are lit, the ghost will be summoned and fully-materialized, and stay motionless for 5 seconds, unable to kill players. <br />
 										After the 5 second "grace period", it will immediately initiate a cursed hunt on the spot. Once the summoning circle has been activated, it cannot be used again.<br /><br />
-										
+
 										If the circle is lit while a hunt is already ongoing, the ghost will be teleported to the middle of the circle, and the hunt will continue. </p>
 								</div>
 							</div>
 							<div id="tarot_hint" class="hidden">
 								<h2>From The Journal</h2>
 								<p>These mystical cards are the most intriguing item we've found during previous investigations.<br />
-									Each deck contains ten random cards that all have different paranormal properties. When drawn, they can trigger different effects on the team and on any nearby ghost.<br />									
-									Whilst they can be useful, they can also have negative effects, such as: sanity drain, ghost attacks, and even death.<br />									
+									Each deck contains ten random cards that all have different paranormal properties. When drawn, they can trigger different effects on the team and on any nearby ghost.<br />
+									Whilst they can be useful, they can also have negative effects, such as: sanity drain, ghost attacks, and even death.<br />
 									Many of these cards are still yet to be discovered, who knows what's possible?</p>
 								<div class="minimal">
 									<h2>How To Use</h2>
@@ -173,7 +173,7 @@
 											<tr><td>The Hermit</td><td>Prevents the ghost it from moving out of its current room for a short while.</td></tr>
 											<tr><td>The Fool</td><td>Appears as another card at first, before turning into The Fool just before it burns. This card does not have any effect on the player.</td></tr>
 										</table><br />
-										
+
 										There will only be one deck of tarot cards that will spawn should it spawn, and once all ten have been used, no more will be given to the player. </p>
 								</div>
 							</div>
@@ -212,7 +212,7 @@
 						<input type="checkbox" id="emf_read" />
 						<label for="emf_read">EMF</label>
 					</div>
-				   
+
 					<div>
 						<input type="checkbox" id="event" />
 						<label for="event">Event</label>
@@ -382,7 +382,7 @@
 							<li>DOTS can only be seen through a video camera and no one can be in the same room.</li>
 							<li>DOTS can only be seen through the video camera projector if you are just outside of the room or from the monitor in the van.</li>
 							<li>Roaming long distances has a very low chance</li>
-							<li><font color="gold">Nightmare Evidence</font> will always be DOTS</li> 
+							<li><font color="gold">Nightmare Evidence</font> will always be DOTS</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -764,7 +764,7 @@
 						<li data-evidence="emf">EMF Level 5</li>
 						<li data-evidence="box">Spirit Box</li>
 						<li data-evidence="freezing">Freezing Temperatures</li>
-						
+
 				</ul>
 				</div>
 			</div><!-- ghost -->
@@ -809,7 +809,7 @@
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
-						<li data-evidence="box">Spirit Box</li> 
+						<li data-evidence="box">Spirit Box</li>
 						<li data-evidence="orb">Ghost Orb</li>
 						<li data-evidence="dots">D.O.T.S Projector</li>
 					</ul>
@@ -835,6 +835,45 @@
 					<ul class="evidence">
 						<li data-evidence="orb">Ghost Orb</li>
 						<li data-evidence="freezing">Freezing Temperatures</li>
+						<li data-evidence="dots">D.O.T.S Projector</li>
+					</ul>
+				</div>
+			</div><!-- ghost -->
+			<div class="ghost">
+				<div>
+					<h3>Deogen</h3>
+					<div class="description">
+						<h4>Evidence</h4>
+					</div>
+					<ul class="evidence">
+						<li data-evidence="box">Spirit Box</li>
+						<li data-evidence="writing">Ghost Writing</li>
+						<li data-evidence="dots">D.O.T.S Projector</li>
+					</ul>
+				</div>
+			</div><!-- ghost -->
+			<div class="ghost">
+				<div>
+					<h3>Moroi</h3>
+					<div class="description">
+						<h4>Evidence</h4>
+					</div>
+					<ul class="evidence">
+						<li data-evidence="box">Spirit Box</li>
+						<li data-evidence="freezing">Freezing Temperatures</li>
+						<li data-evidence="writing">Ghost Writing</li>
+					</ul>
+				</div>
+			</div><!-- ghost -->
+			<div class="ghost">
+				<div>
+					<h3>Thaye</h3>
+					<div class="description">
+						<h4>Evidence</h4>
+					</div>
+					<ul class="evidence">
+						<li data-evidence="orb">Ghost Orb</li>
+						<li data-evidence="writing">Ghost Writing</li>
 						<li data-evidence="dots">D.O.T.S Projector</li>
 					</ul>
 				</div>
