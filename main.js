@@ -169,64 +169,6 @@ function updateGhosts() {
 		warning("No combination of evidence works!", "#c61c1ce0", "#fff");
 }
 
-$("#toggle_instructions").click(function(){
-	if(readCookie("inst") == "t") {
-		writeCookie("inst","f");
-		$(".instructions").hide();
-		$("#toggle_instructions").addClass("active");
-	
-	} else {
-		writeCookie("inst","t");
-		$(".instructions").show();
-		$("#toggle_instructions").removeClass("active");
-	}
-	
-});
-
-$("#toggle_descriptions").click(function(){
-	if(readCookie("info") == "t") {
-		writeCookie("info","f");
-		$(".description").show();
-		$("#toggle_descriptions").addClass("active");
-	} else {
-		writeCookie("info","t");
-		$(".description").hide();
-		$("#toggle_descriptions").removeClass("active");
-	}
-});
-
-$("#toggle_minimal").click(function(){
-	if(readCookie("min") == "t") {
-		writeCookie("min","f");
-		writeCookie("info","f");
-		$("div.minimal").show();
-		$("span").removeClass("minimal");
-		$(".description").show();
-		$("#toggle_minimal").addClass("active");
-		$("#toggle_descriptions").removeClass("active");
-	} else {
-		writeCookie("min","t");
-		writeCookie("info","t");
-		$("div.minimal").hide();
-		$("span").addClass("minimal");
-		$(".description").hide();
-		$("#toggle_minimal").removeClass("active");
-		$("#toggle_descriptions").addClass("active");
-	}
-});
-
-$("#toggle_floatingorb").click(function(){
-	if((readCookie("orb") == "f")) {
-		writeCookie("orb","t");
-		$("#toggle_floatingorb").addClass("active");
-		$("body").addClass("orb");
-	} else {
-		writeCookie("orb","f");
-		$("#toggle_floatingorb").removeClass("active");
-		$("body").removeClass("orb");
-	}
-});
-
 $(".toggle_buttons a").each(function(){
 	$(this).click(function(){
 		$(this).toggleClass("active");
@@ -234,58 +176,6 @@ $(".toggle_buttons a").each(function(){
 });
 
 $("#reset").click(reset);
-
-$("#possessions_list input").change(function() {
-	const possessionsOptions = $("#possessions_list input");
-	const wasAnUncheck = !$(this).prop("checked");
-	const possessionsType = !wasAnUncheck ? $(this).prop("id") : null;
-
-	/**
-	 * Loop through each option and add/remove the "disabled" class
-	 * depending on whether it's checked.
-	 **/
-	possessionsOptions.each(async function (i, item) {
-		const curOption = $(item);
-		if (!curOption.prop("checked") && !wasAnUncheck) {
-			curOption.parent().addClass("disabled").removeClass("active");
-		}
-		else {
-			curOption.parent().removeClass("disabled").addClass("active");
-		}
-	});
-
-	// Reveal the appropiate companion text for possessions meaning.
-	var textToRevealID = null
-
-	if (wasAnUncheck) {
-		$("#possessions_hints").addClass("hidden");
-	} else {
-		$("#possessions_hints").removeClass("hidden");
-	}
-
-	switch (possessionsType) {
-		case 'mirror': textToRevealID = "mirror_hint";
-            break;
-        case 'music': textToRevealID = "music_hint";
-            break;
-        case 'ouija': textToRevealID = "ouija_hint";
-            break;
-        case 'circle': textToRevealID = "circle_hint";
-            break;
-        case 'tarot': textToRevealID = "tarot_hint";
-            break;
-        case 'doll': textToRevealID = "doll_hint";
-            break;
-	}
-
-	$("#possessions_hints").children().addClass("hidden");
-	$("#possessions_hints").children(`#${textToRevealID}`).removeClass("hidden");
-});
-
-$("#nightmare_difficulty").change(function() {
-	updateGhosts();
-});
-
 
 //Evidence has changed, update all affected ghosts
 $("#evidence_list input").change(function() {

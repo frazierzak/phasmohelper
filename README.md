@@ -1,12 +1,12 @@
 # Phasmohelper
-A web app for helping track ghost evidence in the game Phasmophobia
+A web app for helping track ghost evidence in the game Phasmophobia. Forked from https://github.com/zuffdaddy/phasmohelper
 
-Access it here: https://phasmo.site
+Access it here: http://phasmo.tehlp.com
 
 # License
 MIT License
 
-Copyright (c) 2022 zuffdaddy
+Copyright (c) 2022 zuffdaddy, thelala
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
