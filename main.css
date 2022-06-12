@@ -15,12 +15,6 @@ body {
 	font-family: 'Quicksand', sans-serif;
 }
 
-.orb {
-	background-repeat: no-repeat;
-	background-position: top left;
-	background-image: url('orb.gif');
-}
-
 .warning {
 	padding: 5px 10px;
 	margin: 0 0 35px 0;
@@ -74,19 +68,6 @@ body {
 	color: #000;
 }
 
-.instructions {
-	margin: 0 0 35px 0;
-	display: none;
-}
-
-.instructions ol {
-	padding: 0 0 0 15px;
-}
-
-.instructions li {
-	margin: 0 0 5px 0;
-}
-
 h1 {
 	font-size: 30px;
 	margin: 0 0 5px 0;
@@ -108,34 +89,6 @@ span.minimal {
 	background: #f41f86;
 	display: block;
 	margin: 0 0 20px 0;
-}
-
-#ghost_info {
-	margin: 0 0 35px 0;
-	display: flex;
-	flex-direction: column;
-}
-
-#ghost_info h2 {
-	margin: 0 0 10px 0;
-}
-
-#ghost_info p {
-	margin: 0 0 15px 0;
-}
-
-#ghost_info div {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
-
-#ghost_name {
-	margin: 0 15px 0 0;
-}
-
-#ghost_info label {
-	font-size: 22px;
 }
 
 input[type="text"] {
@@ -182,76 +135,6 @@ input[type=reset]:hover {
 	background-color: #f41f86;
 }
 
-#objectives {
-	display: flex;
-	flex-direction: column;
-	margin: 0 0 35px 0;
-}
-
-#objectives h2 {
-	margin: 0 0 10px 0;
-}
-
-#objectives p {
-	margin: 0 0 15px 0;
-}
-
-#objective_list {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-#objective_list div {
-	margin: 0 10px 10px 0;
-}
-
-#cursed_possessions {
-	display: flex;
-	flex-direction: column;
-	margin: 0 0 35px 0;
-}
-
-#cursed_possessions h2 {
-	margin: 0 0 5px 0;
-}
-
-#cursed_possessions p {
-	margin: 0 0 15px 0;
-}
-
-#cursed_possessions p:last-of-type {
-	margin: 0;
-}
-
-#possessions_list {
-	display: flex;
-}
-
-#possessions_list div {
-	margin: 0 10px 0 0;
-}
-
-#possessions_hints {
-	margin: 0 0 0 15px;
-}
-
-#possessions_hints.hidden {
-	width: 0;
-}
-
-#possessions_list div.disabled, #possessions_hints div.hidden {
-	display: none;
-}
-
-@media screen and (max-width: 1540px) {
-	#aggression_list {
-		flex-direction: column;
-	}
-	#aggression_list div {
-		margin: 0 10px 20px 0;
-	}
-}
-
 input[type="checkbox"] {
 	position:absolute;
 	visibility:hidden;
@@ -271,11 +154,6 @@ input[type="checkbox"] + label {
 
 input[type="checkbox"]:checked + label {
 	background: #f41f86;
-	text-decoration: none;
-}
-
-#objectives input[type="checkbox"]:checked + label {
-	background: #1faef4;
 	text-decoration: none;
 }
 
@@ -315,6 +193,7 @@ input[type="checkbox"]:checked + label {
 .evidenceToggle input[type="range"] {
 	appearance: none;
 	width: 150px;
+	height: 32px;
 	padding: 1px;
 	border-radius: 2px;
 	background-color: #484848;
