@@ -106,7 +106,8 @@ function updateGhosts() {
 			var thisEvidenceLeft = $(this).children("li:not(.yes)");
 			if(thisEvidenceLeft.length < minEvidenceLeft) {
 				minEvidenceLeft = thisEvidenceLeft.length;
-			} else if(thisEvidenceLeft.length > maxEvidenceLeft) {
+			}
+			if(thisEvidenceLeft.length > maxEvidenceLeft) {
 				maxEvidenceLeft = thisEvidenceLeft.length;
 			}
 			fadein($(this).parents(".ghost"));
