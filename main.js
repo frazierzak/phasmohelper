@@ -76,6 +76,9 @@ function reset() {
 	//$("#aggression_list input").prop("checked", false).trigger("change");
 	$("#possessions_list input").prop("checked", false).trigger("change");
 	$('#evidence input').val(1);
+	$(".evidenceToggle input").each(function() {
+		$(this).removeClass('yes no');
+	});
 	warning("Please select up to 3 pieces of evidence to narrow down the spookster.", "#2f2f2f", "#fff");
 }
 
