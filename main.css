@@ -312,10 +312,6 @@ input[type="checkbox"]:checked + label {
 	display: none;
 }
 
-#evidence_list input[type="checkbox"].no + label {
-	background: #971a1a;
-}
-
 .evidenceToggle input[type="range"] {
 	appearance: none;
 	width: 150px;
@@ -337,6 +333,26 @@ input[type="checkbox"]:checked + label {
 }
 
 .evidenceToggle input[type="range"].no::-webkit-slider-thumb  {
+	background-color: #971a1a;
+}
+
+/* Firefox has it's own selectors for ranges and Chrome doesn't play nice with
+ * them being combined, so Firefox gets it's own style section
+ */
+.evidenceToggle input[type="range"]::-moz-range-thumb {
+	appearance: none;
+	height: 30px;
+	width: 45px;
+	border-radius: 2px;
+	background-color: #2f2f2f;
+	border: none;
+}
+
+.evidenceToggle input[type="range"].yes::-moz-range-thumb  {
+	background-color: #f41f86;
+}
+
+.evidenceToggle input[type="range"].no::-moz-range-thumb  {
 	background-color: #971a1a;
 }
 
