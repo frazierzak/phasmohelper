@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Phasmo.site - A Phasmophobia Companion Web App</title>
+	<title>Phasmo.thelp.com - A Phasmophobia Companion Web App</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 	<meta name="description" content="A Phasmophobia Web App for help with tracking ghost evidence and information.">
-	<meta name="keywords" content="Phasmophobia, PhasmoHelpeor, Phasmo, Companion App, Web App, Phasmo Site">
+	<meta name="keywords" content="Phasmophobia, PhasmoHelpeor, Phasmo, Companion App, Web App">
 	<meta name="author" content="zuffdaddy">
 	<meta name="author" content="TheLala">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +14,7 @@
 <body onload="loadSettings()">
 	<div class="wrapper">
 		<div id="desc" class="minimal">
-			<h1>Phasmo.site</h1>
+			<h1>Phasmo.thelp.com (a fork of Phasmo.site)</h1>
 			<p>A web app for tracking evidence during contracts in the game Phasmophobia. This is a supplemental tool for the journal on hunts. <a href="https://github.com/TheLala/phasmohelper">View the source on github</a>.</p>
 		</div>
 
@@ -147,7 +147,7 @@
 						<h4>Unique Strengths</h4>
 						<p>Deogen constantly sense the living. You can run but you can't hide.</p>
 						<h4>Weaknesses</h4>
-						<p>Deogen require a lot of energy to form and will move very slowly.</p>
+						<p>Deogen require a lot of energy to form and will move very slowly when approaching its victim.</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
 							<i>Initial observations</i>
@@ -178,7 +178,6 @@
 							<li>DOTS can only be seen through a video camera and no one can be in the same room.</li>
 							<li>DOTS can only be seen through the video camera projector if you are just outside of the room or from the monitor in the van.</li>
 							<li>Roaming long distances has a very low chance</li>
-							<li><font color="gold">Nightmare Evidence</font> will always be DOTS</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -205,7 +204,6 @@
 							<li><font color="tomato">Hunting Speed</font> increases by 5%-50% as the temperature drops in rooms.</li>
 							<li><font color="tomato">Hunting Speed</font> decreased by 7% in the warmest areas.</li>
 							<li><font color="tomato">Hunting Speed</font> does not increase when in line of sight of a player.</li>
-							<li><font color="gold">Nightmare Evidence</font> will always be freezing temperatures</li>
 							<li>Breaker has an increased chance to be turned OFF</li>
 						</ul>
 						<h4>Evidence</h4>
@@ -313,7 +311,7 @@
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
-						<li data-evidence="box">Spirit Box</li>
+						<li data-evidence="box" required="true">Spirit Box</li>
 						<li data-evidence="writing">Ghost Writing</li>
 						<li data-evidence="freezing">Freezing Temperatures</li>
 					</ul>
@@ -356,7 +354,6 @@
 							<li>Fingerprints can show 6 fingers</li>
 							<li>Fingerprints have a 70% chance of showing</li>
 							<li>Fingerprints disappear timer can decrease from 2 minutes to 1 minute.</li>
-							<li><font color="gold">Nightmare Evidence</font> will always be fingerprints</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>

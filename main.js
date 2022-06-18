@@ -72,7 +72,9 @@ function reset() {
 		$(this).removeClass('yes no');
 	});
 	$("#evidence li").removeClass("disabled");
+
 	$('form').trigger("reset");
+
 	//$("#aggression_list input").prop("checked", false).trigger("change");
 	$("#possessions_list input").prop("checked", false).trigger("change");
 	$('#evidence input').val(1);
@@ -97,7 +99,12 @@ function updateGhosts() {
 		$(this).parents(".ghost").removeClass("excluded");
 		if($(this).children(".yes").length !== foundEvidence.length) {
 			fadeout($(this).parents(".ghost"));
-		} else if($(this).children(".no").length > (nightmare ? 1 : 0) || $(this).find(".no[required='true']").length > 0 ) {
+		} else if(
+				$(this).children(".no").length > (nightmare ? 1 : 0) ||
+				$(this).find(".no[required='true']").length > 0 ||
+				(nightmare && foundEvidence.length >= $(this).children("li").length) ||
+				(nightmare && foundEvidence.length >= $(this).children("li").length-1 && $(this).find("[required='true']:not(.yes)").length > 0)
+			) {
 			// In nightmare difficulty one piece of evidence is hidden, so a ghost can only be ruled out if
 			// two pieces of evidence are excluded OR if a required piece of evidence is excluded
 			$(this).parents(".ghost").addClass("excluded");
@@ -176,6 +183,19 @@ $(".toggle_buttons a").each(function(){
 });
 
 $("#reset").click(reset);
+
+$("#nightmare_difficulty").click(function() {
+
+	updateGhosts();
+
+	if($('#nightmare_difficulty').prop("checked")) {
+		$(".ghost .evidence li[required='true']").addClass("required");
+	} else {
+			$(".ghost .evidence li[required='true']").removeClass("required");
+	}
+
+
+});
 
 //Evidence has changed, update all affected ghosts
 $("#evidence_list input").change(function() {

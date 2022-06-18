@@ -302,6 +302,11 @@ input[type="checkbox"]:checked + label {
 	background-color: #50092b;
 }
 
+.ghost .evidence li.required {
+	color: gold;
+}
+
+
 footer {
 	margin: 2em 0 0 0;
 }
