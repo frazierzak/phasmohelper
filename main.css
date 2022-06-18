@@ -157,7 +157,7 @@ input[type="text"] {
 	margin: 0 10px 0 0;
 }
 
-input[type="text"]:focus {	
+input[type="text"]:focus {
 	background: #fff;
 	color: #000;
 }
@@ -269,15 +269,6 @@ input[type="checkbox"] + label {
 	text-decoration: none;
 }
 
-input[type="checkbox"].indeterminate + label {
-	background: #1a1a1a;
-	text-decoration: line-through;
-}
-input[type="checkbox"].indeterminate:indeterminate + label {
-	background: #484848;
-	text-decoration: none;
-}
-
 input[type="checkbox"]:checked + label {
 	background: #f41f86;
 	text-decoration: none;
@@ -302,20 +293,56 @@ input[type="checkbox"]:checked + label {
 	margin: 0 0 5px 0;
 }
 
+#evidence #nightmare_checkbox {
+	width: 10em;
+	margin: 0 0 5px 0;
+}
+
 #evidence p {
 	margin: 0 0 15px 0;
 }
 
-#evidence li {
+#evidence_list li {
 	list-style: none;
+	white-space: nowrap;
+	width: auto;
 }
 
-#evidence ul li.disabled {
+#evidence_list ul li.disabled {
 	display: none;
 }
 
-#evidence input[type="checkbox"].no + label {
+#evidence_list input[type="checkbox"].no + label {
 	background: #971a1a;
+}
+
+.evidenceToggle input[type="range"] {
+	appearance: none;
+	width: 150px;
+	padding: 1px;
+	border-radius: 2px;
+	background-color: #484848;
+}
+
+.evidenceToggle input[type="range"]::-webkit-slider-thumb  {
+	appearance: none;
+	height: 30px;
+	width: 45px;
+	border-radius: 2px;
+	background-color: #2f2f2f;
+}
+
+.evidenceToggle input[type="range"].yes::-webkit-slider-thumb  {
+	background-color: #f41f86;
+}
+
+.evidenceToggle input[type="range"].no::-webkit-slider-thumb  {
+	background-color: #971a1a;
+}
+
+.evidenceToggle label  {
+	margin: auto;
+	display: block;
 }
 
 #ghosts {

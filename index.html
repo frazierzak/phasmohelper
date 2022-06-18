@@ -3,7 +3,7 @@
 <head>
 	<title>Phasmo.site - A Phasmophobia Companion Web App</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
-	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">	
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 	<meta name="description" content="A Phasmophobia Web App for help with tracking ghost evidence and information.">
 	<meta name="keywords" content="Phasmophobia, PhasmoHelpeor, Phasmo, Companion App, Web App, Phasmo Site">
 	<meta name="author" content="zuffdaddy">
@@ -11,7 +11,7 @@
 	<meta charset="utf-8">
 </head>
 <body class="orb" onload="loadSettings()">
-	<div class="wrapper">	
+	<div class="wrapper">
 		<div id="desc" class="minimal">
 			<h1>Phasmo.site</h1>
 			<p>A web app for tracking evidence during contracts in the game Phasmophobia. This is a supplemental tool for the journal on hunts. <a href="https://github.com/zuffdaddy/phasmohelper">View the source on github</a> and submit bugs/suggestions <a href="https://github.com/zuffdaddy/phasmohelper/issues">here</a>.</p>
@@ -50,11 +50,11 @@
 					<!-- <div>
 						<input id="reset" type="reset" value="Reset">
 					</div> -->
-				</div>				
-				
+				</div>
+
 			</div><!-- ghost_info -->
 			<span></span>
-			
+
 			<div id="cursed_possessions">
 				<h2 class="minimal">Cursed Possession:</h2>
 				<p class="instructions">You will always find a cursed possession during each contract. Each item has been reported to have paranormal abilities that can help you investigate.<br />
@@ -89,7 +89,7 @@
 						<div id="possessions_hints" class="hidden">
 							<div id="mirror_hint" class="hidden">
 								<h2>From The Journal</h2>
-								<p>If you find the oval shaped mirror laying around, you can use it to find the room where the ghost is most commonly found. 
+								<p>If you find the oval shaped mirror laying around, you can use it to find the room where the ghost is most commonly found.
 									Pick it up and activate it to peer into the spectral realm.<br />
 									Careful: seeing into this realm will drain your sanity rapidly.</p>
 								<div class="minimal">
@@ -100,7 +100,7 @@
 							</div>
 							<div id="music_hint" class="hidden">
 								<h2>From The Journal</h2>
-								<p>This intricate little music box has been created with the sole purpose of communicating with the dead.<br /> 
+								<p>This intricate little music box has been created with the sole purpose of communicating with the dead.<br />
 									Holding the box and activating it starts playing a spectral song, if you listen closely the ghost can sometimes be heard singing along to this haunting melody.<br />
 									Don't get too close, you may interrupt its musical trance and anger it. </p>
 								<div class="minimal">
@@ -121,7 +121,7 @@
 										The Ouija Board does not have to be in the Ghost Room (nor the ghost's current room) to respond.<br />
 										To deactivate the Ouija Board, the player must say "Goodbye", which will make the planchette disappear.<br />
 										If the player who activated the board walks away from an active Ouija Board, or has insufficient sanity to "pay" for the question that they ask, the board will break itself up and trigger a cursed hunt.<br />
-										
+
 										<table>
 											<tr><th colspan="3">Sanity deduction rates (%)</th></tr>
 											<tr><th>Type of question</th><th>Success&nbsp;</th><th>Success (Demon)</th></tr>
@@ -130,7 +130,7 @@
 											<tr><td>Number of people in room, bone location</td><td>20%</td><td>16%</td></tr>
 											<tr><td>Others</td><td>5%</td><td>4%</td></tr>
 										</table>
-										
+
 										If the question is recognised, the planchette will move to answer the question, and an EMF Level 2 reading will be generated around the Ouija Board.<br />
 										If the ghost has EMF Level 5 as evidence, there is a 25% chance for this to be the reading instead.<br />
 										The response chance is not affected by whether or not the ghost is shy.</p>
@@ -146,15 +146,15 @@
 										Each candle deducts 16% sanity, leading to a total of 80% sanity being deducted for all candles.<br />
 										Once all five candles are lit, the ghost will be summoned and fully-materialized, and stay motionless for 5 seconds, unable to kill players. <br />
 										After the 5 second "grace period", it will immediately initiate a cursed hunt on the spot. Once the summoning circle has been activated, it cannot be used again.<br /><br />
-										
+
 										If the circle is lit while a hunt is already ongoing, the ghost will be teleported to the middle of the circle, and the hunt will continue. </p>
 								</div>
 							</div>
 							<div id="tarot_hint" class="hidden">
 								<h2>From The Journal</h2>
 								<p>These mystical cards are the most intriguing item we've found during previous investigations.<br />
-									Each deck contains ten random cards that all have different paranormal properties. When drawn, they can trigger different effects on the team and on any nearby ghost.<br />									
-									Whilst they can be useful, they can also have negative effects, such as: sanity drain, ghost attacks, and even death.<br />									
+									Each deck contains ten random cards that all have different paranormal properties. When drawn, they can trigger different effects on the team and on any nearby ghost.<br />
+									Whilst they can be useful, they can also have negative effects, such as: sanity drain, ghost attacks, and even death.<br />
 									Many of these cards are still yet to be discovered, who knows what's possible?</p>
 								<div class="minimal">
 									<h2>How To Use</h2>
@@ -173,7 +173,7 @@
 											<tr><td>The Hermit</td><td>Prevents the ghost it from moving out of its current room for a short while.</td></tr>
 											<tr><td>The Fool</td><td>Appears as another card at first, before turning into The Fool just before it burns. This card does not have any effect on the player.</td></tr>
 										</table><br />
-										
+
 										There will only be one deck of tarot cards that will spawn should it spawn, and once all ten have been used, no more will be given to the player. </p>
 								</div>
 							</div>
@@ -212,7 +212,7 @@
 						<input type="checkbox" id="emf_read" />
 						<label for="emf_read">EMF</label>
 					</div>
-				   
+
 					<div>
 						<input type="checkbox" id="event" />
 						<label for="event">Event</label>
@@ -254,52 +254,59 @@
 			<span></span>
 			<div id="evidence">
 				<h2 class="minimal">Confirmed Evidence:</h2>
-				<p class="instructions">Check off found evidence here. Evidence not necessary based on previously selected evidence will be eliminated. Click twice on evidence to "eliminate" it from possibilities. </p>
-				<ul>
-					<li>
-						<div>
-							<input type="checkbox" class="indeterminate" id="dots" />
-							<label for="dots">D.O.T.S Projector</label>
-						</div>
-					</li>
-					<li>
-						<div>
-							<input type="checkbox" class="indeterminate" id="emf" />
-							<label for="emf">EMF Level 5</label>
-						</div>
-					</li>
-					<li>
-						<div>
-							<input type="checkbox" class="indeterminate" id="fingerprints" />
-							<label for="fingerprints">Fingerprints</label>
-						</div>
-					</li>
-					<li>
-						<div>
-							<input type="checkbox" class="indeterminate" id="freezing" />
-							<label for="freezing">Freezing Temperatures</label>
-						</div>
-					</li>
-					<li>
-						<div>
-							<input type="checkbox" class="indeterminate" id="orb" />
-							<label for="orb">Ghost Orb</label>
-						</div>
-					</li>
-					<li>
-						<div>
-							<input type="checkbox" class="indeterminate" id="writing" />
-							<label for="writing">Ghost Writing</label>
-						</div>
-					</li>
-					<li>
-						<div>
-							<input type="checkbox" class="indeterminate" id="box" />
-							<label for="box">Spirit Box</label>
-						</div>
-					</li>
-					
-				</ul>
+				<p class="instructions">Track found evidence here. Slide left for confirmed evidence and right for eliminated evidence. If you are playing on Nightmare difficulty select Nightmare to account for one piece of evidence being hidden.  </p>
+				<div id="nightmare_checkbox">
+					<input  id="nightmare_difficulty" type="checkbox"  name="nightmare_difficulty" />
+					<label for="nightmare_difficulty">Nightmare</label>
+				</div>
+
+				<div id="evidence_list">
+					<ul>
+						<li>
+							<div class="evidenceToggle">
+								<label for="dots">D.O.T.S Projector</label>
+								<input type="range" name="dots" id="dots" min="0" max="2" />
+							</div>
+						</li>
+						<li>
+							<div class="evidenceToggle">
+								<label for="emf">EMF Level 5</label>
+								<input type="range" name="emf" id="emf" min="0" max="2" />
+							</div>
+						</li>
+						<li>
+							<div class="evidenceToggle">
+								<label for="fingerprints">Fingerprints</label>
+								<input type="range" name="fingerprints" id="fingerprints" min="0" max="2" />
+							</div>
+						</li>
+						<li>
+							<div class="evidenceToggle">
+								<label for="freezing">Freezing Temperatures</label>
+								<input type="range" name="freezing" id="freezing" min="0" max="2" />
+							</div>
+						</li>
+						<li>
+							<div class="evidenceToggle">
+								<label for="orb">Ghost Orb</label>
+								<input type="range" name="orb" id="orb" min="0" max="2" />
+							</div>
+						</li>
+						<li>
+							<div class="evidenceToggle">
+								<label for="writing">Ghost Writing</label>
+								<input type="range" name="writing" id="writing" min="0" max="2" />
+							</div>
+						</li>
+						<li>
+							<div class="evidenceToggle">
+								<label for="box">Spirit Box</label>
+								<input type="range" name="box" id="box" min="0" max="2" />
+							</div>
+						</li>
+
+					</ul>
+				</div>
 			</div><!-- checkboxes -->
 		</form>
 		<div class="warning">
@@ -316,6 +323,16 @@
 						<p>Banshee's will weaken their target before striking.</p>
 						<h4>Weaknesses</h4>
 						<p>Banshee's can sometimes be heard screaming with a parabolic microphone.</p>
+						<h4>Unique Features</h4>
+						<ul style="margin-left:15px">
+							<li><font color="deeppink">When Hunting,</font> it targerts only one person. Changes to normal ghost attacking when main target leaves the house.</li>
+							<li><font color="deeppink">When Hunting,</font> and the main target dies, it will target another player.<li>
+							<li><font color="orange">Average Sanity Hunt</font> is target dependant and not average sanity</li>
+							<li><font color="aqua">Ghost Events</font> are likely to be the singing based ones.</li>
+							<li><font color="plum">Sanity Loss</font> increased by 5% for singing Ghost Events</li>
+							<li>Parabolic Microphone has a chance for a unique wailing audio queue.</li>
+							<li>Roaming will happen often towards their target</li>
+						</ul>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
@@ -334,6 +351,14 @@
 						<p>Demons will initiate hunts more often than other ghosts.</p>
 						<h4>Weaknesses</h4>
 						<p>Demons fear the Crucifix and will be less aggressive near one.</p>
+						<h4>Unique Features</h4>
+						<ul style="margin-left:15px">
+							<li><font color="greenyellow">Hunt Initiation</font> can happen at any average sanity. Even 100%</li>
+							<li><font color="greenyellow">Hunt Initiation</font> cancelled with Crosses.  Range increased from 3m to 5m.</li>
+							<li><font color="orange">Average Sanity Hunt</font> is increased from 50% to 70%.</li>
+							<li><font color="rosybrown">Smudge Stick Hunt Prevention</font> is reduced from 90 seconds to 60 seconds.</li>
+							<li>Hunt time interval is reduced from 25 seconds to 20 seconds.</li>
+						</ul>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
@@ -352,12 +377,19 @@
 						<p>A Goryo will usually only show itself on camera if there are no people nearby.</p>
 						<h4>Weaknesses</h4>
 						<p>They are rarely seen far from their place of death.</p>
+						<h4>Unique Features</h4>
+						<ul style="margin-left:15px">
+							<li>DOTS can only be seen through a video camera and no one can be in the same room.</li>
+							<li>DOTS can only be seen through the video camera projector if you are just outside of the room or from the monitor in the van.</li>
+							<li>Roaming long distances has a very low chance</li>
+							<li><font color="gold">Nightmare Evidence</font> will always be DOTS</li>
+						</ul>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
 						<li data-evidence="emf">EMF Level 5</li>
 						<li data-evidence="fingerprints">Fingerprints</li>
-						<li data-evidence="dots">D.O.T.S Projector</li>
+						<li data-evidence="dots" required="true">D.O.T.S Projector</li>
 					</ul>
 				</div>
 			</div><!-- ghost -->
@@ -370,12 +402,22 @@
 						<p>Lower temperatures can cause the Hantu to move at faster speeds.</p>
 						<h4>Weaknesses</h4>
 						<p>Hantus move slower in warmer areas.</p>
+						<h4>Unique Features</h4>
+						<ul style="margin-left:15px">
+							<li><font color="deeppink">When Hunting,</font> you can see freezing breath from the ghost while in rooms of 3°C or lower.</li>
+							<li><font color="deeppink">When Hunting,</font> audible footsteps will increase in hot areas and slower in cold areas.</li>
+							<li><font color="tomato">Hunting Speed</font> increases by 5%-50% as the temperature drops in rooms.</li>
+							<li><font color="tomato">Hunting Speed</font> decreased by 7% in the warmest areas.</li>
+							<li><font color="tomato">Hunting Speed</font> does not increase when in line of sight of a player.</li>
+							<li><font color="gold">Nightmare Evidence</font> will always be freezing temperatures</li>
+							<li>Breaker has an increased chance to be turned OFF</li>
+						</ul>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
 						<li data-evidence="fingerprints">Fingerprints</li>
 						<li data-evidence="orb">Ghost Orb</li>
-						<li data-evidence="freezing">Freezing Temperatures</li>
+						<li data-evidence="freezing" required="true">Freezing Temperatures</li>
 					</ul>
 				</div>
 			</div><!-- ghost -->
@@ -388,6 +430,12 @@
 						<p>A Jinn will travel at a a faster speed if it’s victim is far away.</p>
 						<h4>Weaknesses</h4>
 						<p>Turning off the locations power source will prevent the Jinn from using it’s ability.</p>
+						<h4>Unique Features</h4>
+						<ul style="margin-left:15px">
+							<li><font color="tomato">Hunting Speed</font> is nearly doubled if in line of sight until it reaches 2m of the player if the breaker is ON.</li>
+							<li><font color="plum">Sanity Loss</font> by 25% using an ability if you stand within 3m of the ghost and if the breaker is ON.</li>
+							<li>Breaker cannot be turned OFF.</li>
+						</ul>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
@@ -406,6 +454,15 @@
 						<p>A Mare will have an increased chance to attack in the dark.</p>
 						<h4>Weaknesses</h4>
 						<p>Turning the lights ON around the Mare will lower its chance to attack.</p>
+						<h4>Unique Features</h4>
+						<ul style="margin-left:15px">
+							<li><font color="deeppink">When Hunting,</font> they are more likely to turn OFF lights than any other form of interaction.</li>
+							<li><font color="orange">Average Sanity Hunt</font> threshold with lights ON is at 40% and 60% with lights OFF.</li>
+							<li><font color="aqua">Ghost Events</font> are more likely to be breaking a light bulb.</li>
+							<li>Lights can be turned OFF immediately after you turn them ON. Cannot be spammed</li>
+							<li>Lights cannot be turned ON by ghost.</li>
+							<li>Roaming long range has a higher chance to happen if the lights are ON in the room</li>
+						</ul>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
@@ -417,19 +474,26 @@
 			</div><!-- ghost -->
 			<div class="ghost">
 				<div>
-					<h3>The Mimic</h3>
+					<h3>Mimic</h3>
 					<div class="description">
 						<p>The Mimic is an elusive, mysterious, copycat ghost that mirrors traits and behaviours from others, including other ghost types.</p>
 						<h4>Unique Strengths</h4>
 						<p>We're unsure what this ghost is capable of. Be careful.</p>
 						<h4>Weaknesses</h4>
 						<p>Several reports have noted ghost orbs sightings near mimics.</p>
+						<h4>Unique Features</h4>
+						<ul style="margin-left:15px">
+							<li>Ghost Orbs will appear as a 4th piece of evidence.</li>
+							<li>Ghost Orbs will follow the ghost as it wanders around.</li>
+							<li>Can imitate traits of other ghosts including hunting early.</li>
+						</ul>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
 						<li data-evidence="box">Spirit Box</li>
 						<li data-evidence="fingerprints">Fingerprints</li>
 						<li data-evidence="freezing">Freezing Temperatures</li>
+						<li data-evidence="orb" required="true">Ghost Orb</li>
 					</ul>
 				</div>
 			</div><!-- ghost -->
@@ -442,6 +506,11 @@
 						<p>A Myling is known to be quieter when hunting.</p>
 						<h4>Weaknesses</h4>
 						<p>Mylings more frequently make paranormal sounds.</p>
+						<h4>Unique Features</h4>
+						<ul style="margin-left:15px">
+							<li><font color="deeppink">When Hunting,</font> footsteps can only be heard within 10m of the player (same distance when flashlights pulse).</li>
+							<li>Parabolic Microphone has a chance for a unique ghost whispering audio queue.</li>
+						</ul>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
@@ -460,11 +529,18 @@
 						<p>When interacting with the environment, an Obake will rarely leave a trace.</p>
 						<h4>Weaknesses</h4>
 						<p>Sometimes this ghost will shapeshift, leaving behind unique evidence.</p>
+						<h4>Unique Features</h4>
+						<ul style="margin-left:15px">
+							<li>Fingerprints can show 6 fingers</li>
+							<li>Fingerprints have a 70% chance of showing</li>
+							<li>Fingerprints disappear timer can decrease from 2 minutes to 1 minute.</li>
+							<li><font color="gold">Nightmare Evidence</font> will always be fingerprints</li>
+						</ul>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
 						<li data-evidence="emf">EMF Level 5</li>
-						<li data-evidence="fingerprints">Fingerprints</li>
+						<li data-evidence="fingerprints" required="true">Fingerprints</li>
 						<li data-evidence="orb">Ghost Orb</li>
 					</ul>
 				</div>
@@ -478,6 +554,11 @@
 						<p>Oni’s are more active when people are nearby and have been seen moving objects at great speed.</p>
 						<h4>Weaknesses</h4>
 						<p>Onis are very active, making them easier to find.</p>
+						<h4>Unique Features</h4>
+						<ul style="margin-left:15px">
+							<li><font color="aqua">Ghost Events</font> will never be transparent or mist for ghost events.</li>
+							<li><font color="deepskyblue">Interactions</font> and <font color="aqua">Ghost Events</font> happen extremely frequent.</li>
+						</ul>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
@@ -496,6 +577,14 @@
 						<p>Extinguishing a flame can cause an Onryo to attack.</p>
 						<h4>Weaknesses</h4>
 						<p>When threatened, this ghost will be less likely to hunt.</p>
+						<h4>Unique Features</h4>
+						<ul style="margin-left:15px">
+							<li><font color="greenyellow">Hunt Initiation</font> cannot occur when ghost is within 4m of a lit candle/campfire.</li>
+							<li><font color="greenyellow">Hunt Initiation</font> can happen if a candle/campfire is blown out by the ghost and no other lit candles/campfire is within range.  First 3 blowouts are free, 4th is a 50% chance.  If there are 2 or more players dead the chance is increased to 100%.</li>
+							<li><font color="orange">Average Sanity Hunt</font> is increased from 50% to 60% if there are no lit candles/campfire nearby.</li>
+							<li>Candles/campfire have a higher chance of being blown out</li>
+							<li>Candles/campfire will prioritize blowing out candles/campfire over biting a cross.</li>
+						</ul>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
@@ -514,6 +603,13 @@
 						<p>Looking at a Phantom will dorp your sanity considerably faster.</p>
 						<h4>Weaknesses</h4>
 						<p>Taking a photo of the Phantom will make it temporarily disappear.</p>
+						<h4>Unique Features</h4>
+						<ul style="margin-left:15px">
+							<li><font color="deeppink">When Hunting,</font> ghost visibility between disappearing will be increased from 0.1 seconds to 1 second or more</li>
+							<li><font color="plum">Sanity Loss</font> occurs when looking at the ghost durring a ghost event/hunt.</li>
+							<li>Ghost pictures listed in the journal will not show the ghost in the image.</li>
+							<li>Roaming chance increased for long distances to a player</li>
+						</ul>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
@@ -532,6 +628,12 @@
 						<p>A Poltergeist can throw multiple objects at once.</p>
 						<h4>Weaknesses</h4>
 						<p>With nothing to throw, Poltergeists become powerless.</p>
+						<h4>Unique Features</h4>
+						<ul style="margin-left:15px">
+							<li><font color="deepskyblue">Interactions</font> are two or more items at once if multiple objects are nearby</li>
+							<li><font color="plum">Sanity Loss</font> of 2% for every thrown object to all players close by.</li>
+							<li>Activity Monitor can show similar to EMF 5 spike (0 to 4/5 bar then drop down)</li>
+						</ul>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
@@ -550,6 +652,12 @@
 						<p>A Raiju can siphon power from nearby electrical devices, making it move faster.</p>
 						<h4>Weaknesses</h4>
 						<p>Raiju are constatntly disrupting electronic equipment, making it easier to track when attacking.</p>
+						<h4>Unique Features</h4>
+						<ul style="margin-left:15px">
+							<li><font color="deeppink">When Hunting,</font> faster footsteps can be heard as they pass electrical equipment.</li>
+							<li><font color="tomato">Hunting Speed</font> increases by 65% when in range of any electrical equipment left on.</li>
+							<li><font color="orange">Average Sanity Hunt</font> is increased from 50% to 65% when nearby electrical equipment left on.</li>
+						</ul>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
@@ -568,6 +676,12 @@
 						<p>A Revenant will travel at a significantly faster speed when hunting their prey.</p>
 						<h4>Weaknesses</h4>
 						<p>Hiding from the Revenant will cause it to move very slowly.</p>
+						<h4>Unique Features</h4>
+						<ul style="margin-left:15px">
+							<li><font color="deeppink">When Hunting,</font> time between audible footsteps is one every 3 seconds when not chasing a player</li>
+							<li><font color="tomato">Hunting Speed,</font> increases by 70% when they are in line of sight of a player</li>
+							<li><font color="tomato">Hunting Speed,</font> decreases by 50% when they are not in line of sight of a player</li>
+						</ul>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
@@ -586,6 +700,14 @@
 						<p>Shades are much harder to find.</p>
 						<h4>Weaknesses</h4>
 						<p>The Ghost will not enter a hunt if there are multiple people nearby.</p>
+						<h4>Unique Features</h4>
+						<ul style="margin-left:15px">
+							<li><font color="greenyellow">Hunt Initiation</font> cannot happen if there are multiple people next to the ghost.</li>
+							<li><font color="orange">Average Sanity Hunt</font> is decreased from 50% to 35%.</li>
+							<li><font color="aqua">Ghost events</font> occur based on the average sanity.  sanity:event chance  =  100%:0%  75%:50%  50%:100%</li>
+							<li><font color="aqua">Ghost events</font> are likely to be the audios ones with the breath, hiss, or woosh</li>
+							<li><font color="aqua">Ghost events</font> showing it's form are likely to be a shadowy figure</li>
+						</ul>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
@@ -604,14 +726,17 @@
 						<p>None.</p>
 						<h4>Weaknesses</h4>
 						<p>A Spirit can be temporarily stopped by burning Smudge Sticks near them.</p>
+						<h4>Unique Features</h4>
+						<ul style="margin-left:15px">
+							<li><font color="rosybrown">Smudge Stick Hunt Prevention</font> is increased from 90 seconds to 180 seconds.(</li>
+						</ul>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
 						<li data-evidence="emf">EMF Level 5</li>
 						<li data-evidence="box">Spirit Box</li>
 						<li data-evidence="writing">Ghost Writing</li>
-						
-				</ul>
+					</ul>
 				</div>
 			</div><!-- ghost -->
             <div class="ghost">
@@ -623,13 +748,23 @@
 						<p>Either Twin can be angered and initiate an attack on their prey.</p>
 						<h4>Weaknesses</h4>
 						<p>The Twins will often interact with the environment at the same time.</p>
+						<h4>Unique Features</h4>
+						<ul style="margin-left:15px">
+							<li><font color="greenyellow">Hunt Initiation</font> can occur where either twin is currently located. This includes the Summoning Circle.</li>
+							<li><font color="greenyellow">Hunt Initiation</font> from the alt-twin will interact with something firs then immediately hunt.</li>
+							<li><font color="tomato">Hunting Speed</font> is decreased by 10% for the twin that is in the ghost room.</li>
+							<li><font color="tomato">Hunting Speed</font> is increased by 10% for the alt-twin that is not in the ghost room.</li>
+							<li><font color="deepskyblue">Interactions</font> will occur in two seperate areas of the room/map almost at the same time.</li>
+							<li>Activity Montior will show an initial climb then level off followed by an immediate spike indicating a double interaction</li>
+							<li>Evidence will not be available from the alt-twin except EMF5</li>
+						</ul>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
 						<li data-evidence="emf">EMF Level 5</li>
 						<li data-evidence="box">Spirit Box</li>
 						<li data-evidence="freezing">Freezing Temperatures</li>
-						
+
 				</ul>
 				</div>
 			</div><!-- ghost -->
@@ -642,6 +777,12 @@
 						<p>Wraiths almost never touch the ground meaning it can’t be tracked by footsteps.</p>
 						<h4>Weaknesses</h4>
 						<p>Wraiths have a toxic reaction to Salt.</p>
+						<h4>Unique Features</h4>
+						<ul style="margin-left:15px">
+							<li><font color="deepskyblue">Interactions</font> increased when stepping in salt.</li>
+							<li>Footprints are not visible with salt and UV lights while hearing footsteps</li>
+							<li>Teleporting to a player will give off an EMF 2 even with no items to interact with.</li>
+						</ul>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
@@ -660,6 +801,11 @@
 						<p>Talking near a Yokai will anger it, increasing the chance of an attack.</p>
 						<h4>Weaknesses</h4>
 						<p>When hunting, a Yokai can only hear voices close to it.</p>
+						<h4>Unique Features</h4>
+						<ul style="margin-left:15px">
+							<li><font color="orange">Average Sanity Hunt</font> is increased from 50% to 90% if contiouly talking near the ghost.</li>
+							<li><font color="deepskyblue">Interactions</font> increased when continuiously talking near the ghost.</li>
+						</ul>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
@@ -678,11 +824,56 @@
 						<p>Yurei’s have been known to have a stronger effect on peoples sanity.</p>
 						<h4>Weaknesses</h4>
 						<p>Smudging the Yurei’s place of death will trap it temporarily, reducing how much it wanders</p>
+						<h4>Unique Features</h4>
+						<ul style="margin-left:15px">
+							<li><font color="aqua">Ghost Events</font> are likely to be "whoosh" or "hey".</li>
+							<li><font color="plum">Sanity Loss</font> by 13% from doing a "closing door" ghost event near you.</li>
+							<li><font color="rosybrown">Smudge Stick Hunt Prevention</font> will prevent the ghost from leaving the area for 90 seconds.</li>
+						</ul>
 						<h4>Evidence</h4>
 					</div>
 					<ul class="evidence">
 						<li data-evidence="orb">Ghost Orb</li>
 						<li data-evidence="freezing">Freezing Temperatures</li>
+						<li data-evidence="dots">D.O.T.S Projector</li>
+					</ul>
+				</div>
+			</div><!-- ghost -->
+			<div class="ghost">
+				<div>
+					<h3>Deogen</h3>
+					<div class="description">
+						<h4>Evidence</h4>
+					</div>
+					<ul class="evidence">
+						<li data-evidence="box">Spirit Box</li>
+						<li data-evidence="writing">Ghost Writing</li>
+						<li data-evidence="dots">D.O.T.S Projector</li>
+					</ul>
+				</div>
+			</div><!-- ghost -->
+			<div class="ghost">
+				<div>
+					<h3>Moroi</h3>
+					<div class="description">
+						<h4>Evidence</h4>
+					</div>
+					<ul class="evidence">
+						<li data-evidence="box">Spirit Box</li>
+						<li data-evidence="freezing">Freezing Temperatures</li>
+						<li data-evidence="writing">Ghost Writing</li>
+					</ul>
+				</div>
+			</div><!-- ghost -->
+			<div class="ghost">
+				<div>
+					<h3>Thaye</h3>
+					<div class="description">
+						<h4>Evidence</h4>
+					</div>
+					<ul class="evidence">
+						<li data-evidence="orb">Ghost Orb</li>
+						<li data-evidence="writing">Ghost Writing</li>
 						<li data-evidence="dots">D.O.T.S Projector</li>
 					</ul>
 				</div>

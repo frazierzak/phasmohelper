@@ -6,7 +6,7 @@ Access it here: https://phasmo.site
 # License
 MIT License
 
-Copyright (c) 2021 zuffdaddy
+Copyright (c) 2022 zuffdaddy
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
