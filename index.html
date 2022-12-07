@@ -167,7 +167,7 @@
 											<tr><td>The Tower</td><td>Causes an interaction.</td></tr>
 											<tr><td>The Wheel of Fortune&nbsp;</td><td>Either increases the player's sanity by 25% if it burns green or decreases it by 25% if it burns red.</td></tr>
 											<tr><td>The Devil</td><td>Triggers a Ghost Event.</td></tr>
-											<tr><td>The High Priestess</td><td>Randomly selects one dead teammate and resurrects them. The resurrected teammate will respawn at the location of their corpse. If no one is dead when the card is drawn, it will ressurect the next person who dies. </td></tr>
+											<tr><td>The High Priestess</td><td>Randomly selects one dead teammate and resurrects them. The resurrected teammate will respawn at the location of their corpse. If no one is dead when the card is drawn, it will resurrect the next person who dies. </td></tr>
 											<tr><td>The Hanged Man</td><td>Instantly kills the player.</td></tr>
 											<tr><td>Death</td><td>Triggers a hunt.</td></tr>
 											<tr><td>The Hermit</td><td>Prevents the ghost it from moving out of its current room for a short while.</td></tr>
@@ -320,18 +320,18 @@
 					<div class="description">
 						<p>The singing siren, known for attracting its victims through song. It has been known to single out its prey before making a killing blow.</p>
 						<h4>Unique Strengths</h4>
-						<p>Banshee's will weaken their target before striking.</p>
+						<p>Banshees will weaken their target before striking.</p>
 						<h4>Weaknesses</h4>
-						<p>Banshee's can sometimes be heard screaming with a parabolic microphone.</p>
+						<p>Banshees can sometimes be heard screaming with a parabolic microphone.</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
-							<li><font color="deeppink">When Hunting,</font> it targerts only one person. Changes to normal ghost attacking when main target leaves the house.</li>
-							<li><font color="deeppink">When Hunting,</font> and the main target dies, it will target another player.<li>
-							<li><font color="orange">Average Sanity Hunt</font> is target dependant and not average sanity</li>
-							<li><font color="aqua">Ghost Events</font> are likely to be the singing based ones.</li>
-							<li><font color="plum">Sanity Loss</font> increased by 5% for singing Ghost Events</li>
-							<li>Parabolic Microphone has a chance for a unique wailing audio queue.</li>
-							<li>Roaming will happen often towards their target</li>
+							<li><font color="deeppink">When Hunting</font>, it targets only one person. If the hunt target is outside the building, it will hunt like any other ghost, chasing any opportune player.</li>
+							<li><font color="deeppink">When Hunting</font>, and the main target dies, it will target another player.</li>
+							<li><font color="orange">Average Sanity Hunt</font> is target dependant and not average sanity.</li>
+							<li><font color="aqua">Ghost Events</font> are likely to be the singing-based ones.</li>
+							<li><font color="plum">Sanity Loss</font> of 15% instead of 10% from target player when colliding with ghost during singing ghost events.</li>
+							<li>Parabolic Microphone has a chance for a unique wailing sound.</li>
+							<li>Roaming will happen often towards their target.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -353,11 +353,11 @@
 						<p>Demons fear the Crucifix and will be less aggressive near one.</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
-							<li><font color="greenyellow">Hunt Initiation</font> can happen at any average sanity. Even 100%</li>
-							<li><font color="greenyellow">Hunt Initiation</font> cancelled with Crosses.  Range increased from 3m to 5m.</li>
-							<li><font color="orange">Average Sanity Hunt</font> is increased from 50% to 70%.</li>
+							<li><font color="greenyellow">Hunt Initiation</font> can happen at any average sanity. Even 100%.</li>
+							<li><font color="greenyellow">Hunt Initiation</font> blocking range of Crucifixes increased from 3m to 5m.</li>
+							<li><font color="orange">Average Sanity Hunt</font> at 70%.</li>
 							<li><font color="rosybrown">Smudge Stick Hunt Prevention</font> is reduced from 90 seconds to 60 seconds.</li>
-							<li>Hunt time interval is reduced from 25 seconds to 20 seconds.</li>
+							<li>Minimum hunt time cooldown is reduced from 25 seconds to 20 seconds.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -372,17 +372,17 @@
 				<div>
 					<h3>Goryo</h3>
 					<div class="description">
-						<p>When a Goryo passes through a DOTS projector, using a video camera is the only way to see it.</p>
+						<p>When a Goryo passes through a D.O.T.S Projector, using a video camera is the only way to see it.</p>
 						<h4>Unique Strengths</h4>
 						<p>A Goryo will usually only show itself on camera if there are no people nearby.</p>
 						<h4>Weaknesses</h4>
 						<p>They are rarely seen far from their place of death.</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
-							<li>DOTS can only be seen through a video camera and no one can be in the same room.</li>
-							<li>DOTS can only be seen through the video camera projector if you are just outside of the room or from the monitor in the van.</li>
-							<li>Roaming long distances has a very low chance</li>
-							<li><font color="gold">Nightmare Evidence</font> will always be DOTS</li>
+							<li>D.O.T.S can only be seen through a video camera.</li>
+							<li>Will not interact with D.O.T.S if any player is in the same room as the ghost.</li>
+							<li>Roaming long distances has a very low chance.</li>
+							<li><font color="gold">Nightmare Evidence</font> will always be D.O.T.S.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -404,13 +404,12 @@
 						<p>Hantus move slower in warmer areas.</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
-							<li><font color="deeppink">When Hunting,</font> you can see freezing breath from the ghost while in rooms of 3°C or lower.</li>
-							<li><font color="deeppink">When Hunting,</font> audible footsteps will increase in hot areas and slower in cold areas.</li>
-							<li><font color="tomato">Hunting Speed</font> increases by 5%-50% as the temperature drops in rooms.</li>
-							<li><font color="tomato">Hunting Speed</font> decreased by 7% in the warmest areas.</li>
+							<li><font color="deeppink">When Hunting</font>, you can see freezing breath from the ghost while in rooms of 3°C or lower.</li>
+							<li><font color="tomato">Hunting Speed</font> increases depending on temperature in rooms below 15°C, up to 60% below 0°C.</li>
+							<li><font color="tomato">Hunting Speed</font> decreased by 20% in rooms above 15°C.</li>
 							<li><font color="tomato">Hunting Speed</font> does not increase when in line of sight of a player.</li>
-							<li><font color="gold">Nightmare Evidence</font> will always be freezing temperatures</li>
-							<li>Breaker has an increased chance to be turned OFF</li>
+							<li>Breaker has an increased chance to be turned OFF.</li>
+							<li><font color="gold">Nightmare Evidence</font> will always be freezing temperatures.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -427,14 +426,14 @@
 					<div class="description">
 						<p>A Jinn is a territorial Ghost that will attack when threatened. It has also been known to be able to travel at significant speed.</p>
 						<h4>Unique Strengths</h4>
-						<p>A Jinn will travel at a a faster speed if it’s victim is far away.</p>
+						<p>A Jinn will travel at a faster speed if its victim is far away.</p>
 						<h4>Weaknesses</h4>
-						<p>Turning off the locations power source will prevent the Jinn from using it’s ability.</p>
+						<p>Turning off the locations power source will prevent the Jinn from using its ability.</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
-							<li><font color="tomato">Hunting Speed</font> is nearly doubled if in line of sight until it reaches 2m of the player if the breaker is ON.</li>
+							<li><font color="tomato">Hunting Speed</font> increased by 50% if in line of sight and the player is over 3m away, while the breaker is ON.</li>
 							<li><font color="plum">Sanity Loss</font> by 25% using an ability if you stand within 3m of the ghost and if the breaker is ON.</li>
-							<li>Breaker cannot be turned OFF.</li>
+							<li>Breaker cannot be turned OFF by ghost interaction.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -456,12 +455,12 @@
 						<p>Turning the lights ON around the Mare will lower its chance to attack.</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
-							<li><font color="deeppink">When Hunting,</font> they are more likely to turn OFF lights than any other form of interaction.</li>
+							<li><font color="deeppink">When Hunting</font>, they are more likely to turn OFF lights than any other form of interaction.</li>
 							<li><font color="orange">Average Sanity Hunt</font> threshold with lights ON is at 40% and 60% with lights OFF.</li>
 							<li><font color="aqua">Ghost Events</font> are more likely to be breaking a light bulb.</li>
-							<li>Lights can be turned OFF immediately after you turn them ON. Cannot be spammed</li>
+							<li>Lights can be turned OFF immediately after you turn them ON. Cannot be spammed.</li>
 							<li>Lights cannot be turned ON by ghost.</li>
-							<li>Roaming long range has a higher chance to happen if the lights are ON in the room</li>
+							<li>Roaming long range has a higher chance to happen if the lights are ON in the room.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -484,8 +483,8 @@
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
 							<li>Ghost Orbs will appear as a 4th piece of evidence.</li>
-							<li>Ghost Orbs will follow the ghost as it wanders around.</li>
-							<li>Can imitate traits of other ghosts including hunting early.</li>
+							<li>Can imitate traits of other ghosts, including hunting early.</li>
+							<li>Changes what traits to imitate every 30 to 120 seconds, but never during a hunt.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -508,8 +507,8 @@
 						<p>Mylings more frequently make paranormal sounds.</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
-							<li><font color="deeppink">When Hunting,</font> footsteps can only be heard within 10m of the player (same distance when flashlights pulse).</li>
-							<li>Parabolic Microphone has a chance for a unique ghost whispering audio queue.</li>
+							<li><font color="deeppink">When Hunting</font>, footsteps and ghost vocalisations can only be heard within 12m of the player (same distance as electronic interference).</li>
+							<li>Produces paranormal sounds through the Parabolic Microphone more frequently.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -531,10 +530,11 @@
 						<p>Sometimes this ghost will shapeshift, leaving behind unique evidence.</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
-							<li>Fingerprints can show 6 fingers</li>
-							<li>Fingerprints have a 70% chance of showing</li>
-							<li>Fingerprints disappear timer can decrease from 2 minutes to 1 minute.</li>
-							<li><font color="gold">Nightmare Evidence</font> will always be fingerprints</li>
+							<li>Fingerprints can show six-fingered handprint.</li>
+							<li>Fingerprints can show two fingerprints on light switches (instead of one).</li>
+							<li>Fingerprints have a 75% chance of showing.</li>
+							<li>Fingerprints' remaining time can randomly be cut in half. Can happen multiple times in quick succession, making it possible for fingerprints to only last for mere seconds.</li>
+							<li><font color="gold">Nightmare Evidence</font> will always be fingerprints.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -549,16 +549,18 @@
 				<div>
 					<h3>Oni</h3>
 					<div class="description">
-						<p>Oni's love to scare their victims as much as possible before attacking. They are often seen in their physical form guarding their place of death.</p>
+						<p>Onis love to scare their victims as much as possible before attacking. They are often seen in their physical form guarding their place of death.</p>
 						<h4>Unique Strengths</h4>
-						<p>Oni’s are more active when people are nearby and have been seen moving objects at great speed.</p>
+						<p>Onis are more active when people are nearby and have been seen moving objects at great speed.</p>
 						<h4>Weaknesses</h4>
 						<p>Onis are very active, making them easier to find.</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
-							<li><font color="aqua">Ghost Events</font> will drain double the amount of sanity.</li>
-							<li><font color="aqua">Ghost Events</font> will never be transparent or mist for ghost events.</li>
-							<li><font color="deepskyblue">Interactions</font> and <font color="aqua">Ghost Events</font> happen extremely frequent.</li>
+							<li><font color="deeppink">When Hunting</font>, the ghost will flash visible for longer durations, making it easier to take a photo of.</li>
+							<li><font color="aqua">Ghost Events</font> will never be ghost mist/airball.</li>
+							<li><font color="aqua">Ghost Events</font> prefers full manifestation over shadowy or translucent ones.</li>
+							<li><font color="plum">Sanity Loss</font> of 20% instead of 10% when colliding with the target player during a ghost event.</li>
+							<li><font color="deepskyblue">Interactions</font> happen more frequently when players are nearby.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -573,18 +575,18 @@
 				<div>
 					<h3>Onryo</h3>
 					<div class="description">
-						<p>The Onryo is often referred to as "The Wrathful Spirit". It steals soulsfrom dying victims' bodies to seek revenge. This ghost has been known to fear any form of fire, and will do anything to be far from it.</p>
+						<p>The Onryo is often referred to as "The Wrathful Spirit". It steals souls from dying victims' bodies to seek revenge. This ghost has been known to fear any form of fire, and will do anything to be far from it.</p>
 						<h4>Unique Strengths</h4>
 						<p>Extinguishing a flame can cause an Onryo to attack.</p>
 						<h4>Weaknesses</h4>
 						<p>When threatened, this ghost will be less likely to hunt.</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
-							<li><font color="greenyellow">Hunt Initiation</font> cannot occur when ghost is within 4m of a lit candle/campfire.</li>
-							<li><font color="greenyellow">Hunt Initiation</font> can happen if a candle/campfire is blown out by the ghost and no other lit candles/campfire is within range.  First 3 blowouts are free, 4th is a 50% chance.  If there are 2 or more players dead the chance is increased to 100%.</li>
-							<li><font color="orange">Average Sanity Hunt</font> is increased from 50% to 60% if there are no lit candles/campfire nearby.</li>
-							<li>Candles/campfire have a higher chance of being blown out</li>
-							<li>Candles/campfire will prioritize blowing out candles/campfire over biting a cross.</li>
+							<li><font color="greenyellow">Hunt Initiation</font> cannot occur when ghost is within 4m of a lit candle, a lighter, or a campfire.</li>
+							<li><font color="greenyellow">Hunt Initiation</font> will prioritize blowing out lit candles, lighters, and campfires over burning a crucifix.</li>
+							<li><font color="greenyellow">Hunt Initiation</font> triggers every third blow out of a lit candle, a lighter, or a campfire. This hunt can still be blocked by an additional nearby flame or crucifix.</li>
+							<li><font color="orange">Average Sanity Hunt</font> at 60%.</li>
+							<li>Blows out lit candles, lighters, and campfires more frequently. Increases further with the number of dead players.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -601,15 +603,15 @@
 					<div class="description">
 						<p>A Phantom is a Ghost that can possess the living, inducing fear into those around it. They are most commonly summoned from Ouija Boards.</p>
 						<h4>Unique Strengths</h4>
-						<p>Looking at a Phantom will dorp your sanity considerably faster.</p>
+						<p>Looking at a Phantom will drop your sanity considerably faster.</p>
 						<h4>Weaknesses</h4>
 						<p>Taking a photo of the Phantom will make it temporarily disappear.</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
-							<li><font color="deeppink">When Hunting,</font> ghost visibility between disappearing will be increased from 0.1 seconds to 1 second or more</li>
-							<li><font color="plum">Sanity Loss</font> occurs when looking at the ghost durring a ghost event/hunt.</li>
-							<li>Ghost pictures listed in the journal will not show the ghost in the image.</li>
-							<li>Roaming chance increased for long distances to a player</li>
+							<li><font color="deeppink">When Hunting</font>, the ghost is invisible for twice as much of the time.</li>
+							<li><font color="plum">Sanity Loss</font> of 0.5%/sec occurs while being in line of sight within 10m of the ghost during a ghost event or hunt.</li>
+							<li>Ghost pictures listed in the journal will not show the ghost in the image, and will not contain any interference.</li>
+							<li>May pick a random player inside the house and walk to them no matter the distance.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -626,14 +628,16 @@
 					<div class="description">
 						<p>One of the most famous Ghosts, the Poltergeist. Known to manipulate objects around it to spread fear into its victims.</p>
 						<h4>Unique Strengths</h4>
-						<p>A Poltergeist can throw multiple objects at once.</p>
+						<p>Poltergeists can throw multiple objects at once, and with great force.</p>
 						<h4>Weaknesses</h4>
 						<p>With nothing to throw, Poltergeists become powerless.</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
-							<li><font color="deepskyblue">Interactions</font> are two or more items at once if multiple objects are nearby</li>
-							<li><font color="plum">Sanity Loss</font> of 2% for every thrown object to all players close by.</li>
-							<li>Activity Monitor can show similar to EMF 5 spike (0 to 4/5 bar then drop down)</li>
+							<li><font color="deeppink">When Hunting</font>, will throw nearby objects twice as often.</li>
+							<li><font color="deepskyblue">Interactions</font> may throw multiple objects at once.</li>
+							<li><font color="deepskyblue">Interactions</font> may throw an object with twice the force.</li>
+							<li><font color="plum">Sanity Loss</font> of 2% for every thrown object to all nearby players when multiple objects are thrown at once.</li>
+							<li>Activity Monitor can show similar to EMF 5 spike (jump 0 to 5 bar then drop down) due to throwing multiple objects at once.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -648,16 +652,16 @@
 				<div>
 					<h3>Raiju</h3>
 					<div class="description">
-						<p>A Raiju is a demon that thrives on electrical current. While generally calm, they can become agitated when overhwhelmed with power.</p>
+						<p>A Raiju is a demon that thrives on electrical current. While generally calm, they can become agitated when overwhelmed with power.</p>
 						<h4>Unique Strengths</h4>
 						<p>A Raiju can siphon power from nearby electrical devices, making it move faster.</p>
 						<h4>Weaknesses</h4>
-						<p>Raiju are constatntly disrupting electronic equipment, making it easier to track when attacking.</p>
+						<p>Raiju are constantly disrupting electronic equipment, making it easier to track when attacking.</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
-							<li><font color="deeppink">When Hunting,</font> faster footsteps can be heard as they pass electrical equipment.</li>
-							<li><font color="tomato">Hunting Speed</font> increases by 65% when in range of any electrical equipment left on.</li>
-							<li><font color="orange">Average Sanity Hunt</font> is increased from 50% to 65% when nearby electrical equipment left on.</li>
+							<li><font color="tomato">Hunting Speed</font> increases by 50% when in range of any active electrical equipment.</li>
+							<li><font color="orange">Average Sanity Hunt</font> is increased from 50% to 65% when nearby active electrical equipment.</li>
+							<li><font color="aqua">Ghost Events</font> will interfere with electronics up to 15m (instead of 10m) away.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -679,9 +683,8 @@
 						<p>Hiding from the Revenant will cause it to move very slowly.</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
-							<li><font color="deeppink">When Hunting,</font> time between audible footsteps is one every 3 seconds when not chasing a player</li>
-							<li><font color="tomato">Hunting Speed,</font> increases by 70% when they are in line of sight of a player</li>
-							<li><font color="tomato">Hunting Speed,</font> decreases by 50% when they are not in line of sight of a player</li>
+							<li><font color="tomato">Hunting Speed</font>, increases by 75% when they are in line of sight of a player.</li>
+							<li><font color="tomato">Hunting Speed</font>, decreases by 40% when they are not in line of sight of a player.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -703,11 +706,13 @@
 						<p>The Ghost will not enter a hunt if there are multiple people nearby.</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
-							<li><font color="greenyellow">Hunt Initiation</font> cannot happen if there are multiple people next to the ghost.</li>
-							<li><font color="orange">Average Sanity Hunt</font> is decreased from 50% to 35%.</li>
-							<li><font color="aqua">Ghost events</font> occur based on the average sanity.  sanity:event chance  =  100%:0%  75%:50%  50%:100%</li>
-							<li><font color="aqua">Ghost events</font> are likely to be the audios ones with the breath, hiss, or woosh</li>
-							<li><font color="aqua">Ghost events</font> showing it's form are likely to be a shadowy figure</li>
+							<li><font color="greenyellow">Hunt Initiation</font> cannot happen if a player is in the same room as the ghost.</li>
+							<li><font color="orange">Average Sanity Hunt</font> at 35%.</li>
+							<li><font color="aqua">Ghost Events</font> likelihood based on the average sanity. The chance starts at 0% at 100% sanity, and gradually increases to 100% at 50% sanity.</li>
+							<li><font color="aqua">Ghost Events</font> are likely to be ghost mist/airball (audio ones with the breath, hiss, or woosh).</li>
+							<li><font color="aqua">Ghost Events</font> showing its form are likely to be a shadowy figure.</li>
+							<li><font color="deepskyblue">Interactions</font> cannot be thrown object if a player is in the same room as the ghost.</li>
+							<li>When made to appear using a Summoning Circle or a Music Box, it has a chance of appearing as a black shadow rather than its full form while stationary.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -729,7 +734,7 @@
 						<p>A Spirit can be temporarily stopped by burning Smudge Sticks near them.</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
-							<li><font color="rosybrown">Smudge Stick Hunt Prevention</font> is increased from 90 seconds to 180 seconds.(</li>
+							<li><font color="rosybrown">Smudge Stick Hunt Prevention</font> is increased from 90 seconds to 180 seconds.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -755,9 +760,9 @@
 							<li><font color="greenyellow">Hunt Initiation</font> from the alt-twin will interact with something firs then immediately hunt.</li>
 							<li><font color="tomato">Hunting Speed</font> is decreased by 10% for the twin that is in the ghost room.</li>
 							<li><font color="tomato">Hunting Speed</font> is increased by 10% for the alt-twin that is not in the ghost room.</li>
-							<li><font color="deepskyblue">Interactions</font> will occur in two seperate areas of the room/map almost at the same time.</li>
-							<li>Activity Montior will show an initial climb then level off followed by an immediate spike indicating a double interaction</li>
-							<li>Evidence will not be available from the alt-twin except EMF5</li>
+							<li><font color="deepskyblue">Interactions</font> may occur in two separate areas of the room/map almost at the same time.</li>
+							<li>Activity Monitor will show an initial climb then level off followed by an immediate spike indicating a double interaction.</li>
+							<li>Evidence will not be available from the alt-twin except EMF 5.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -775,14 +780,14 @@
 					<div class="description">
 						<p>Wraiths are one of the most dangerous Ghosts you will find. It is also the only known Ghost that has the ability of flight and has sometimes been known to travel through walls.</p>
 						<h4>Unique Strengths</h4>
-						<p>Wraiths almost never touch the ground meaning it can’t be tracked by footsteps.</p>
+						<p>Wraiths almost never touch the ground meaning it can't be tracked by footsteps.</p>
 						<h4>Weaknesses</h4>
 						<p>Wraiths have a toxic reaction to Salt.</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
 							<li><font color="deepskyblue">Interactions</font> increased when stepping in salt.</li>
-							<li>Footprints are not visible with salt and UV lights while hearing footsteps</li>
-							<li>Teleporting to a player will give off an EMF 2 even with no items to interact with.</li>
+							<li>When stepping in salt, it will never leave any UV-visible footprints. Photo of the stepped-in salt will be unlabelled.</li>
+							<li>May teleport to a random player, generating an EMF 2 even with no items to interact with.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -804,8 +809,9 @@
 						<p>When hunting, a Yokai can only hear voices close to it.</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
-							<li><font color="orange">Average Sanity Hunt</font> is increased from 50% to 80% if continuiously talking near the ghost.</li>
-							<li><font color="deepskyblue">Interactions</font> increased when continuiously talking near the ghost.</li>
+							<li><font color="deeppink">When Hunting</font>, it can only hear players or sense handheld active electronics that are within 2.5m away.</li>
+							<li><font color="orange">Average Sanity Hunt</font> is increased from 50% to 80% if continuously talking near the ghost.</li>
+							<li><font color="deepskyblue">Interactions</font> increased when continuously talking near the ghost.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -822,9 +828,9 @@
 					<div class="description">
 						<p>A Yurei is a Ghost that has returned to the physical world, usually for the purpose of revenge or hatred.</p>
 						<h4>Unique Strengths</h4>
-						<p>Yurei’s have been known to have a stronger effect on peoples sanity.</p>
+						<p>Yureis have been known to have a stronger effect on peoples sanity.</p>
 						<h4>Weaknesses</h4>
-						<p>Smudging the Yurei’s place of death will trap it temporarily, reducing how much it wanders</p>
+						<p>Smudging the Yurei's place of death will trap it temporarily, reducing how much it wanders</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
 							<li><font color="aqua">Ghost Events</font> are likely to be "whoosh" or "hey".</li>
@@ -851,15 +857,14 @@
 						<p>Deogen require a lot of energy to form and will move very slowly when approaching its victim.</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
-							<li><font color="orange">Average Sanity Hunt</font> Hunts at 40% sanity</li>
-							<li><font color="tomato">Hunting Speed</font> Between 2.5 - 6 metres, the ghost becomes slower as it approaches the player.</li>
-							<li><font color="deepskyblue">Interactions</font> The Deogen will show up more often as a silhouette on the D.O.T.S Projector.</li>
-							<li><font color="deeppink">When Hunting,</font> the Deogen always has line-of-sight with all players on the map and will occasionally "refresh" and repick the nearest target throughout the hunt.</li>
-							<li><font color="deeppink">When Hunting,</font> the Deogen blinks faster during hunts; it is visible for longer intervals and/or is invisible for shorter intervals.</li>
-							<li><font color="gold">Nightmare Evidence</font> Will always be Spirit Box</li>
+							<li><font color="orange">Average Sanity Hunt</font> at 40%.</li>
+							<li><font color="tomato">Hunting Speed</font> increased by 75% when more than 6m away. Below 6m, the ghost becomes <b>much</b> slower as it approaches the player.</li>
+							<li><font color="deeppink">When Hunting</font>, it always has line of sight with all players (hiding spots don't work) and will occasionally repick the nearest target throughout the hunt.</li>
+							<li><font color="deeppink">When Hunting</font>, it is invisible for shorter intervals.</li>
+							<li>Will show up more often as a silhouette on the D.O.T.S Projector.</li>
 							<li>Can produce a unique heavy bull-like breathing within 1 meter.</li>
-							<li>Hiding spots do not work when dealing with a Deogen</li>
-							<li>Using a Smudge Stick will force the Deogen to repick the nearest target when the smudge effect runs out.</li>
+							<li>Using a Smudge Stick will force it to repick the nearest target when the smudge effect runs out.</li>
+							<li><font color="gold">Nightmare Evidence</font> will always be Spirit Box.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -881,14 +886,14 @@
 						<p>Moroi suffer from hyperosmia, weakening them for longer periods.</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
-							<li><font color="tomato">Hunting Speed</font> Ghost speed will increase as average sanity decreases.</li>
-							<li><font color="tomato">Hunting Speed</font> Ghost speed will increase with line of sight.</li>
-							<li><font color="plum">Sanity Loss</font> Curse: Using the Spirit Box will cause a passive sanity drain of .3%/sec.</li>
-							<li><font color="plum">Sanity Loss</font> Sanity drain curse will pause when outside of the house, but will start again if you go back inside.</li>
-							<li><font color="plum">Sanity Loss</font> Sanity pills will stop the curse completely.</li>
-							<li><font color="rosybrown">Smudge Stick Hunt Prevention</font> Smudging the Moroi during a hunt will cause it to wander for about 12 seconds.</li>
-							<li><font color="gold">Nightmare Evidence</font> Will always be Spirit Box</li>
-							<li>Moroi can curse multiple players at the same time.</li>
+							<li><font color="tomato">Hunting Speed</font> is 10% slower above 45% average sanity, gradually increasing to 30% faster at 0% average sanity.</li>
+							<li><font color="tomato">Hunting Speed</font> will continuously accelerate with line of sight.</li>
+								<li><font color="plum">Sanity Loss</font>: Getting a Spirit Box response will curse the player, doubling their passive sanity drain, and standing in a lit area will not stop the sanity drain.</li>
+							<li>The curse will pause when outside of the house, and start again when back inside.</li>
+							<li>Sanity Pills will break the curse.</li>
+							<li>Multiple players can be cursed at the same time.</li>
+							<li>Smudging the Moroi during a hunt will cause it to wander for 12 seconds (instead of 6 seconds).</li>
+							<li><font color="gold">Nightmare Evidence</font> will always be Spirit Box.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
@@ -910,11 +915,11 @@
 						<p>Thaye will weaken over time, making them weaker, slower and less aggressive.</p>
 						<h4>Unique Features</h4>
 						<ul style="margin-left:15px">
-							<li><font color="orange">Average Sanity Hunt</font>Thaye become less aggressive and start ghost hunts less often at low Sanity levels.</li>
-							<li><font color="greenyellow">Hunt Initiation</font> The hunt threshold will change as the ghost ages.</li>
-							<li><font color="tomato">Hunting Speed</font> As the ghost ages, its speed will become reduced.</li>
-							<li>Thaye are incredibly dangerous to early game players. Due to its high level of activity at the start of the game, this Phasmophobia ghost type becomes easy to identify. </li>
-							<li>However, due to how aggressive the Thaye is early in the game, expect aggressive Ghost Hunts early.</li>
+							<li><font color="orange">Average Sanity Hunt</font> starts at 75%. Decreases each time the ghost ages, stopping at 15%.</li>
+							<li><font color="tomato">Hunting Speed</font> increased by 60% at start. Decreases each time the ghost ages, stopping at 1/3 of the initial speed (slower than players).</li>
+							<li><font color="deepskyblue">Interactions</font> happen very frequently at start. Decreases each time the ghost ages, stopping at 1/4 of the initial frequency.</li>
+							<li>Does not speed up with line of sight of a player.</li>
+							<li>Only ages when a player is in the same room as the ghost.</li>
 						</ul>
 						<h4>Evidence</h4>
 					</div>
