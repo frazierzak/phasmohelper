@@ -276,6 +276,8 @@ $("#possessions_list input").change(function() {
             break;
         case 'doll': textToRevealID = "doll_hint";
             break;
+		case 'paw': textToRevealID = "paw_hint";
+			break;
 	}
 
 	$("#possessions_hints").children().addClass("hidden");

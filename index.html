@@ -85,6 +85,10 @@
 								<input type="checkbox" id="doll" />
 								<label for="doll">Voodoo Doll</label>
 							</div>
+							<div>
+								<input type="checkbox" id="paw" />
+								<label for="paw">Monkey Paw</label>
+							</div>
 						</div><!-- possessions_list -->
 						<div id="possessions_hints" class="hidden">
 							<div id="mirror_hint" class="hidden">
@@ -188,6 +192,28 @@
 										Interacting with the voodoo doll will cause one of the 10 pins stuck in the doll to be pushed into it at random.<br />
 										This will cause the ghost to perform an interaction, and will drop the player's sanity by 10%. If the heart pin is pressed down, it will initiate a cursed hunt in the player's immediate vicinity.<br />
 										If the player's sanity is less than 10%, all of the pins will get pushed in and a cursed hunt will occur as well. </p>
+								</div>
+							</div>
+							<div id="paw_hint" class="hidden">
+								<h2>From The Journal</h2>
+								<p>This mummified monkeys paw seems to grant a number of wishes depending on how many fingers are lifted when it's found.<br />
+									It seems to be unique, compared to the other Cursed Possessions we've found, in that each wish has different consequences. Will you tamper with fate and change your future?</p>
+								<div class="minimal">
+									<h2>How To Use</h2>
+									<p>The Monkey Paw can be used to grant the player wishes. Depending on the difficulty level, you'll get three to five wishes. You can't repeat the wish, so choose carefully.</p>
+									<table style="border-spacing: 20px 2px; text-align: left;">
+										<tr><th>Wish</th><th>Effect</th><th>Penalty</th></tr>
+										<tr><td>I wish to be sane</td><td>The Sanity of all players is set to 50%.</td><td>Permanently 50% increased sanity drain. The Ghost's favorite room will be randomized.</td></tr>
+										<tr><td>I wish to be safe</td><td>Unblocks the nearest hiding spot.</td><td>Ghost can permanently sense Player's voice and active electronics at any range.</td></tr>
+										<tr><td>I wish to leave</td><td>Unlocks all doors.</td><td>Player is slowed and have reduced vision for 5 seconds.</td></tr>
+										<tr><td>I wish to see the ghost</td><td>Ghost spawns near you for 5 seconds.</td><td>Cursed Hunt afterwards with reduced vision.</td></tr>
+										<tr><td>I wish for activity</td><td>Doubled ghost activity for 2 minutes.</td><td>Permanently breaks the fuse box, and locks the exit door for two minutes.</td></tr>
+										<tr><td>I wish to trap the ghost</td><td>Traps the ghost in the ghost room for 1 minute.</td><td>Player will be trapped in the room they are currently in for 1 minute. Cursed Hunt afterwards.</td></tr>
+										<tr><td>I wish for life</td><td>Revive a dead teammate.</td><td>50% chance of killing the player who made the wish in turn.</td></tr>
+										<tr><td>I wish for knowledge</td><td>Cross out incorrect evidence in your journal.</td><td>Cursed Hunt, and permanently reduced vision and muffled hearing.</td></tr>
+										<tr><td>I wish for anything</td><td>Randomly pick a wish.</td></tr>
+									</table>
+									<p><br />Additionally, you may wish for a change of weather with the penalty of going temporarily blind while the weather undergoes its change: I wish for clear skies/rain/snow/sunrise/fog.</p>
 								</div>
 							</div><!-- possessions_hints -->
 						</div>
