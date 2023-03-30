@@ -319,14 +319,15 @@ input[type="checkbox"]:checked + label {
 .evidenceToggle input[type="range"] {
 	appearance: none;
 	width: 150px;
+	height:30px;
 	padding: 1px;
 	border-radius: 2px;
 	background-color: #484848;
 }
 
-.evidenceToggle input[type="range"]::-webkit-slider-thumb  {
+.evidenceToggle input[type="range"]::-webkit-slider-thumb {
 	appearance: none;
-	height: 30px;
+	height: 28px;
 	width: 45px;
 	border-radius: 2px;
 	background-color: #2f2f2f;
@@ -336,7 +337,24 @@ input[type="checkbox"]:checked + label {
 	background-color: #f41f86;
 }
 
-.evidenceToggle input[type="range"].no::-webkit-slider-thumb  {
+.evidenceToggle input[type="range"].no::-webkit-slider-thumb {
+	background-color: #971a1a;
+}
+
+.evidenceToggle input[type="range"]::-moz-range-thumb  {
+	appearance: none;
+	height: 28px;
+	width: 45px;
+	border-radius: 2px;
+	border: none;
+	background-color: #2f2f2f;
+}
+
+.evidenceToggle input[type="range"].yes::-moz-range-thumb  {
+	background-color: #f41f86;
+}
+
+.evidenceToggle input[type="range"].no::-moz-range-thumb  {
 	background-color: #971a1a;
 }
 
