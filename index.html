@@ -127,12 +127,15 @@
 										If the player who activated the board walks away from an active Ouija Board, or has insufficient sanity to "pay" for the question that they ask, the board will break itself up and trigger a cursed hunt.<br />
 
 										<table>
-											<tr><th colspan="3">Sanity deduction rates (%)</th></tr>
-											<tr><th>Type of question</th><th>Success&nbsp;</th><th>Success (Demon)</th></tr>
-											<tr><td>Ghost's current location</td><td>40%</td><td>32%</td></tr>
-											<tr><td>Hide and seek</td><td>25%</td><td>20%</td></tr>
-											<tr><td>Number of people in room, bone location</td><td>20%</td><td>16%</td></tr>
+											<tr><th>Question</th><th>Sanity Deduction</th></tr>
+											<tr><td>Where are you?</td><td>50%</td></tr>
+											<tr><td>Where is the bone?</td><td>50%</td></tr>
+											<tr><td>Are you close?</td><td>20%</td></tr>
+											<tr><td>Do you respond to everyone?</td><td>20%</td></tr>
+											<tr><td>How old are you?</td><td>5%</td></tr>
+											<tr><td>What is my sanity?</td><td>5%</td></tr>
 											<tr><td>Others</td><td>5%</td><td>4%</td></tr>
+											<tr><td>Hide and seek</td><td>0% (cursed hunt)</td></tr>
 										</table>
 
 										If the question is recognised, the planchette will move to answer the question, and an EMF Level 2 reading will be generated around the Ouija Board.<br />
@@ -165,20 +168,21 @@
 									<p>Each Tarot cards deck contains 10 randomly generated cards. There are various possible cards the player can draw from the deck, each having a unique effect on either the player or the ghost if it is nearby. After being used, each card will vanish in a colored flame that is dependent on its type. The cards must be drawn inside the investigation area for them to work.<br /><br />
 										There are 10 possible cards that can be drawn. A single card type can appear more than once in the deck, and there are different percentages for each card to spawn.<br />
 										<table>
-											<tr><th>Card</th><th>Effect</th></tr>
-											<tr><td>The Sun</td><td>Fully restores sanity to 100%.</td></tr>
-											<tr><td>The Moon</td><td>Immediately drops sanity to 0%.</td></tr>
-											<tr><td>The Tower</td><td>Causes an interaction.</td></tr>
-											<tr><td>The Wheel of Fortune&nbsp;</td><td>Either increases the player's sanity by 25% if it burns green or decreases it by 25% if it burns red.</td></tr>
-											<tr><td>The Devil</td><td>Triggers a Ghost Event.</td></tr>
-											<tr><td>The High Priestess</td><td>Randomly selects one dead teammate and resurrects them. The resurrected teammate will respawn at the location of their corpse. If no one is dead when the card is drawn, it will resurrect the next person who dies. </td></tr>
-											<tr><td>The Hanged Man</td><td>Instantly kills the player.</td></tr>
-											<tr><td>Death</td><td>Triggers a hunt.</td></tr>
-											<tr><td>The Hermit</td><td>Prevents the ghost it from moving out of its current room for a short while.</td></tr>
-											<tr><td>The Fool</td><td>Appears as another card at first, before turning into The Fool just before it burns. This card does not have any effect on the player.</td></tr>
-										</table><br />
+											<tr><th>Card</th><th>Chance</th><th>Effect</th></tr>
+											
+									<tr><td>The Tower</td><td>20%</td><td>Causes an interaction and doubles ghost activity for 20 seconds.</td></tr>
+									<tr><td>The Wheel of Fortune&nbsp;</td><td>20%</td><td>Either increases the player's sanity by 25% if it burns green or decreases it by 25% if it burns red.</td></tr>
+									<tr><td>The Devil</td><td>10%</td><td>Triggers a Ghost Event.</td></tr>
+									<tr><td>Death</td><td>10%</td><td>Triggers a cursed hunt.</td></tr>
+									<tr><td>The Hermit</td><td>10%</td><td>Teleports the ghost back to its ghost room and traps it there for 1 minute.</td></tr>
+									<tr><td>The Sun</td><td>5%</td><td>Restores sanity to 100%.</td></tr>
+									<tr><td>The Moon</td><td>5%</td><td>Drops sanity to 0%.</td></tr>
+									<tr><td>The Fool</td><td>5%</td><td>Appears as another card at first, before turning into The Fool just before it burns. This card does not have any effect on the player.</td></tr>
+									<tr><td>The High Priestess</td><td>2%</td><td>Revives a randomly chosen dead player at their corpse. If no one is dead, it will revive the next person who dies.</td></tr>
+									<tr><td>The Hanged Man</td><td>1%</td><td>Instantly kills the player.</td></tr>
+								</table><br />
 
-										There will only be one deck of tarot cards that will spawn should it spawn, and once all ten have been used, no more will be given to the player. </p>
+										There will only be one deck of tarot cards that will spawn should it spawn, and once all ten have been used, no more will be given to the player.</p>
 								</div>
 							</div>
 							<div id="doll_hint" class="hidden">
@@ -187,11 +191,9 @@
 									Picking one up and activating it will force the ghost to interact with the environment. Pins are chosen at random, and certain pins seem to affect you more than it effects the ghost.</p>
 								<div class="minimal">
 									<h2>How To Use</h2>
-									<p>Taking a picture of a voodoo doll with the photo camera will give photo rewards, and is counted as a Voodoo Doll picture.<br />
-
-										Interacting with the voodoo doll will cause one of the 10 pins stuck in the doll to be pushed into it at random.<br />
-										This will cause the ghost to perform an interaction, and will drop the player's sanity by 10%. If the heart pin is pressed down, it will initiate a cursed hunt in the player's immediate vicinity.<br />
-										If the player's sanity is less than 10%, all of the pins will get pushed in and a cursed hunt will occur as well. </p>
+									<p>Interacting with the voodoo doll will cause one of the 10 pins stuck in the doll to be pushed into it at random.<br />
+										This will cause the ghost to perform an interaction, and will drop the player's sanity by 5%. If the heart pin is pressed down, it will instead initiate a cursed hunt and drop the player's sanity by 10%.<br />
+										If the player's sanity is less than what the pressed pin would drain, all of the remaining pins will get pushed in and a cursed hunt will occur. </p>
 								</div>
 							</div>
 							<div id="paw_hint" class="hidden">
