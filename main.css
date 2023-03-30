@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+:root {
+	color-scheme: dark;
+}
+
 body {
 	/*display: flex;*/
 	/*flex-direction: column;*/
